@@ -19,5 +19,5 @@ Thumbs.db
 venv/
 
 # Tester
-*/tester/
+tester/
 tester.py
