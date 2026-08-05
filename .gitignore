@@ -1,0 +1,22 @@
+# Environment variables
+.env
+.env.local
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Python
+*/__pycache__/
+*.pyc
+venv/
+
+# Tester
+tester.py

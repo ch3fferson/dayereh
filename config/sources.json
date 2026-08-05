@@ -1,0 +1,127 @@
+{
+  "tgju":[
+    {
+      "title": "دلار",
+      "slang": "price_dollar_rl"
+    },
+    {
+      "title": "نیم سکه",
+      "slang": "nim"
+    },
+    {
+      "title": "سکه امامی",
+      "slang": "sekee"
+    },
+    {
+      "title": "طلای 18 عیار",
+      "slang": "geram18"
+    }
+  ],
+
+  "live-rates":[
+    {
+      "title": "طلای جهانی",
+      "currency": "GOLD"
+    },
+    {
+      "title": "شاخص دلار",
+      "currency": "DOLLAR_INDX"
+    },
+    {
+      "title": "نفت خام برنت",
+      "currency": "BRENT_OIL"
+    }
+  ],
+  
+  "telegram": [
+    {
+      "title": "آشیان سیمرغ",
+      "app_name": "news-ir-simorgh",
+      "url": "https://t.me/s/simorghdata369"
+    },
+    {
+      "title": "کار آنلاین",
+      "app_name": "news-ir-caronline",
+      "url": "https://t.me/s/caronline_original"
+    },
+    {
+      "title": "ایران اینترنشنال",
+      "app_name": "news-ir-iranintl",
+      "url": "https://t.me/s/iranintltv"
+    },
+    {
+      "title": "ضد تی وی",
+      "app_name": "news-ir-ztv",
+      "url": "https://t.me/s/ZTVofficial"
+    },
+    {
+      "title": "صدای آمریکا",
+      "app_name": "news-ir-voapersian",
+      "url": "https://t.me/s/farsivoa"
+    },
+    {
+      "title": "بی‌بی‌سی فارسی",
+      "app_name": "news-ir-bbcpersian",
+      "url": "https://t.me/s/bbcpersian"
+    },
+    {
+      "title": "رادیو فردا",
+      "app_name": "news-ir-radiofarda",
+      "url": "https://t.me/s/radiofarda"
+    },
+    {
+      "title": "کانال شاهزاده",
+      "app_name": "news-ir-rezapahlavi",
+      "url": "https://t.me/s/OfficialRezaPahlavi"
+    },
+    {
+      "title": "مهدی مطهرنیا",
+      "app_name": "news-ir-motaharnia",
+      "url": "https://t.me/s/MehdiMotaharnia1344"
+    },
+    {
+      "title": "وحید آنلاین",
+      "app_name": "news-ir-vahidonline",
+      "url": "https://t.me/s/VahidOnline"
+    },
+    {
+      "title": "ایران وایر",
+      "app_name": "news-ir-iranwire",
+      "url": "https://t.me/s/Farsi_Iranwire"
+    },
+    {
+      "title": "دویچه وله",
+      "app_name": "news-ir-dwfarsi",
+      "url": "https://t.me/s/dw_farsi"
+    },
+    {
+      "title": "ایندیپندنت",
+      "app_name": "news-ir-indypersian",
+      "url": "https://t.me/s/indypersian"
+    },
+    {
+      "title": "یورونیوز",
+      "app_name": "news-ir-euronewsfarsi",
+      "url": "https://t.me/s/euronewspe"
+    },
+    {
+      "title": "العربیه",
+      "app_name": "news-ir-alarabiyafar",
+      "url": "https://t.me/s/Alarabiya_far"
+    },
+    {
+      "title": "تی آر تی",
+      "app_name": "news-ir-trtfarsi",
+      "url": "https://t.me/s/farsi_trt"
+    }
+  ],
+
+
+  "rss": [
+    {
+      "title": "رادیو بین‌المللی فرانسه فارسی",
+      "app_name": "news-ir-rfifa",
+      "url": "https://www.rfi.fr/fa/rss"
+    }
+  ]
+} 
