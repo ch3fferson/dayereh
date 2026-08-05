@@ -5,7 +5,6 @@ lxml
 beautifulsoup4
 yt_dlp
 parsivar
-llmlingua
 google-genai
 pillow
 pillow-avif-plugin
