@@ -4,38 +4,40 @@ import unicodedata
 from functools import lru_cache
 
 from parsivar import Normalizer
-from llmlingua import PromptCompressor
 
 
 class GeminiPromptCompressor:
 
-    MODEL_NAME = (
-        "microsoft/"
-        "llmlingua-2-xlm-roberta-large-meetingbank"
+    IMPORTANT_PATTERNS = (
+        r"\d",
+        r"%",
+        r"\b(?:۱۹|۲۰)\d{2}\b",
+        r"\b(?:دلار|یورو|پوند|روبل|ریال|تومان)\b",
+        r"\b(?:میلیون|میلیارد|هزار)\b",
+        r"\b(?:امروز|دیروز|فردا|امشب|صبح|شب)\b",
+        r"\b(?:ایران|آمریکا|اسرائیل|روسیه|اوکراین|چین|اروپا|"
+        r"غزه|فلسطین|لبنان|سوریه|عراق|یمن|ترکیه|عربستان)\b",
+        r"\b(?:ترامپ|پوتین|نتانیاهو|بایدن|زلنسکی|خامنه‌ای|"
+        r"پزشکیان|مکرون|شی|پوتین)\b",
+        r"\b(?:دولت|وزارت|ارتش|سپاه|مجلس|کاخ سفید|"
+        r"سازمان ملل|ناتو|اتحادیه اروپا)\b",
+        r"\b(?:حمله|جنگ|آتش‌بس|تحریم|مذاکره|توافق|"
+        r"موشک|هسته‌ای|نظامی|امنیتی|انتخابات)\b",
+        r"\b(?:اعلام کرد|گفت|افزود|تأکید کرد|تاکید کرد|"
+        r"اظهار داشت|خبر داد|گزارش داد)\b",
     )
 
-    def __init__(
-        self,
-        max_tokens: int,
-        device: str = "cpu",
-    ):
+    def __init__(self, max_tokens: int):
         if max_tokens < 1:
-            raise ValueError(
-                "max_tokens must be greater than 0"
-            )
+            raise ValueError("max_tokens must be greater than 0")
 
         self.max_tokens = max_tokens
         self.normalizer = Normalizer()
 
-        self.compressor = PromptCompressor(
-            model_name=self.MODEL_NAME,
-            device_map=device,
-            use_llmlingua2=True,
-            llmlingua2_config={
-                "max_batch_size": 32,
-                "max_force_token": 100,
-            },
-        )
+        self._important_patterns = [
+            re.compile(pattern, re.IGNORECASE)
+            for pattern in self.IMPORTANT_PATTERNS
+        ]
 
     def clean(self, text: str) -> str:
 
@@ -58,6 +60,11 @@ class GeminiPromptCompressor:
         )
 
         text = re.sub(
+            r'<[^>]+>|[{}\[\]":,]',
+            ' ',
+            text)
+
+        text = re.sub(
             r"[\u200b\u200c\u200d\ufeff]",
             "",
             text,
@@ -73,8 +80,7 @@ class GeminiPromptCompressor:
         text = "".join(
             char
             for char in text
-            if unicodedata.category(char)
-            not in {"So", "Sk"}
+            if unicodedata.category(char) not in {"So", "Sk"}
         )
 
         text = re.sub(
@@ -115,7 +121,7 @@ class GeminiPromptCompressor:
         return text.strip()
 
     @staticmethod
-    @lru_cache(maxsize=32768)
+    @lru_cache(maxsize=16384)
     def _fingerprint(text: str) -> str:
 
         text = text.lower()
@@ -128,69 +134,257 @@ class GeminiPromptCompressor:
 
         return " ".join(text.split())
 
-    def _deduplicate_sentences(
-        self,
-        text: str,
-    ) -> str:
+    def split_sentences(self, text: str) -> list[str]:
 
-        sentences = re.split(
-            r"(?<=[.!؟])\s+|\n+",
-            text,
-        )
+        return [
+            sentence.strip()
+            for sentence in re.split(
+                r"(?<=[.!؟])\s+|\n+",
+                text,
+            )
+            if sentence.strip()
+        ]
+
+    def deduplicate(self, sentences: list[str]) -> list[str]:
 
         seen = set()
         result = []
 
         for sentence in sentences:
 
-            sentence = sentence.strip()
+            fingerprint = self._fingerprint(sentence)
 
-            if not sentence:
-                continue
-
-            fingerprint = self._fingerprint(
-                sentence
-            )
-
-            if not fingerprint:
-                continue
-
-            if fingerprint in seen:
+            if not fingerprint or fingerprint in seen:
                 continue
 
             seen.add(fingerprint)
             result.append(sentence)
 
-        return "\n".join(result)
+        return result
 
-    def _compress_llmlingua(
-        self,
-        text: str,
-    ) -> str:
+    def _importance(self, sentence: str, index: int, total: int) -> float:
 
-        result = self.compressor.compress_prompt(
-            text,
-            target_token=self.max_tokens,
-            use_context_level_filter=False,
-            use_token_level_filter=True,
-            force_tokens=[
-                "\n",
-                ".",
-                "؟",
-                "!",
-                ":",
-                "؛",
-            ],
-            force_reserve_digit=True,
-            keep_first_sentence=1,
-            keep_last_sentence=1,
-            reorder_context="original",
-            strict_preserve_uncompressed=True,
+        words = sentence.split()
+        word_count = len(words)
+
+        if word_count < 3:
+            return -100.0
+
+        score = 0.0
+
+        for pattern in self._important_patterns:
+
+            matches = pattern.findall(sentence)
+
+            if matches:
+                score += min(len(matches), 3) * 3.0
+
+        if word_count >= 8:
+            score += 2.0
+
+        if word_count >= 15:
+            score += 2.0
+
+        if word_count >= 30:
+            score += 1.0
+
+        if '"' in sentence or "«" in sentence or "»" in sentence:
+            score += 2.0
+
+        if re.search(r"[!?؟]", sentence):
+            score += 0.5
+
+        if index < max(3, total * 0.1):
+            score += 1.5
+
+        if index >= total * 0.9:
+            score += 0.5
+
+        return score
+
+    @staticmethod
+    def _estimate_tokens(text: str) -> int:
+
+        if not text:
+            return 0
+
+        persian = len(
+            re.findall(
+                r"[\u0600-\u06ff]",
+                text,
+            )
         )
 
-        return result[
-            "compressed_prompt"
-        ].strip()
+        latin = len(
+            re.findall(
+                r"[a-zA-Z]",
+                text,
+            )
+        )
+
+        digits = len(
+            re.findall(
+                r"\d",
+                text,
+            )
+        )
+
+        spaces = text.count(" ")
+
+        estimated = (
+            persian / 2.5
+            + latin / 4
+            + digits / 2
+            + spaces / 3
+        )
+
+        return max(
+            1,
+            int(estimated),
+        )
+
+    def _select(
+        self,
+        sentences: list[str],
+    ) -> list[str]:
+
+        if not sentences:
+            return []
+
+        if self._estimate_tokens(" ".join(sentences)) <= self.max_tokens:
+            return sentences
+
+        total = len(sentences)
+
+        ranked = sorted(
+            (
+                (
+                    self._importance(
+                        sentence,
+                        index,
+                        total,
+                    ),
+                    index,
+                    sentence,
+                    self._estimate_tokens(sentence),
+                )
+                for index, sentence in enumerate(sentences)
+            ),
+            key=lambda item: (
+                item[0],
+                -item[3],
+            ),
+            reverse=True,
+        )
+
+        selected = []
+        used_tokens = 0
+
+        for _, index, sentence, tokens in ranked:
+
+            if used_tokens + tokens > self.max_tokens:
+                continue
+
+            selected.append(
+                (
+                    index,
+                    sentence,
+                )
+            )
+
+            used_tokens += tokens
+
+        selected.sort(
+            key=lambda item: item[0],
+        )
+
+        return [
+            sentence
+            for _, sentence in selected
+        ]
+
+    def _fit_exact(
+        self,
+        sentences: list[str],
+        token_counter,
+    ) -> str:
+
+        if not sentences:
+            return ""
+
+        text = " ".join(sentences)
+
+        if token_counter(text) <= self.max_tokens:
+            return text
+
+        low = 0
+        high = len(sentences)
+
+        best = ""
+
+        while low <= high:
+
+            middle = (low + high) // 2
+
+            candidate = " ".join(
+                sentences[:middle]
+            )
+
+            if token_counter(candidate) <= self.max_tokens:
+
+                best = candidate
+                low = middle + 1
+
+            else:
+
+                high = middle - 1
+
+        if best:
+            return best
+
+        return self._hard_limit(
+            text,
+            token_counter,
+        )
+
+    def _hard_limit(
+        self,
+        text: str,
+        token_counter,
+    ) -> str:
+
+        if not text:
+            return ""
+
+        words = text.split()
+
+        low = 0
+        high = len(words)
+
+        best = ""
+
+        while low <= high:
+
+            middle = (low + high) // 2
+
+            candidate = " ".join(
+                words[:middle]
+            )
+
+            if not candidate:
+                low = middle + 1
+                continue
+
+            if token_counter(candidate) <= self.max_tokens:
+
+                best = candidate
+                low = middle + 1
+
+            else:
+
+                high = middle - 1
+
+        return best.strip()
 
     def compress(
         self,
@@ -203,135 +397,41 @@ class GeminiPromptCompressor:
         if not text:
             return ""
 
-        text = self._deduplicate_sentences(
-            text
-        )
+        sentences = self.split_sentences(text)
+        sentences = self.deduplicate(sentences)
 
-        if not text:
+        if not sentences:
             return ""
 
-        if token_counter is not None:
+        estimated_tokens = self._estimate_tokens(text)
 
-            if (
-                token_counter(text)
-                <= self.max_tokens
-            ):
+        if estimated_tokens <= self.max_tokens:
+
+            if token_counter is None:
                 return text
 
-        compressed = self._compress_llmlingua(
-            text
-        )
+            if token_counter(text) <= self.max_tokens:
+                return text
 
-        if not compressed:
+        selected = self._select(sentences)
+
+        if not selected:
             return ""
 
-        if token_counter is None:
-            return compressed
+        result = " ".join(selected)
 
-        actual_tokens = token_counter(
-            compressed
-        )
+        if token_counter is None:
+            return result
+
+        actual_tokens = token_counter(result)
 
         if actual_tokens <= self.max_tokens:
-            return compressed
+            return result
 
-        return self._recompress(
-            text,
+        return self._fit_exact(
+            selected,
             token_counter,
         )
-
-    def _recompress(
-        self,
-        text: str,
-        token_counter,
-    ) -> str:
-
-        target = self.max_tokens
-
-        for _ in range(3):
-
-            compressed = self.compressor.compress_prompt(
-                text,
-                target_token=target,
-                use_context_level_filter=False,
-                use_token_level_filter=True,
-                force_tokens=[
-                    "\n",
-                    ".",
-                    "؟",
-                    "!",
-                    ":",
-                    "؛",
-                ],
-                force_reserve_digit=True,
-                keep_first_sentence=1,
-                keep_last_sentence=1,
-                reorder_context="original",
-                strict_preserve_uncompressed=True,
-            )[
-                "compressed_prompt"
-            ].strip()
-
-            if not compressed:
-                return ""
-
-            actual_tokens = token_counter(
-                compressed
-            )
-
-            if actual_tokens <= self.max_tokens:
-                return compressed
-
-            target = max(
-                1,
-                int(
-                    target
-                    * self.max_tokens
-                    / actual_tokens
-                    * 0.95
-                ),
-            )
-
-        return self._hard_limit(
-            compressed,
-            token_counter,
-        )
-
-    def _hard_limit(
-        self,
-        text: str,
-        token_counter,
-    ) -> str:
-
-        if token_counter(text) <= self.max_tokens:
-            return text
-
-        words = text.split()
-
-        low = 1
-        high = len(words)
-        best = ""
-
-        while low <= high:
-
-            middle = (
-                low + high
-            ) // 2
-
-            candidate = " ".join(
-                words[:middle]
-            )
-
-            if (
-                token_counter(candidate)
-                <= self.max_tokens
-            ):
-                best = candidate
-                low = middle + 1
-            else:
-                high = middle - 1
-
-        return best.strip()
 
     def compress_items(
         self,
@@ -342,19 +442,21 @@ class GeminiPromptCompressor:
         if not items:
             return ""
 
-        cleaned = []
+        cleaned_items = []
 
         for item in items:
 
-            item = self.clean(item)
+            cleaned = self.clean(item)
 
-            if item:
-                cleaned.append(item)
+            if cleaned:
+                cleaned_items.append(cleaned)
 
-        if not cleaned:
+        if not cleaned_items:
             return ""
 
+        text = "\n".join(cleaned_items)
+
         return self.compress(
-            "\n\n".join(cleaned),
+            text,
             token_counter=token_counter,
         )
