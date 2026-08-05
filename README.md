@@ -218,8 +218,6 @@ MIT — see [`LICENSE`](LICENSE).
 
 <br>
 
----
-
 <div align="center">
 
 **تقدیم به همه جاویدنامان ایران**
