@@ -352,13 +352,6 @@ Context Memory:
                         f"{client.input_token_limit:,} tokens"
                     )
 
-
-
-                    print(prompt)
-                    exit(0)
-
-
-
                     print("⟳ Summarizing Data using Gemini")
 
                     result = client.send(prompt)
