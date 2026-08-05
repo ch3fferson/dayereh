@@ -558,8 +558,8 @@ class HTMLBuilder:
 
         has_any_feed = len(feeds) > 0
 
-        summary_html = self.build_summary_content(summery[0])
-        summary_trigger = self.build_summary_trigger(summary_html)
+        summary_html = self.build_summary_content(summery[0] if len(summery) > 0 else "")
+        summary_trigger = self.build_summary_trigger(summary_html if summary_html != "" else None)
         summary_modal = self.build_summary_modal(
             summary_html,
             summery[1] if len(summery) > 1 else "",
