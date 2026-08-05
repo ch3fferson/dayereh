@@ -611,7 +611,7 @@ class HTMLBuilder:
 <link
     rel="icon"
     type="image/webp"
-    href="https://raw.githubusercontent.com/shawnkasaei/news-reader-meli/refs/heads/main/feeds/view/assets/favicon.webp"
+    href="https://raw.githubusercontent.com/shawnkasaei/dayereh/refs/heads/main/feeds/view/assets/favicon.webp"
 />
 
 <script>
@@ -624,7 +624,7 @@ document.documentElement.classList.add("js");
     font-family: Peyda;
 
     src:
-        url('https://raw.githubusercontent.com/shawnkasaei/news-reader-meli/refs/heads/main/feeds/view/assets/fonts/Peyda-Regular.ttf')
+        url('https://raw.githubusercontent.com/shawnkasaei/dayereh/refs/heads/main/feeds/view/assets/fonts/Peyda-Regular.ttf')
         format('truetype');
 
     font-weight: 400;
@@ -634,7 +634,7 @@ document.documentElement.classList.add("js");
     font-family: Peyda;
 
     src:
-        url('https://raw.githubusercontent.com/shawnkasaei/news-reader-meli/refs/heads/main/feeds/view/assets/fonts/Peyda-Bold.ttf')
+        url('https://raw.githubusercontent.com/shawnkasaei/dayereh/refs/heads/main/feeds/view/assets/fonts/Peyda-Bold.ttf')
         format('truetype');
 
     font-weight: 700;
@@ -644,7 +644,7 @@ document.documentElement.classList.add("js");
     font-family: Peyda;
 
     src:
-        url('https://raw.githubusercontent.com/shawnkasaei/news-reader-meli/refs/heads/main/feeds/view/assets/fonts/Peyda-Black.ttf')
+        url('https://raw.githubusercontent.com/shawnkasaei/dayereh/refs/heads/main/feeds/view/assets/fonts/Peyda-Black.ttf')
         format('truetype');
 
     font-weight: 900;
