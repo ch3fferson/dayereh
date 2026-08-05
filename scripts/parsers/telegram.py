@@ -261,6 +261,9 @@ class Telegram:
         downloaded,
         download_lock,
     ):
+        if not self.media_downloader:
+            return []
+        
         file_names = []
 
         for index, url in enumerate(media_urls):
