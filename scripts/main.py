@@ -66,7 +66,7 @@ class App:
                 items = self.tgm_parser.parse(html=html, title_char_limit=self.title_char_limit)
             else:
                 xml = self.fetcher.get_text_by_requests(source["url"])
-                items = self.rss_parser.parse(xml=xml, title_char_limit=self.title_char_limit)
+                items = self.rss_parser.parse(xml=xml)
 
             xml_data = self.xml_builder.build(
                 items,
@@ -204,22 +204,17 @@ class App:
                 print(f"⚠ Website failed -> {source['title']}")
                 print(f"error: {e}") """
 
-        gemini_key = (
-            sys.argv[1]
-            if len(sys.argv) > 1
-            else None
-        )
-        
+        gemini_key = sys.argv[1] if len(sys.argv) > 1 else None
         result = None
         summary_text = None
-        
+
         MEMORY_START = "---MEMORY_START---"
         MEMORY_END = "---MEMORY_END---"
-        
+
         if gemini_key:
-        
+
             try:
-        
+
                 with (
                     open(
                         BASE / "scripts" / "ai" / "soul.md",
@@ -232,60 +227,48 @@ class App:
                         encoding="utf-8",
                     ) as memoryf,
                 ):
-        
-                    print(
-                        "⟳ Reading soul and memory for Gemini"
-                    )
-        
+
+                    print("⟳ Reading soul and memory for Gemini")
+
                     soul = soulf.read()
                     memory = memoryf.read()
-        
-                    print(
-                        "✓ Gemini soul and memory loaded"
-                    )
-        
+
+                    print("✓ Gemini soul and memory loaded")
+
                     client = GeminiClient(
                         api_key=gemini_key,
                         model="gemini-3.5-flash",
                         system_instruction=soul,
                         temperature=0.2,
                         top_p=1.0,
-                        max_output_tokens=3000,
                     )
-        
+
                     print(
-                        f"✓ Model: {client.model}"
+                        f"✓ Gemini model: {client.model}"
                     )
-        
+
                     print(
-                        f"✓ Input limit: "
-                        f"{client.input_token_limit:,}"
+                        f"✓ Gemini input limit: "
+                        f"{client.input_token_limit:,} tokens"
                     )
-        
+
                     print(
-                        f"✓ Output limit: "
-                        f"{client.output_token_limit:,}"
+                        f"✓ Gemini output limit: "
+                        f"{client.output_token_limit:,} tokens"
                     )
-        
+
                     items_content = [
                         content
                         for feed in feeds
                         for item in feed.get("items", [])
-                        if (
-                            content :=
-                            getattr(
-                                item,
-                                "content",
-                                "",
-                            ).strip()
-                        )
+                        if (content := getattr(item, "content", "").strip())
                     ]
-        
+
                     prices_text = ", ".join(
                         f"{p['currency']}: {p['price']}"
                         for p in prices
                     )
-        
+
                     prompt_template = f"""مورخ {now}:
 آخرین قیمت‌ها:
 {prices_text}
@@ -294,271 +277,192 @@ class App:
 Context Memory:
 {memory}
 """
-        
-                    fixed_prompt = (
-                        prompt_template.replace(
-                            "{NEWS}",
-                            "",
-                        )
+
+                    fixed_prompt = prompt_template.replace(
+                        "{NEWS}",
+                        "",
                     )
-        
-                    fixed_tokens = (
-                        client.count_tokens(
-                            fixed_prompt
-                        )
+
+                    fixed_tokens = client.count_tokens(
+                        fixed_prompt,
                     )
-        
+
                     available_tokens = max(
                         1,
-                        client.input_token_limit
-                        - fixed_tokens,
+                        client.input_token_limit - fixed_tokens,
                     )
-        
-                    compression_budget = max(
-                        1,
-                        int(
-                            available_tokens * 0.92
-                        ),
-                    )
-        
+
                     print(
-                        f"⟳ News budget: "
-                        f"{compression_budget:,} tokens"
+                        f"⟳ Compressing news "
+                        f"({available_tokens:,} tokens available)"
                     )
-        
+
                     compressor = GeminiPromptCompressor(
-                        max_tokens=compression_budget,
-                        device="cpu",
+                        max_tokens=available_tokens,
                     )
-        
-                    compressed = (
-                        compressor.compress_items(
-                            items_content
+
+                    compressed = compressor.compress_items(
+                        items_content,
+                    )
+
+                    prompt = prompt_template.replace(
+                        "{NEWS}",
+                        compressed,
+                    )
+
+                    prompt_tokens = client.count_tokens(
+                        prompt,
+                    )
+
+                    if prompt_tokens > client.input_token_limit:
+
+                        print(
+                            f"⚠ Prompt exceeds model limit "
+                            f"({prompt_tokens:,} > "
+                            f"{client.input_token_limit:,})"
                         )
-                    )
-        
-                    prompt = (
-                        prompt_template.replace(
+
+                        remaining_tokens = (
+                            client.input_token_limit - fixed_tokens
+                        )
+
+                        compressor = GeminiPromptCompressor(
+                            max_tokens=max(
+                                1,
+                                remaining_tokens,
+                            ),
+                        )
+
+                        compressed = compressor.compress_items(
+                            items_content,
+                        )
+
+                        prompt = prompt_template.replace(
                             "{NEWS}",
                             compressed,
                         )
-                    )
-        
-                    prompt_tokens = (
-                        client.count_tokens(
-                            prompt
+
+                        prompt_tokens = client.count_tokens(
+                            prompt,
                         )
-                    )
-        
-                    if (
-                        prompt_tokens
-                        > client.input_token_limit
-                    ):
-        
-                        print(
-                            "⚠ Prompt still exceeds "
-                            "Gemini limit; recompressing"
-                        )
-        
-                        compression_budget = max(
-                            1,
-                            int(
-                                compression_budget
-                                * client.input_token_limit
-                                / prompt_tokens
-                                * 0.95
-                            ),
-                        )
-        
-                        compressor = GeminiPromptCompressor(
-                            max_tokens=compression_budget,
-                            device="cpu",
-                        )
-        
-                        compressed = (
-                            compressor.compress_items(
-                                items_content
-                            )
-                        )
-        
-                        prompt = (
-                            prompt_template.replace(
-                                "{NEWS}",
-                                compressed,
-                            )
-                        )
-        
-                        prompt_tokens = (
-                            client.count_tokens(
-                                prompt
-                            )
-                        )
-        
+
                     print(
                         f"✓ Final prompt: "
                         f"{prompt_tokens:,} / "
-                        f"{client.input_token_limit:,} "
-                        f"Gemini tokens"
+                        f"{client.input_token_limit:,} tokens"
                     )
-        
-                    print(
-                        "⟳ Summarizing Data using Gemini"
-                    )
-        
-                    result = client.send(
-                        prompt
-                    )
-        
-                    if (
-                        MEMORY_START in result
-                        and MEMORY_END in result
-                    ):
-        
-                        summary_text, remainder = (
-                            result.split(
-                                MEMORY_START,
-                                1,
-                            )
+
+
+
+                    print(prompt)
+                    exit(0)
+
+
+
+                    print("⟳ Summarizing Data using Gemini")
+
+                    result = client.send(prompt)
+
+                    if MEMORY_START in result and MEMORY_END in result:
+
+                        summary_text, remainder = result.split(
+                            MEMORY_START,
+                            1,
                         )
-        
-                        memory_text, _ = (
-                            remainder.split(
-                                MEMORY_END,
-                                1,
-                            )
+
+                        memory_text, _ = remainder.split(
+                            MEMORY_END,
+                            1,
                         )
-        
-                        summary_text = (
-                            summary_text.strip()
-                        )
-        
-                        memory_text = (
-                            memory_text.strip()
-                        )
-        
+
+                        summary_text = summary_text.strip()
+                        memory_text = memory_text.strip()
+
                     else:
-        
-                        print(
-                            "⚠ Memory delimiter not found"
-                        )
-        
+
+                        print("⚠ Memory delimiter not found")
+
                         summary_text = result.strip()
                         memory_text = None
-        
-                    json_data = (
-                        self.json_builder.build(
-                            {
-                                "summary": summary_text,
-                                "time": now,
-                            }
-                        )
-                    )
-        
+
+                    json_data = self.json_builder.build({
+                        "summary": summary_text,
+                        "time": now,
+                    })
+
                     self.storage.save_json(
                         "news-summary",
                         json_data,
                     )
-        
-                    print(
-                        "✓ Gemini -> news-summary.json"
-                    )
-        
+
+                    print("✓ Gemini -> news-summary.json")
+
                     if memory_text is not None:
-        
-                        print(
-                            "⟳ Updating Memory"
-                        )
-        
+
+                        print("⟳ Updating Memory")
+
                         memoryf.seek(0)
                         memoryf.write(memory_text)
                         memoryf.truncate()
-        
-                        print(
-                            "✓ Memory updated successfully"
-                        )
-        
+
+                        print("✓ Memory updated successfully")
+
             except Exception as e:
-        
-                print(
-                    "⚠ Data summarization failed"
-                )
-        
-                print(
-                    f"error: {e}"
-                )
-        
-        
-        summary = None
-        
+
+                print("⚠ Data summarization failed")
+                print(f"error: {e}")
+
+
+        summary = ["", ""]
+
         try:
-        
+
             if result and summary_text:
-        
+
                 summary = (
                     summary_text,
                     now,
                 )
-        
+
             else:
-        
-                print(
-                    "⟳ Using most recent summary"
-                )
-        
+
+                print("⟳ Using most recent summary")
+
                 with open(
-                    BASE
-                    / "feeds"
-                    / "news-summary.json",
+                    BASE / "feeds" / "news-summary.json",
                     "r",
                     encoding="utf-8",
                 ) as summaryf:
-        
-                    data = json.load(
-                        summaryf
-                    )
-        
+
+                    data = json.load(summaryf)
+
                     summary = (
                         data.get("summary"),
                         data.get("time"),
                     )
-        
+
         except Exception as e:
-        
-            print(
-                "⚠ Couldn't read most recent summary"
-            )
-        
-            print(
-                f"error: {e}"
-            )
-        
-        
+
+            print("⚠ Couldn't read most recent summary")
+            print(f"error: {e}")
+
+
         try:
-        
+
             html = self.html_builder.build(
                 feeds,
                 prices,
                 summary,
             )
-        
-            self.storage.save_html(
-                html
-            )
-        
-            print(
-                "✓ SITE LAUNCHED -> "
-                "feeds/view/index.html"
-            )
-        
+
+            self.storage.save_html(html)
+
+            print("✓ SITE LAUNCHED -> feeds/view/index.html")
+
         except Exception as e:
-        
-            print(
-                "⚠ failed to launch site"
-            )
-        
-            print(
-                f"error: {e}"
-            )
+
+            print("⚠ failed to launch site")
+            print(f"error: {e}")
 
 
 if __name__ == "__main__":
