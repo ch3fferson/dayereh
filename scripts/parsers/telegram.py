@@ -13,7 +13,7 @@ from net.media_downloader import MediaDownloader
 MAX_WORKERS = 4
 REPLY_CLASS = "tgme_widget_message_reply"
 MEDIA_SELECTOR = ".tgme_widget_message_photo_wrap, video"
-MEDIA_BASE_URL = "https://raw.githubusercontent.com/ch3fferson/news-reader-meli/main/feeds/view/media"
+MEDIA_BASE_URL = "https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media"
 
 
 class Telegram:

@@ -186,7 +186,7 @@ class RSS:
                 file_names.append(file_name)
 
         return [
-            f"https://raw.githubusercontent.com/ch3fferson/news-reader-meli/main/feeds/view/media/{file_name}"
+            f"https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/{file_name}"
             for file_name in file_names
         ]
 
