@@ -35,7 +35,7 @@ class XMLBuilder:
         base_url = (
             "https://htmlpreview.github.io/?"
             "https://raw.githubusercontent.com/"
-            "shawnkasaei/news-reader-meli/"
+            "shawnkasaei/dayereh/"
             "refs/heads/main/feeds/view/index.html"
         )
 
