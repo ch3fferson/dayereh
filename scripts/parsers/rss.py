@@ -14,13 +14,13 @@ MAX_WORKERS = 4
 
 class RSS:
 
-    def __init__(self, media_downloader: MediaDownloader, allow_duplicates: bool = True, reverse_items: bool = False):
+    def __init__(self, media_downloader: MediaDownloader = None, allow_duplicates: bool = True, reverse_items: bool = False):
 
         self.allow_duplicates = allow_duplicates
         self.reverse_items = reverse_items
         self.media_downloader = media_downloader
 
-    def parse(self, xml: str, title_char_limit: int = 60):
+    def parse(self, xml: str):
 
         downloaded = {}
         download_lock = Lock()
@@ -34,7 +34,6 @@ class RSS:
             results = executor.map(
                 lambda item: self._process_item(
                     item,
-                    title_char_limit,
                     downloaded,
                     download_lock,
                     seen_titles,
@@ -54,7 +53,6 @@ class RSS:
     def _process_item(
         self,
         item,
-        title_char_limit,
         downloaded,
         download_lock,
         seen_titles,
@@ -89,14 +87,13 @@ class RSS:
             ]):
                 return None
 
+            title = StringUtils.remove_html_shenanigans(
+                            title_match.group(1).strip()
+                        )
+
             content = StringUtils.remove_html_shenanigans(
                             content_match.group(1).strip()
                         )
-
-            title = StringUtils.truncate_text_char(
-                content,
-                title_char_limit,
-            )
 
             date = TimeUtils.to_string(
                 TimeUtils.normalize(
@@ -155,6 +152,8 @@ class RSS:
         downloaded,
         download_lock,
     ):
+        if not self.media_downloader:
+            return []
 
         file_names = []
 
