@@ -220,6 +220,4 @@ MIT — see [`LICENSE`](LICENSE).
 
 **تقدیم به همه جاویدنامان ایران**
 
-<sub>شِف</sub>
-
 </div>
