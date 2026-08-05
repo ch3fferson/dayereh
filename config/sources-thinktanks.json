@@ -1,0 +1,334 @@
+{
+  "rss": [
+    {
+      "title": "Council on Foreign Relations",
+      "app_name": "think-tank-us-cfr",
+      "url": "https://www.foreignaffairs.com/rss.xml"
+    },
+    {
+      "title": "Brookings Institution",
+      "app_name": "think-tank-us-brookings",
+      "url": "https://www.brookings.edu/feed/"
+    },
+    {
+      "title": "Carnegie Endowment for International Peace",
+      "app_name": "think-tank-us-carnegie",
+      "url": "https://carnegieendowment.org/rss/solr/?fa=feeds"
+    },
+    {
+      "title": "Center for Strategic and International Studies",
+      "app_name": "think-tank-us-csis",
+      "url": "https://www.csis.org/analysis/feed"
+    },
+    {
+      "title": "Atlantic Council",
+      "app_name": "think-tank-us-atlanticcouncil",
+      "url": "https://www.atlanticcouncil.org/feed/"
+    },
+    {
+      "title": "RAND Corporation",
+      "app_name": "think-tank-us-rand",
+      "url": "https://news.google.com/rss/search?q=site:rand.org+when:1d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "title": "Center for a New American Security",
+      "app_name": "think-tank-us-cnas",
+      "url": "https://www.cnas.org/rss.xml"
+    },
+    {
+      "title": "Institute for the Study of War",
+      "app_name": "think-tank-us-isw",
+      "url": "https://www.understandingwar.org/rss.xml"
+    },
+    {
+      "title": "German Marshall Fund of the United States",
+      "app_name": "think-tank-us-gmfus",
+      "url": "https://www.gmfus.org/rss.xml"
+    },
+    {
+      "title": "Wilson Center",
+      "app_name": "think-tank-us-wilsoncenter",
+      "url": "https://www.wilsoncenter.org/rss.xml"
+    },
+    {
+      "title": "Hudson Institute",
+      "app_name": "think-tank-us-hudson",
+      "url": "https://www.hudson.org/rss.xml"
+    },
+    {
+      "title": "Quincy Institute",
+      "app_name": "think-tank-us-quincyinst",
+      "url": "https://quincyinst.org/feed/"
+    },
+    {
+      "title": "Peterson Institute for International Economics",
+      "app_name": "think-tank-us-piie",
+      "url": "https://www.piie.com/rss.xml"
+    },
+    {
+      "title": "Heritage Foundation",
+      "app_name": "think-tank-us-heritage",
+      "url": "https://news.google.com/rss/search?q=site:heritage.org+when:1d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "title": "American Enterprise Institute",
+      "app_name": "think-tank-us-aei",
+      "url": "https://www.aei.org/feed/"
+    },
+    {
+      "title": "Center for American Progress",
+      "app_name": "think-tank-us-cap",
+      "url": "https://www.americanprogress.org/feed/"
+    },
+    {
+      "title": "Stimson Center",
+      "app_name": "think-tank-us-stimson",
+      "url": "https://www.stimson.org/feed/"
+    },
+    {
+      "title": "Cato Institute",
+      "app_name": "think-tank-us-cato",
+      "url": "https://www.cato.org/rss.xml"
+    },
+    {
+      "title": "Chatham House",
+      "app_name": "think-tank-uk-chathamhouse",
+      "url": "https://www.chathamhouse.org/rss.xml"
+    },
+    {
+      "title": "International Institute for Strategic Studies",
+      "app_name": "think-tank-uk-iiss",
+      "url": "https://www.iiss.org/blogs/rss"
+    },
+    {
+      "title": "Royal United Services Institute",
+      "app_name": "think-tank-uk-rusi",
+      "url": "https://rusi.org/rss.xml"
+    },
+    {
+      "title": "Overseas Development Institute",
+      "app_name": "think-tank-uk-odi",
+      "url": "https://odi.org/en/rss/"
+    },
+    {
+      "title": "European Council on Foreign Relations",
+      "app_name": "think-tank-eu-ecfr",
+      "url": "https://ecfr.eu/feed/"
+    },
+    {
+      "title": "Stiftung Wissenschaft und Politik",
+      "app_name": "think-tank-eu-swp",
+      "url": "https://www.swp-berlin.org/en/rss"
+    },
+    {
+      "title": "Institut français des relations internationales",
+      "app_name": "think-tank-eu-ifri",
+      "url": "https://www.ifri.org/en/rss.xml"
+    },
+    {
+      "title": "Bruegel",
+      "app_name": "think-tank-eu-bruegel",
+      "url": "https://www.bruegel.org/rss.xml"
+    },
+    {
+      "title": "Clingendael Institute",
+      "app_name": "think-tank-eu-clingendael",
+      "url": "https://www.clingendael.org/rss.xml"
+    },
+    {
+      "title": "Institut Montaigne",
+      "app_name": "think-tank-eu-institutmontaigne",
+      "url": "https://www.institutmontaigne.org/rss.xml"
+    },
+    {
+      "title": "Istituto Affari Internazionali",
+      "app_name": "think-tank-eu-iai",
+      "url": "https://www.iai.it/en/rss.xml"
+    },
+    {
+      "title": "Center for China and Globalization",
+      "app_name": "think-tank-cn-ccg",
+      "url": "https://news.google.com/rss/search?q=site:ccg.org.cn+when:1d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "title": "Russian International Affairs Council",
+      "app_name": "think-tank-ru-riac",
+      "url": "https://russiancouncil.ru/en/rss/"
+    },
+    {
+      "title": "Valdai Discussion Club",
+      "app_name": "think-tank-ru-valdai",
+      "url": "https://valdaiclub.com/rss/"
+    },
+    {
+      "title": "Primakov Institute of World Economy and International Relations",
+      "app_name": "think-tank-ru-imemo",
+      "url": "https://www.imemo.ru/en/rss"
+    },
+    {
+      "title": "Council on Foreign and Defense Policy",
+      "app_name": "think-tank-ru-svop",
+      "url": "https://svop.ru/rss/"
+    },
+    {
+      "title": "SETA Foundation",
+      "app_name": "think-tank-tr-seta",
+      "url": "https://www.setav.org/en/feed/"
+    },
+    {
+      "title": "Center for Economics and Foreign Policy Studies",
+      "app_name": "think-tank-tr-edam",
+      "url": "https://edam.org.tr/en/feed/"
+    },
+    {
+      "title": "ORSAM",
+      "app_name": "think-tank-tr-orsam",
+      "url": "https://orsam.org.tr/en/feed/"
+    },
+    {
+      "title": "TASAM",
+      "app_name": "think-tank-tr-tasam",
+      "url": "https://tasam.org/en/rss"
+    },
+    {
+      "title": "Economic Research Forum",
+      "app_name": "think-tank-eg-erf",
+      "url": "https://erf.org.eg/feed/"
+    },
+    {
+      "title": "Al Jazeera Centre for Studies",
+      "app_name": "think-tank-qa-aljazeeracenter",
+      "url": "https://studies.aljazeera.net/en/rss.xml"
+    },
+    {
+      "title": "Arab Center for Research and Policy Studies",
+      "app_name": "think-tank-qa-acrps",
+      "url": "https://www.dohainstitute.org/en/rss.xml"
+    },
+    {
+      "title": "Middle East Council on Global Affairs",
+      "app_name": "think-tank-qa-mecouncil",
+      "url": "https://mecouncil.org/feed/"
+    },
+    {
+      "title": "Gulf Research Center",
+      "app_name": "think-tank-ae-grc",
+      "url": "https://www.grc.net/rss"
+    },
+    {
+      "title": "Emirates Policy Center",
+      "app_name": "think-tank-ae-epc",
+      "url": "https://epc.ae/en/rss"
+    },
+    {
+      "title": "King Faisal Center for Research and Islamic Studies",
+      "app_name": "think-tank-sa-kfcris",
+      "url": "https://news.google.com/rss/search?q=site:kfcris.com+when:1d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "title": "Gulf Research Center",
+      "app_name": "think-tank-sa-grc",
+      "url": "https://www.grc.net/rss"
+    },
+    {
+      "title": "King Abdullah Petroleum Studies and Research Center",
+      "app_name": "think-tank-sa-kapsarc",
+      "url": "https://www.kapsarc.org/rss"
+    },
+    {
+      "title": "Carnegie Middle East Center",
+      "app_name": "think-tank-lb-carnegiemec",
+      "url": "https://carnegie-mec.org/rss"
+    },
+    {
+      "title": "Issam Fares Institute for Public Policy and International Affairs",
+      "app_name": "think-tank-lb-ifi",
+      "url": "https://www.aub.edu.lb/ifi/rss"
+    },
+    {
+      "title": "Lebanese Center for Policy Studies",
+      "app_name": "think-tank-lb-lcps",
+      "url": "https://www.lcps-lebanon.org/rss"
+    },
+    {
+      "title": "Policy Center for the New South",
+      "app_name": "think-tank-ma-policycenter",
+      "url": "https://www.policycenter.ma/rss.xml"
+    },
+    {
+      "title": "Moroccan Institute for Policy Analysis",
+      "app_name": "think-tank-ma-mipa",
+      "url": "https://mipa.institute/feed"
+    },
+    {
+      "title": "Institute for National Security Studies",
+      "app_name": "think-tank-il-inss",
+      "url": "https://www.inss.org.il/feed/"
+    },
+    {
+      "title": "Begin-Sadat Center for Strategic Studies",
+      "app_name": "think-tank-il-besa",
+      "url": "https://besacenter.org/feed/"
+    },
+    {
+      "title": "Jerusalem Institute for Strategy and Security",
+      "app_name": "think-tank-il-jiss",
+      "url": "https://jiss.org.il/en/feed/"
+    },
+    {
+      "title": "Moshe Dayan Center for Middle Eastern and African Studies",
+      "app_name": "think-tank-il-dayan",
+      "url": "https://dayan.org/feed/"
+    },
+    {
+      "title": "International Institute for Counter-Terrorism",
+      "app_name": "think-tank-il-ict",
+      "url": "https://www.ict.org.il/feed/"
+    },
+    {
+      "title": "Mitvim – The Israeli Institute for Regional Foreign Policies",
+      "app_name": "think-tank-il-mitvim",
+      "url": "https://mitvim.org.il/en/feed/"
+    },
+    {
+      "title": "International Crisis Group",
+      "app_name": "think-tank-intl-icg",
+      "url": "https://www.crisisgroup.org/rss.xml"
+    },
+    {
+      "title": "Stockholm International Peace Research Institute",
+      "app_name": "think-tank-intl-sipri",
+      "url": "https://www.sipri.org/rss.xml"
+    },
+    {
+      "title": "United Nations University",
+      "app_name": "think-tank-intl-unu",
+      "url": "https://unu.edu/rss.xml"
+    },
+    {
+      "title": "Lowy Institute",
+      "app_name": "think-tank-au-lowyinstitute",
+      "url": "https://www.lowyinstitute.org/publications/rss.xml"
+    },
+    {
+      "title": "Observer Research Foundation",
+      "app_name": "think-tank-in-orf",
+      "url": "https://www.orfonline.org/feed/"
+    },
+    {
+      "title": "Institute for Defence Studies and Analyses",
+      "app_name": "think-tank-in-idsa",
+      "url": "https://idsa.in/rss.xml"
+    },
+    {
+      "title": "Centre for International Governance Innovation",
+      "app_name": "think-tank-ca-cigi",
+      "url": "https://www.cigionline.org/feed/"
+    },
+    {
+      "title": "Japan Institute of International Affairs",
+      "app_name": "think-tank-jp-jiia",
+      "url": "https://www.jiia.or.jp/en/rss.xml"
+    }
+  ]
+}

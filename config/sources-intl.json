@@ -1,0 +1,234 @@
+{
+  "rss": [
+    {
+      "title": "BBC",
+      "app_name": "news-uk-bbc",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "Financial Times",
+      "app_name": "news-uk-ft",
+      "url": "https://www.ft.com/world?format=rss"
+    },
+    {
+      "title": "The Economist",
+      "app_name": "news-uk-economist",
+      "url": "https://www.economist.com/latest/rss.xml"
+    },
+    {
+      "title": "The Guardian",
+      "app_name": "news-uk-guardian",
+      "url": "https://www.theguardian.com/world/rss"
+    },
+    {
+      "title": "Sky News",
+      "app_name": "news-uk-skynews",
+      "url": "https://feeds.skynews.com/feeds/rss/home.xml"
+    },
+    {
+      "title": "Reuters",
+      "app_name": "news-uk-reuters",
+      "url": "https://news.google.com/rss/search?q=site:reuters.com+when:1d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "title": "Associated Press",
+      "app_name": "news-us-ap",
+      "url": "https://news.google.com/rss/search?q=site:apnews.com+when:1d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "title": "New York Times",
+      "app_name": "news-us-nyt",
+      "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml"
+    },
+    {
+      "title": "Washington Post",
+      "app_name": "news-us-wapo",
+      "url": "https://www.washingtonpost.com/arcio/rss/"
+    },
+    {
+      "title": "Wall Street Journal",
+      "app_name": "news-us-wsj",
+      "url": "https://feeds.content.dowjones.io/public/rss/RSSWorldNews"
+    },
+    {
+      "title": "Bloomberg",
+      "app_name": "news-us-bloomberg",
+      "url": "https://feeds.bloomberg.com/politics/news.rss"
+    },
+    {
+      "title": "Foreign Affairs",
+      "app_name": "news-us-foreignaffairs",
+      "url": "https://www.foreignaffairs.com/rss.xml"
+    },
+    {
+      "title": "Foreign Policy",
+      "app_name": "news-us-foreignpolicy",
+      "url": "https://foreignpolicy.com/feed/"
+    },
+    {
+      "title": "Politico",
+      "app_name": "news-us-politico",
+      "url": "https://www.politico.com/rss/politicopicks.xml"
+    },
+    {
+      "title": "The Atlantic",
+      "app_name": "news-us-atlantic",
+      "url": "https://www.theatlantic.com/feed/all/"
+    },
+    {
+      "title": "CNN",
+      "app_name": "news-us-cnn",
+      "url": "https://news.google.com/rss/search?q=site:cnn.com/world+when:1d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "title": "Fox News",
+      "app_name": "news-us-foxnews",
+      "url": "https://moxie.foxnews.com/google-publisher/world.xml"
+    },
+    {
+      "title": "The Hill",
+      "app_name": "news-us-thehill",
+      "url": "https://thehill.com/feed/"
+    },
+    {
+      "title": "NBC News",
+      "app_name": "news-us-nbcnews",
+      "url": "https://news.google.com/rss/search?q=site:nbcnews.com+when:1d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "title": "AFP",
+      "app_name": "news-fr-afp",
+      "url": "https://news.google.com/rss/search?q=site:afp.com+when:1d&hl=fr&gl=FR&ceid=FR:fr"
+    },
+    {
+      "title": "Le Monde",
+      "app_name": "news-fr-lemonde",
+      "url": "https://www.lemonde.fr/rss/une.xml"
+    },
+    {
+      "title": "France 24",
+      "app_name": "news-fr-france24",
+      "url": "https://www.france24.com/fr/rss"
+    },
+    {
+      "title": "Deutsche Welle",
+      "app_name": "news-de-dw",
+      "url": "https://rss.dw.com/xml/rss-de-all"
+    },
+    {
+      "title": "El País",
+      "app_name": "news-es-elpais",
+      "url": "https://feeds.e lpais.com/mrss-s/pages/ep/site/elpais.com/portada"
+    },
+    {
+      "title": "EFE",
+      "app_name": "news-es-efe",
+      "url": "https://news.google.com/rss/search?q=site:efe.com+when:1d&hl=es&gl=ES&ceid=ES:es"
+    },
+    {
+      "title": "ANSA",
+      "app_name": "news-it-ansa",
+      "url": "https://www.ansa.it/sito/ansait_rss.xml"
+    },
+    {
+      "title": "Corriere della Sera",
+      "app_name": "news-it-corriere",
+      "url": "https://www.corriere.it/rss/homepage.xml"
+    },
+    {
+      "title": "Al Jazeera",
+      "app_name": "news-qa-aljazeera",
+      "url": "https://www.aljazeera.com/xml/rss/all.xml"
+    },
+    {
+      "title": "TRT News",
+      "app_name": "news-tr-trt",
+      "url": "https://news.google.com/rss/search?q=site:trtworld.com+when:1d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "title": "Anadolu Agency",
+      "app_name": "news-tr-aa",
+      "url": "https://www.aa.com.tr/tr/rss/default?cat=guncel"
+    },
+    {
+      "title": "Xinhua",
+      "app_name": "news-cn-xinhua",
+      "url": "https://news.google.com/rss/search?q=site:xinhuanet.com+when:1d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "title": "CGTN",
+      "app_name": "news-cn-cgtn",
+      "url": "https://news.google.com/rss/search?q=site:cgtn.com+when:1d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "title": "South China Morning Post",
+      "app_name": "news-hk-scmp",
+      "url": "https://www.scmp.com/rss/91/feed"
+    },
+    {
+      "title": "NHK",
+      "app_name": "news-jp-nhk",
+      "url": "https://www3.nhk.or.jp/rss/news/cat0.xml"
+    },
+    {
+      "title": "Nikkei Asia",
+      "app_name": "news-jp-nikkei",
+      "url": "https://asia.nikkei.com/rss"
+    },
+    {
+      "title": "The Hindu",
+      "app_name": "news-in-thehindu",
+      "url": "https://www.thehindu.com/news/national/feeder/default.rss"
+    },
+    {
+      "title": "Indian Express",
+      "app_name": "news-in-indianexpress",
+      "url": "https://indianexpress.com/section/world/feed/"
+    },
+    {
+      "title": "The Wire",
+      "app_name": "news-in-thewire",
+      "url": "https://thewire.in/feed"
+    },
+    {
+      "title": "Yonhap",
+      "app_name": "news-kr-yonhap",
+      "url": "https://en.yna.co.kr/RSS/news.xml"
+    },
+    {
+      "title": "Haaretz",
+      "app_name": "news-il-haaretz",
+      "url": "https://www.haaretz.com/srv/htz-all-sections"
+    },
+    {
+      "title": "Times of Israel",
+      "app_name": "news-il-toi",
+      "url": "https://www.timesofisrael.com/feed/"
+    },
+    {
+      "title": "CBC",
+      "app_name": "news-ca-cbc",
+      "url": "https://www.cbc.ca/webfeed/rss/rss-world"
+    },
+    {
+      "title": "Globe and Mail",
+      "app_name": "news-ca-globeandmail",
+      "url": "https://news.google.com/rss/search?q=site:theglobeandmail.com+when:1d&hl=en-CA&gl=CA&ceid=CA:en"
+    },
+    {
+      "title": "ABC News",
+      "app_name": "news-au-abc",
+      "url": "https://www.abc.net.au/news/feed/51120/rss.xml"
+    },
+    {
+      "title": "TASS",
+      "app_name": "news-ru-tass",
+      "url": "https://tass.ru/rss/v2.xml"
+    },
+    {
+      "title": "RT",
+      "app_name": "news-ru-rt",
+      "url": "https://russian.rt.com/rss"
+    }
+  ]
+}
