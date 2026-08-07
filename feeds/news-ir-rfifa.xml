@@ -11,6 +11,14 @@
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-129ab80aa250.jpg" />
         </item>
         <item>
+            <pubDate>2026-08-07 18:49:38</pubDate>
+            <title>«صورتش بر اثر ضربات در هم شکسته بود»؛ چگونه حاکمیت طالبان عصر تازه‌ای از قتل زنان را رقم زد</title>
+            <description>تحقیق مشترک روزنامه گاردین و شبکه خبرنگاران زن‌تایمز افغانستان نشان می‌دهد که از زمان بازگشت طالبان به قدرت، قتل زنان در افغانستان در فضایی از مصونیت قضایی، ضعف نهادهای قانونی و پنهان‌کاری رسمی افزایش یافته است. این گزارش که بر پایه بررسی ۲۳۱ پرونده زن‌کشی در ۱۰ ولایت افغانستان تهیه شده، تصویری از خشونت سیستماتیک علیه زنان ارائه می‌دهد؛ خشونتی که در بسیاری از موارد به دست همسران یا اعضای خانواده رخ می‌دهد و اغلب بدون مجازات باقی می‌ماند.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#1d0a5c4d28ee</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-1d0a5c4d28ee.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-1d0a5c4d28ee.jpg" />
+        </item>
+        <item>
             <pubDate>2026-08-07 16:17:41</pubDate>
             <title>تلاش برای شناسایی مهاجران جان‌باخته در هجوم به سئوتا؛ اسپانیا در تدارک دفن قربانیان است</title>
             <description>در حالی که خانواده‌های نگران همچنان در انتظار دریافت خبری از عزیزان مفقود خود هستند، پلیس و کارشناسان پزشکی قانونی اسپانیا با به‌کارگیری نیروهای اضافی در تلاش‌اند هویت اجساد ۸۰ مهاجری را که پس از هجوم گسترده هفته گذشته به منطقه سئوتا پیدا شده‌اند، شناسایی کنند. به گفته مقام‌های اسپانیایی، قرار است بیشتر قربانیان طی روزهای آینده در سئوتا به خاک سپرده شوند. اثر انگشت و نمونه‌ دی‌ان‌ای آن دسته از اجسادی که تا پیش از مراسم تدفین هویتشان مشخص نشده باشد هم نگهداری خواهد شد تا روند شناسایی هویت و یافتن بستگان، به نتیجه برسد.</description>
@@ -129,14 +137,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#286b50c14b8f</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-286b50c14b8f.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-286b50c14b8f.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-08-04 17:12:17</pubDate>
-            <title>رویترز: آمریکا در جنگ با ایران «تقریباً تمام» موشک‌های دقیق دوربرد خود را مصرف کرده است</title>
-            <description>خبرگزاری رویترز امروز به نقل از منابع آگاه نوشت که ارتش ایالات متحده در جریان جنگ پنج‌ماهه با ایران «تقریباً تمام» ذخایر موشک‌های دقیق دوربرد خود را مصرف کرده و این موضوع نگرانی‌هایی را درباره آمادگی نظامی واشنگتن برای مواجهه با درگیری‌های احتمالی آینده برانگیخته است. این تسلیحات عمدتاً شامل موشک‌های زمین‌به‌زمین ارتش آمریکا موسوم به اتکمز (ATACMS) و موشک‌های ضربه هدفمند پریزم (PrSM) هستند. میزان کاهش ذخایر موشک‌های اتکمز و پریزم آمریکا تاکنون گزارش نشده بود.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#2985e141f1df</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-2985e141f1df.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-2985e141f1df.jpg" />
         </item>
     </channel>
 </rss>
