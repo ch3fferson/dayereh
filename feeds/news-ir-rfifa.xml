@@ -11,6 +11,14 @@
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-067d5db18901.jpg" />
         </item>
         <item>
+            <pubDate>2026-08-08 13:12:59</pubDate>
+            <title>انتخابات ریاست‌جمهوری فرانسه؛ گابریل اتل از «دخالت خارجی» روسیه شکایت کرد</title>
+            <description>گابریل اتل، نخست‌وزیر سابق فرانسه که برای انتخابات ریاست‌جمهوری در سال ٢٠٢٧ نامزد شده است، از «شبکه‌های روسی» به دلیل «دخالت خارجی» و عملیات «دستکاری اطلاعات» و «تولید محتوای جعلی» شکایت کرد. پیش از او، نامزدهای دیگر انتخابات از جمله رافائل گلوکسمان و ادوار فیلیپ نیز با کارزارهای تخریب‌کننده‌ای مواجه شدند که به شبکه‌های طرفدار روسیه نسبت داده می‌شد.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#4c33f3988f63</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-4c33f3988f63.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-4c33f3988f63.jpg" />
+        </item>
+        <item>
             <pubDate>2026-08-07 11:03:55</pubDate>
             <title>امضای پیمان دفاعی در مکه: حمله به عربستان، ترکیه یا پاکستان، حمله به هر سه است</title>
             <description>دونالد ترامپ، رئیس‌جمهوری ایالات متحده، اعلام کرد که تنگه هرمز «به‌زودی» باز خواهد شد و اطمینان داد مذاکرات در این باره «بسیار خوب» پیش رفته است. با این حال، قیمت نفت در پی نگرانی‌ها از اجرای طرح پیشنهادی ایران برای کنترل این آبراه راهبردی افزایش یافت؛ طرحی که بر اساس آن، ایران مانع ورود کشتی‌های آمریکایی و اسرائیلی به تنگه هرمز می‌شود. از سوی دیگر، مقامات عربستان، ترکیه و پاکستان روز جمعه ۱۶ مردادماه پیمان دفاعی مشترکی امضا کردند؛ توافقی که مطابق آن، هرگونه حمله به یکی از این کشورها به‌منزله حمله به هر سه تلقی خواهد شد.</description>
@@ -129,14 +137,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#603d203e5ffb</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-603d203e5ffb.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-603d203e5ffb.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-08-04 12:29:41</pubDate>
-            <title>چگونه جامعۀ کوچک مسیحی ارمنیان کابل نابود شد؟</title>
-            <description>زنی ارمنی حدود نود ساله روبه‌روی جان آلفرد گری، پزشک انگلیسی دربار امیرعبدالرحمان‌خان نشست و به گریه گفت: «یک پادشاه مسلمان برای ما کلیسا ساخت، اما مسیحیان آن را ویران کردند.» مقصود پیرزن از مسیحیان، سربازان بریتانیایی است که کلیسای ارمنیان کابل را در ۱۸۷۹، در جریان جنگ دوم انگلیس و افغانستان ویران کردند، این اما نه آغاز و نه پایان داستان مسیحیان کابل بود!</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#20798daacf09</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-20798daacf09.png" medium="image" type="image/png" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-20798daacf09.png" />
         </item>
     </channel>
 </rss>
