@@ -11,6 +11,14 @@
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-2ac92c92d3d8.jpg" />
         </item>
         <item>
+            <pubDate>2026-08-09 18:11:22</pubDate>
+            <title>اوکراین و روسیه یکدیگر را به حملات مرگبار متهم کردند؛ هشت کشته در دو کشور</title>
+            <description>روسیه و اوکراین یکشنبه ١٨‬ مردادماه یکدیگر را به انجام حملات مرگبار متهم کردند؛ این حملات در منطقه بلگورود روسیه ۵‬ کشته و ۲۵ مجروح و در خارکیف اوکراین ۳ کشته و ۳۷ مجروح بر جای گذاشت. هم‌زمان، رئیس‌جمهوری اوکراین از خسارت به بندر اودسا خبر داد و مسکو را به هدف قرار دادن امنیت غذایی جهان متهم کرد.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#30d728fbbaf3</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-30d728fbbaf3.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-30d728fbbaf3.jpg" />
+        </item>
+        <item>
             <pubDate>2026-08-09 16:45:44</pubDate>
             <title>نتانیاهو طرح صلح غزه را رد کرد؛ آینده فلسطین قربانی رقابت‌های سیاسی اسرائیل؟</title>
             <description>بنیامین نتانیاهو، نخست‌وزیر اسرائیل، صراحتاً اعلام کرد که کشورش آخرین طرح ایالات متحده برای صلح در غزه را که مورد قبول حماس قرار گرفته بود، رد می‌کند. این طرح ۱۵ ماده‌ای که توسط «شورای صلح» دونالد ترامپ ارائه شده و آغازگر مرحله دوم طرح صلح بود، خلع سلاح حماس را به عقب‌نشینی تدریجی ارتش اسرائیل گره می‌زد؛ اما نتانیاهو تحت فشارهای متحدان راست‌گرای افراطی خود در آستانۀ انتخابات سراسری، هرگونه عقب‌نشینی را تنها به خلع سلاح «واقعی» این جنبش مشروط کرده است.</description>
@@ -129,14 +137,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#59b7fbb83390</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-59b7fbb83390.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-59b7fbb83390.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-08-06 13:07:24</pubDate>
-            <title>ایران می‌گوید به توافق نهایی با عمان نزدیک شده است؛ مسیر جدید برای کشتی‌رانی در تنگه هرمز؟</title>
-            <description>ایران از نزدیک‌شدن به توافقی با عمان برای تعیین مسیر جدید عبور کشتی‌ها از تنگه هرمز خبر داده، اما جزئیات این طرح و تکلیف دریافت هزینه خدمات از شناورها هم‌چنان مبهم است. در حالی که تهران بر اعمال کنترل این تنگه اصرار دارد و واشنگتن هرگونه نقش نظارتی ایران را تکذیب می‌کند، بازارهای جهانی نفت نیز با بی‌اعتمادی به این توافق، ریسک اختلال در عرضه را هم‌چنان در قیمت‌ها محاسبه می‌کنند.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#af49ea25cf3e</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-af49ea25cf3e.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-af49ea25cf3e.jpg" />
         </item>
     </channel>
 </rss>
