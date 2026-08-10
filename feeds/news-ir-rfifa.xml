@@ -19,6 +19,14 @@
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-ea3822004325.jpg" />
         </item>
         <item>
+            <pubDate>2026-08-10 16:55:48</pubDate>
+            <title>گسترش جبهه مخالفان اینفانتینو در فیفا؛ فراخوان یوفا و دو کنفدراسیون دیگر برای اتحاد «خانواده فوتبال»</title>
+            <description>سه کنفدراسیون فوتبال اروپا (یوفا)، آمریکای شمالی، مرکزی و کارائیب (کونکاکاف) و آسیا (AFC) که خواهان کنار رفتن جانی اینفانتینو از ریاست فیفا هستند، روز دوشنبه تلاش کردند «خانواده فوتبال» را با موضع خود همراه کنند. این سه نهاد معتقدند بحران اخیر تحت مدیریت اینفانتینو اعتماد به رهبری فیفا را به‌طور بنیادین خدشه‌دار کرده است.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#06e3253083bc</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-06e3253083bc.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-06e3253083bc.jpg" />
+        </item>
+        <item>
             <pubDate>2026-08-10 14:15:04</pubDate>
             <title>بازداشت یک پناهجوی افغانستانی در فرانسه، از ادعای فرار از طالبان تا اتهام «نفوذی» و قصد فعالیت تروریستی</title>
             <description>یک پناهنده ۲۸ سالۀ افغانستانی ساکن شهر لورد فرانسه که پیش‌تر مدعی شده بود از سوی طالبان تحت تعقیب بوده، پس از تحقیقات ضدتروریسم به اتهام «مشارکت در طرح جنایات تروریستی»، «تبلیغ و تأمین مالی تروریسم» تفهیم اتهام و زندانی شد. مقام‌های فرانسوی او را مظنون به سفر مخفیانه به افغانستان، آموزش نظامی در کنار طالبان و داشتن انگیزه‌های جهادی پس از بازگشت به فرانسه می‌دانند.</description>
@@ -129,14 +137,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#229ac18c6f01</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-229ac18c6f01.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-229ac18c6f01.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-08-06 11:10:03</pubDate>
-            <title>تهران: توافق با عمان به معنای بازگشایی تنگه هرمز نیست</title>
-            <description>کاظم غریب آبادی، معاون امور حقوقی و بین‌المللی وزارت امور خارجه ایران، چهارشنبه شب از نزدیک شدن تفاهم ایران و عمان درباره ترتیبات جدید تردد کشتی‌های تجاری در تنگه هرمز به مرحله نهایی خبر داده اما تاکید کرد که این تفاهم به معنای بازگشایی کامل تنگه هرمز نیست. ایران می‌گوید تا زمانی که ایالات متحده محاصره بنادر ایران و محدودیت‌های اعمال‌شده بر تردد دریایی به مقصد این کشور را لغو نکند، تنگه هرمز بازگشایی نخواهد شد. از سوی دیگر، درگیری نیروهای اسراییلی و حزب‌الله در جنوب لبنان ادامه دارد. ارتش اسرائیل روز پنج‌شنبه اعلام کرد که دو نظامی نیروی ذخیره این کشور در جریان درگیری با حزب‌الله کشته شده‌اند.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#7f5b05569b8d</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-7f5b05569b8d.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-7f5b05569b8d.jpg" />
         </item>
     </channel>
 </rss>
