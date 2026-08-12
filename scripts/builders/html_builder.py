@@ -700,9 +700,18 @@ a {{ color: inherit; text-decoration: none; }}
 .section-dot {{ width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }}
 .section-title {{ font-size: 0.98rem; font-weight: 900; letter-spacing: -0.01em; }}
 .price-section {{ display: flex; flex-direction: column; gap: 0.9rem; }}
-.price-strip {{ display: flex; gap: 0.7rem; overflow-x: auto; scrollbar-width: none; }}
+.price-strip {{
+    display: flex;
+    gap: 0.7rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding: 0.4rem 0.1rem 0.5rem;
+    margin: -0.4rem -0.1rem -0.5rem;
+}}
 .price-strip::-webkit-scrollbar {{ display: none; }}
 .price-card {{
+    position: relative;
+    z-index: 1;
     flex: 0 0 152px;
     padding: 1rem 1.1rem;
     border-radius: 14px;
@@ -713,7 +722,7 @@ a {{ color: inherit; text-decoration: none; }}
     gap: 0.4rem;
     transition: border-color 0.15s ease, transform 0.15s ease;
 }}
-.price-card:hover {{ border-color: var(--border-strong); transform: translateY(-1px); }}
+.price-card:hover {{ border-color: var(--border-strong); transform: translateY(-2px); z-index: 2; }}
 .price-card.hidden-by-search {{ display: none; }}
 .price-currency {{ font-size: 0.74rem; color: var(--text-secondary); font-weight: 700; }}
 .price-value {{ font-size: 1.2rem; font-weight: 900; letter-spacing: -0.01em; }}
@@ -843,23 +852,28 @@ a {{ color: inherit; text-decoration: none; }}
 .modal-overlay.active {{ display: block; }}
 .modal-close {{
     position: fixed;
-    top: 1.1rem;
-    left: 1.1rem;
+    top: max(0.9rem, env(safe-area-inset-top));
+    left: max(0.9rem, calc((100vw - 720px) / 2 + 0.9rem));
+    right: auto;
     z-index: 5100;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
     border-radius: 50%;
     border: 1px solid var(--border);
-    background: var(--surface);
+    background: color-mix(in srgb, var(--surface) 92%, transparent);
     color: var(--text-secondary);
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: var(--shadow);
-    transition: border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: border-color 0.15s ease, color 0.15s ease, transform 0.15s ease, background 0.15s ease;
 }}
-.modal-close:hover {{ border-color: var(--border-strong); color: var(--text); transform: scale(1.05); }}
+.modal-close:hover {{ border-color: var(--border-strong); color: var(--text); background: var(--surface); transform: scale(1.04); }}
+.modal-close:active {{ transform: scale(0.96); }}
 .news-modal {{ width: 100%; max-width: 720px; margin: 0 auto; min-height: 100vh; background: var(--bg); }}
 .modal-media {{ width: 100%; aspect-ratio: 16/9; background: #000; position: relative; }}
 .modal-media.is-empty {{ display: none; }}
@@ -1006,33 +1020,14 @@ a {{ color: inherit; text-decoration: none; }}
 .media-gallery-next {{
     left: 0.9rem;
 }}
-.media-gallery-counter {{
-    position: absolute;
-    top: 0.9rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 4;
-    min-width: 54px;
-    padding: 0.28rem 0.65rem;
-    border: 1px solid rgba(255,255,255,0.14);
-    border-radius: 999px;
-    background: rgba(0,0,0,0.52);
-    color: #fff;
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-align: center;
-    direction: ltr;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-}}
 .media-gallery-progress {{
     position: absolute;
     right: 0.9rem;
     left: 0.9rem;
     bottom: 0.85rem;
-    height: 3px;
+    height: 2px;
     display: flex;
-    gap: 3px;
+    gap: 2px;
     z-index: 4;
     pointer-events: none;
 }}
@@ -1093,9 +1088,6 @@ a {{ color: inherit; text-decoration: none; }}
     .media-gallery-next {{
         left: 0.65rem;
     }}
-    .media-gallery-counter {{
-        top: 0.65rem;
-    }}
     .media-gallery-progress {{
         right: 0.65rem;
         left: 0.65rem;
@@ -1105,7 +1097,7 @@ a {{ color: inherit; text-decoration: none; }}
 .modal-inner {{ padding: 1.7rem 1.7rem 3rem; max-width: 720px; margin: 0 auto; }}
 .modal-source-row {{ display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.7rem; }}
 .modal-source {{ font-size: 0.78rem; font-weight: 700; color: var(--accent); }}
-.modal-date {{ font-size: 0.78rem; color: var(--text-tertiary); }}
+.modal-date {{ font-size: 0.78rem; color: var(--text-tertiary); direction: rtl; unicode-bidi: isolate; }}
 .modal-title {{ font-size: 1.5rem; font-weight: 900; line-height: 1.6; letter-spacing: -0.01em; margin-bottom: 1.2rem; }}
 .modal-content {{ font-size: 1.04rem; line-height: 2; color: var(--text); text-align: justify; }}
 .modal-related {{ display: none; margin-top: 1.8rem; padding-top: 1.5rem; border-top: 1px solid var(--divider); }}
@@ -1124,9 +1116,11 @@ a {{ color: inherit; text-decoration: none; }}
     align-items: center;
     justify-content: center;
 }}
-.related-text {{ min-width: 0; display: flex; flex-direction: column; gap: 0.2rem; justify-content: center; }}
+.related-text {{ min-width: 0; display: flex; flex-direction: column; gap: 0.2rem; justify-content: center; flex: 1; }}
 .related-source {{ font-size: 0.7rem; color: var(--accent); font-weight: 700; }}
-.related-title {{ font-size: 0.86rem; line-height: 1.6; color: var(--text); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }}
+.related-title-row {{ display: flex; align-items: baseline; gap: 0.45rem; min-width: 0; }}
+.related-title {{ min-width: 0; flex: 1; font-size: 0.86rem; line-height: 1.6; color: var(--text); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }}
+.related-date {{ flex: 0 0 auto; color: var(--text-tertiary); font-size: 0.68rem; line-height: 1.5; white-space: nowrap; direction: rtl; unicode-bidi: isolate; }}
 .ai-summary-header {{ display: flex; flex-direction: column; gap: 0.55rem; margin-bottom: 1.6rem; }}
 .ai-summary-badge {{ display: flex; align-items: center; gap: 0.5rem; color: var(--text); font-size: 1.15rem; font-weight: 900; }}
 .ai-summary-badge svg {{ color: var(--accent); flex: 0 0 auto; }}
@@ -1223,6 +1217,13 @@ a {{ color: inherit; text-decoration: none; }}
     .feed-grid {{ grid-template-columns: repeat(2, 1fr); }}
 }}
 @media (max-width: 640px) {{
+    .modal-close {{
+        top: max(0.75rem, env(safe-area-inset-top));
+        right: max(0.75rem, env(safe-area-inset-right));
+        left: auto;
+        width: 44px;
+        height: 44px;
+    }}
     .feed-grid {{ grid-template-columns: 1fr; }}
     .header-top {{ flex-wrap: wrap; }}
     .header-actions {{ display: flex; align-items: center; flex: 1 1 100%; justify-content: space-between; }}
@@ -1322,15 +1323,11 @@ a {{ color: inherit; text-decoration: none; }}
             <div class="media-gallery" id="mediaGallery" style="display:none">
                 <div class="media-gallery-stage" id="mediaGalleryStage"></div>
                 <button class="media-gallery-control media-gallery-prev" id="mediaGalleryPrev" type="button" aria-label="رسانه قبلی">
-                    
-                    
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
-                    
                 </button>
                 <button class="media-gallery-control media-gallery-next" id="mediaGalleryNext" type="button" aria-label="رسانه بعدی">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
                 </button>
-                <span class="media-gallery-counter" id="mediaGalleryCounter"></span>
                 <div class="media-gallery-progress" id="mediaGalleryProgress"></div>
                 <button class="media-gallery-fullscreen" type="button" onclick="toggleFullscreen('mediaGallery')" aria-label="تمام‌صفحه">{fullscreen_icon_svg}</button>
             </div>
@@ -1444,7 +1441,6 @@ var mediaGallery = document.getElementById("mediaGallery");
 var mediaGalleryStage = document.getElementById("mediaGalleryStage");
 var mediaGalleryPrev = document.getElementById("mediaGalleryPrev");
 var mediaGalleryNext = document.getElementById("mediaGalleryNext");
-var mediaGalleryCounter = document.getElementById("mediaGalleryCounter");
 var mediaGalleryProgress = document.getElementById("mediaGalleryProgress");
 var video = document.getElementById("modalVideo");
 var playerEl = document.getElementById("mediaPlayer");
@@ -1555,18 +1551,16 @@ function preloadGalleryMedia(index) {{
 
 function updateGalleryControls() {{
     var total = mediaState.items.length;
-    var hasMultiple = total > 1;
+    var isSingle = !(total > 1);
 
-    mediaGalleryPrev.hidden = !hasMultiple;
-    mediaGalleryNext.hidden = !hasMultiple;
-    mediaGalleryCounter.hidden = !hasMultiple;
-    mediaGalleryProgress.hidden = !hasMultiple;
+    mediaGalleryPrev.disabled = isSingle;
+    mediaGalleryNext.disabled = isSingle;
+    mediaGalleryProgress.hidden = isSingle;
 
-    if (!hasMultiple) return;
+    if (isSingle) return;
 
     mediaGalleryPrev.disabled = mediaState.index === 0;
     mediaGalleryNext.disabled = mediaState.index === total - 1;
-    mediaGalleryCounter.textContent = (mediaState.index + 1) + " / " + total;
 
     mediaGalleryProgress.querySelectorAll(".media-gallery-progress-item").forEach(function(item, index) {{
         item.classList.toggle("active", index === mediaState.index);
@@ -1754,12 +1748,22 @@ function renderRelated(related) {{
         sourceEl.className = "related-source";
         sourceEl.textContent = item.source || "";
 
+        var titleRow = document.createElement("div");
+        titleRow.className = "related-title-row";
+
         var titleEl = document.createElement("div");
         titleEl.className = "related-title";
         titleEl.textContent = item.title || "";
 
+        var dateEl = document.createElement("span");
+        dateEl.className = "related-date";
+        dateEl.textContent = item.date ? timeAgo(item.date) : "";
+
+        titleRow.appendChild(titleEl);
+        if (dateEl.textContent) titleRow.appendChild(dateEl);
+
         textWrap.appendChild(sourceEl);
-        textWrap.appendChild(titleEl);
+        textWrap.appendChild(titleRow);
         el.appendChild(textWrap);
         list.appendChild(el);
     }});
