@@ -112,19 +112,26 @@ class Telegram:
 
     @staticmethod
     def _own_elements(post, selector):
-        """
-        Returns all elements matching `selector` that belong to the post
-        itself, in document order, skipping anything nested inside a
-        quoted reply block (`.tgme_widget_message_reply`), since that
-        subtree describes the message being replied to, not the post
-        being parsed. Grouped albums (galleries) repeat the same media
-        markup once per attachment, so returning every match (not just
-        the first) is what lets multi-media posts be captured in full.
-        """
-        return [
-            el for el in post.select(selector)
-            if el.find_parent(class_=REPLY_CLASS) is None
-        ]
+        elements = []
+
+        for el in post.select(selector):
+            if el.find_parent(class_=REPLY_CLASS) is not None:
+                continue
+
+            if el.name == "img":
+                profile_parent = el.find_parent(
+                    class_=[
+                        "tgme_widget_message_user_photo",
+                        "tgme_widget_message_author_photo",
+                    ]
+                )
+
+                if profile_parent is not None:
+                    continue
+
+            elements.append(el)
+
+        return elements
 
     @classmethod
     def _first_own(cls, post, selector):
