@@ -11,6 +11,14 @@
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-d880c3ab093a.jpg" />
         </item>
         <item>
+            <pubDate>2026-08-12 13:26:23</pubDate>
+            <title>بن‌بست تنگۀ هرمز: تنها هشت کشتی در عرض یک روز</title>
+            <description>بعد از هفته‌ها کشاکش، درگیری و مذاکره، به نظر می‌رسد هیچ تغییر جدی در وضعیت تنگۀ هرمز ایجاد نشده. تهران بر انسداد تنگه تأکید دارد و برای باز شدن آن شرایط حداکثری تعیین می‌کند، در حالی که دونالد ترامپ می‌گوید این گذرگاه در اختیار آمریکاست.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#8f9dc869d890</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-8f9dc869d890.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-8f9dc869d890.jpg" />
+        </item>
+        <item>
             <pubDate>2026-08-11 11:09:08</pubDate>
             <title>ایالات متحده قصد دارد از ایران «غرامت» مطالبه کند</title>
             <description>دونالد ترامپ، رئیس‌جمهوری آمریکا، روز دوشنبه ۱۹ مرداد/۱۰ اوت، در واکنش به درخواست جمهوری اسلامی برای دریافت غرامت بابت خسارات جنگ، اعلام کرد که ایالات متحده نیز قصد دارد بابت کشته و زخمی شدن نیروهای آمریکایی‌ و اقداماتی که ایران طی سال‌های گذشته علیه مخالفان خود در خارج از کشور یا معترضان در داخل ایران انجام داده است، «غرامت» مطالبه کند. رئیس‌جمهوری آمریکا تأکید کرد که این درخواست در هرگونه مذاکره با ایران، «با قاطعیت» مطرح خواهد شد. در همین حال، در پی یکی از شدیدترین موجهای حملات اسرائیل، نیروی موقت سازمان ملل متحد در لبنان (یونیفل) نسبت به افزایش حملات و همچنین نفوذ نیروهای این کشور به جنوب لبنان هشدار داد.</description>
@@ -129,14 +137,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#3bfe6ab38572</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-3bfe6ab38572.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-3bfe6ab38572.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-08-11 19:01:56</pubDate>
-            <title>قانون عفو مشروط مبارزان کرد توسط پارلمان ترکیه تصویب شد</title>
-            <description>پارلمان ترکیه روز دوشنبه چارچوب قانونی برای خلع سلاح و ادغام مجدد حزب کارگران کردستان (پ.ک.ک) را تصویب کرد. این پیشرفت، گامی کلیدی در جهت پایان دادن به یک درگیری چند دهه‌ای تلقی شده است.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#fa6c6f69907f</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-fa6c6f69907f.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-fa6c6f69907f.jpg" />
         </item>
     </channel>
 </rss>
