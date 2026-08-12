@@ -19,6 +19,14 @@
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-31330b4a583f.jpg" />
         </item>
         <item>
+            <pubDate>2026-08-12 19:18:26</pubDate>
+            <title>خورشیدگرفتگی کامل</title>
+            <description>امشب یک خورشیدگرفتگی کامل صورت میگیرد که سرزمین اصلی آن اسپانیا است و تابستان آینده رویدادی حتی طولانی‌تر نیز در راه است.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#56443b074f00</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-56443b074f00.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-56443b074f00.jpg" />
+        </item>
+        <item>
             <pubDate>2026-08-12 17:17:24</pubDate>
             <title>نگرانی سازمان جهانی بهداشت از سیاست‌های ضد واکسن دولت ترامپ</title>
             <description>دونالد ترامپ در فرمان جدیدش کاهش واکسیناسیون را برای کودکان توصیه می‌کند. او این فرمان را تحت تأثیر عقاید بی‌پایۀ وزیر بهداشت خود امضا کرده است. رابرت اف. کندی جونیور عمیقاً باور دارد که گسترش واکسیناسیون در آمریکا باعث افزایش بیماری اوتیسم شده است.</description>
@@ -129,14 +137,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#06e3253083bc</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-06e3253083bc.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-06e3253083bc.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-08-10 14:15:04</pubDate>
-            <title>بازداشت یک پناهجوی افغانستانی در فرانسه، از ادعای فرار از طالبان تا اتهام «نفوذی» و قصد فعالیت تروریستی</title>
-            <description>یک پناهنده ۲۸ سالۀ افغانستانی ساکن شهر لورد فرانسه که پیش‌تر مدعی شده بود از سوی طالبان تحت تعقیب بوده، پس از تحقیقات ضدتروریسم به اتهام «مشارکت در طرح جنایات تروریستی»، «تبلیغ و تأمین مالی تروریسم» تفهیم اتهام و زندانی شد. مقام‌های فرانسوی او را مظنون به سفر مخفیانه به افغانستان، آموزش نظامی در کنار طالبان و داشتن انگیزه‌های جهادی پس از بازگشت به فرانسه می‌دانند.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#b66951480638</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-b66951480638.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-b66951480638.jpg" />
         </item>
     </channel>
 </rss>
