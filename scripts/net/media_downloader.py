@@ -1,10 +1,12 @@
 import time
 import requests
 import shutil
+
 from pathlib import Path
 from urllib.parse import urlparse
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
+
 from utils.path_utils import PathUtils
 from converters.media_type import MediaType
 from converters.media_compressor import MediaCompressor
@@ -15,7 +17,7 @@ class MediaDownloader:
     MAX_ATTEMPTS = 3
     BACKOFF_FACTOR = 1.0
 
-    def __init__(self, storage:PathUtils):
+    def __init__(self, storage: PathUtils):
         self.storage = storage
 
         self.session = self._build_session()
@@ -24,6 +26,8 @@ class MediaDownloader:
             image_quality=70,
             video_crf=30
         )
+
+        self.valid_files: set[str] = set()
 
     def _build_session(self) -> requests.Session:
         session = requests.Session()
@@ -50,42 +54,73 @@ class MediaDownloader:
 
     def download(self, url: str, post_id: str):
 
-            parsed = urlparse(url)
+        parsed = urlparse(url)
 
-            ext = Path(parsed.path).suffix.lower()
+        ext = Path(parsed.path).suffix.lower()
 
-            if not MediaType.is_supported_ext(ext):
-                return None
+        if not MediaType.is_supported_ext(ext):
+            return None
 
-            filename = f"{post_id.replace('/','_')}{ext}"
+        filename = f"{post_id.replace('/', '_')}{ext}"
+        destination = self.storage.media / filename
 
-            destination = self.storage.media / filename
+        if destination.is_file():
+            self.valid_files.add(filename)
+            return filename
 
-            last_error = None
+        last_error = None
 
-            for attempt in range(self.MAX_ATTEMPTS):
+        for attempt in range(self.MAX_ATTEMPTS):
 
-                try:
+            try:
 
-                    with self.session.get(url, stream=True, timeout=20) as r:
+                with self.session.get(
+                    url,
+                    stream=True,
+                    timeout=20
+                ) as r:
 
-                        r.raise_for_status()
+                    r.raise_for_status()
 
-                        with open(destination, "wb") as f:
-                            shutil.copyfileobj(r.raw, f)
+                    with open(destination, "wb") as f:
+                        shutil.copyfileobj(r.raw, f)
 
-                    self.compressor.compress(
-                        str(destination)
+                self.compressor.compress(
+                    str(destination)
+                )
+
+                self.valid_files.add(filename)
+
+                return filename
+
+            except Exception as e:
+
+                last_error = e
+
+                destination.unlink(missing_ok=True)
+
+                if attempt < self.MAX_ATTEMPTS - 1:
+                    time.sleep(
+                        self.BACKOFF_FACTOR * (2 ** attempt)
                     )
 
-                    return f"{filename}"
+        print(f"error: {last_error}")
 
-                except Exception as e:
-                    last_error = e
-                    destination.unlink(missing_ok=True)
+        return None
 
-                    if attempt < self.MAX_ATTEMPTS - 1:
-                        time.sleep(self.BACKOFF_FACTOR * (2 ** attempt))
+    def cleanup(self):
+        media_directory = self.storage.media
 
-            print(f"error: {last_error}")
-            return None
+        if not media_directory.exists():
+            return
+
+        for file in media_directory.iterdir():
+
+            if not file.is_file():
+                continue
+
+            if file.name not in self.valid_files:
+                try:
+                    file.unlink()
+                except OSError as e:
+                    print(f"error removing {file.name}: {e}")
