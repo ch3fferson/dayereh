@@ -783,19 +783,6 @@ a {{ color: inherit; text-decoration: none; }}
 }}
 .news-card.is-read .card-source {{ color: var(--text-tertiary); }}
 .news-card.is-read .card-excerpt {{ color: var(--text-secondary); }}
-.news-card::before {{
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 3px;
-    background: var(--accent);
-    opacity: 0;
-    transition: opacity 0.2s ease;
-    z-index: 2;
-}}
-.news-card:not(.is-read)::before {{ opacity: 1; }}
 .card-media {{
     width: 100%;
     aspect-ratio: 16/10;
@@ -1246,8 +1233,8 @@ a {{ color: inherit; text-decoration: none; }}
 @media (max-width: 640px) {{
     .modal-close {{
         top: max(0.75rem, env(safe-area-inset-top));
-        right: max(0.75rem, env(safe-area-inset-right));
-        left: auto;
+        left: max(0.75rem, env(safe-area-inset-right));
+        right: auto;
         width: 44px;
         height: 44px;
     }}
@@ -1349,7 +1336,6 @@ a {{ color: inherit; text-decoration: none; }}
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
                 </button>
                 <div class="slider-ui">
-                    <div class="slider-progress" id="sliderProgress"></div>
                     <div class="slider-video-controls" id="sliderVideoControls">
                         <button class="slider-btn" type="button" id="sliderPlayBtn" aria-label="پخش/توقف">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
@@ -1360,6 +1346,7 @@ a {{ color: inherit; text-decoration: none; }}
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path></svg>
                         </button>
                     </div>
+                    <div class="slider-progress" id="sliderProgress"></div>
                     <div class="slider-meta-row">
                         <span class="slider-counter" id="sliderCounter">1 / 1</span>
                         <div class="slider-actions">
@@ -1786,6 +1773,7 @@ function pointerUp() {{
 
     var wasHorizontal = mediaState.locked === "h";
     var dx = mediaState.currentX - mediaState.startX;
+    var startIndex = mediaState.index;
 
     mediaState.dragging = false;
     mediaState.locked = null;
@@ -1799,9 +1787,13 @@ function pointerUp() {{
     if (Math.abs(dx) > 10) mediaState.suppressClick = true;
 
     var threshold = Math.max(40, mediaState.width * 0.15);
-    if (dx > threshold) prevSlide();
-    else if (dx < -threshold) nextSlide();
-    else goToSlide(mediaState.index, true);
+    if (dx > threshold && startIndex > 0) {{
+        goToSlide(startIndex - 1, true);
+    }} else if (dx < -threshold && startIndex < mediaState.items.length - 1) {{
+        goToSlide(startIndex + 1, true);
+    }} else {{
+        goToSlide(startIndex, true);
+    }}
 }}
 
 slider.addEventListener("touchstart", function(e) {{
@@ -1841,14 +1833,22 @@ window.addEventListener("mouseup", function() {{
 }});
 
 window.addEventListener("resize", function() {{
+    syncSliderPosition(false);
+}});
+
+function syncSliderPosition(animate) {{
     if (!mediaState.items.length) return;
     mediaState.width = getSlideWidth();
-    sliderTrack.classList.add("is-dragging");
+    if (animate === false) sliderTrack.classList.add("is-dragging");
+    else sliderTrack.classList.remove("is-dragging");
     sliderTrack.style.transform = "translate3d(" + (-mediaState.index * mediaState.width) + "px,0,0)";
-    requestAnimationFrame(function() {{
-        sliderTrack.classList.remove("is-dragging");
-    }});
-}});
+    if (animate === false) {{
+        void sliderTrack.offsetWidth;
+        requestAnimationFrame(function() {{
+            sliderTrack.classList.remove("is-dragging");
+        }});
+    }}
+}}
 
 function toggleSliderFullscreen() {{
     var el = modalMedia;
@@ -1861,6 +1861,13 @@ function toggleSliderFullscreen() {{
         else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
     }}
 }}
+
+document.addEventListener("fullscreenchange", function() {{
+    syncSliderPosition(false);
+}});
+document.addEventListener("webkitfullscreenchange", function() {{
+    syncSliderPosition(false);
+}});
 
 function getFocusable(container) {{
     return Array.prototype.slice.call(container.querySelectorAll(
@@ -2122,20 +2129,39 @@ document.querySelectorAll(".chip[data-chip-target]").forEach(function(chip) {{
     chipMap.set(chip.dataset.chipTarget, chip);
 }});
 
-function setActiveChip(sectionId) {{
+var chipSpyPaused = false;
+var chipSpyResumeTimer = null;
+var activeChipId = null;
+
+function setActiveChip(sectionId, scrollChip) {{
+    if (sectionId === activeChipId) return;
+    activeChipId = sectionId;
     chipMap.forEach(function(chip) {{ chip.classList.remove("active"); }});
     var chip = chipMap.get(sectionId);
     if (chip) {{
         chip.classList.add("active");
-        chip.scrollIntoView({{ behavior: "smooth", inline: "center", block: "nearest" }});
+        if (scrollChip !== false) {{
+            chip.scrollIntoView({{ behavior: "smooth", inline: "center", block: "nearest" }});
+        }}
     }}
+}}
+
+function getHeaderOffset() {{
+    var header = document.querySelector(".app-header");
+    if (header) return Math.ceil(header.getBoundingClientRect().height) + 8;
+    return window.innerWidth <= 640 ? 190 : 130;
 }}
 
 function jumpToSection(sectionId) {{
     var section = document.getElementById(sectionId);
     if (!section) return;
 
-    var offset = window.innerWidth <= 640 ? 190 : 130;
+    chipSpyPaused = true;
+    if (chipSpyResumeTimer) clearTimeout(chipSpyResumeTimer);
+
+    setActiveChip(sectionId, true);
+
+    var offset = getHeaderOffset();
     var position = section.getBoundingClientRect().top + window.scrollY - offset;
 
     window.scrollTo({{
@@ -2143,20 +2169,45 @@ function jumpToSection(sectionId) {{
         behavior: "smooth"
     }});
 
-    setActiveChip(sectionId);
+    chipSpyResumeTimer = setTimeout(function() {{
+        chipSpyPaused = false;
+        chipSpyResumeTimer = null;
+    }}, 900);
 }}
 
 if (chipMap.size > 0 && "IntersectionObserver" in window) {{
-    var spyObserver = new IntersectionObserver(function(entries) {{
-        var visible = entries.filter(function(entry) {{ return entry.isIntersecting; }});
-        if (visible.length > 0) {{
-            visible.sort(function(a, b) {{ return b.intersectionRatio - a.intersectionRatio; }});
-            setActiveChip(visible[0].target.id);
-        }}
-    }}, {{ rootMargin: "-15% 0px -70% 0px", threshold: [0, 0.25, 0.5, 0.75, 1] }});
+    function buildSpyObserver() {{
+        var top = getHeaderOffset();
+        return new IntersectionObserver(function(entries) {{
+            if (chipSpyPaused) return;
+            var visible = entries.filter(function(entry) {{ return entry.isIntersecting; }});
+            if (visible.length > 0) {{
+                visible.sort(function(a, b) {{
+                    return a.boundingClientRect.top - b.boundingClientRect.top;
+                }});
+                setActiveChip(visible[0].target.id, true);
+            }}
+        }}, {{
+            rootMargin: "-" + top + "px 0px -55% 0px",
+            threshold: [0, 0.05, 0.1, 0.25, 0.5, 1]
+        }});
+    }}
 
+    var spyObserver = buildSpyObserver();
     document.querySelectorAll("[data-source-section]").forEach(function(section) {{
         spyObserver.observe(section);
+    }});
+
+    var spyResizeTimer = null;
+    window.addEventListener("resize", function() {{
+        if (spyResizeTimer) clearTimeout(spyResizeTimer);
+        spyResizeTimer = setTimeout(function() {{
+            spyObserver.disconnect();
+            spyObserver = buildSpyObserver();
+            document.querySelectorAll("[data-source-section]").forEach(function(section) {{
+                spyObserver.observe(section);
+            }});
+        }}, 150);
     }});
 }}
 
