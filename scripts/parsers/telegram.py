@@ -160,14 +160,14 @@ class Telegram:
                 option.get_text(" ", strip=True)
                 for option in self._own_elements(post, ".tgme_widget_message_poll_option_text")
             ]
-            parts = [f"📊 {poll_question.get_text(' ', strip=True)}"]
+            parts = [f"{poll_question.get_text(' ', strip=True)}"]
             parts.extend(f"— {option}" for option in own_options)
             return StringUtils.remove_html_shenanigans(" ".join(parts)).strip()
 
         document_title = self._first_own(post, ".tgme_widget_message_document_title")
         if document_title:
             return StringUtils.remove_html_shenanigans(
-                f"📄 {document_title.get_text(' ', strip=True)}"
+                f"{document_title.get_text(' ', strip=True)}"
             ).strip()
 
         link_preview = self._first_own(post, ".tgme_widget_message_link_preview")
@@ -184,19 +184,19 @@ class Telegram:
                 return StringUtils.remove_html_shenanigans(" — ".join(preview_parts)).strip()
 
         if self._first_own(post, ".tgme_widget_message_voice"):
-            return "🎤 پیام صوتی"
+            return "پیام صوتی"
 
         if len(media_urls) > 1:
-            return f"🖼 گالری ({len(media_urls)} رسانه)"
+            return f"گالری ({len(media_urls)} رسانه)"
 
         if self._first_own(post, "video"):
-            return "🎬 ویدیو"
+            return "ویدیو"
 
         if self._first_own(post, ".tgme_widget_message_photo_wrap"):
-            return "🖼 تصویر"
+            return "تصویر"
 
         if self._first_own(post, "img"):
-            return "🖼 تصویر"
+            return "تصویر"
 
         return ""
 
