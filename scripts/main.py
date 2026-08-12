@@ -54,7 +54,25 @@ class App:
         self.xml_builder = XMLBuilder()
         self.html_builder = HTMLBuilder(self.storage)
 
-        self.storage.clear_media()
+    def _load_cached_prices(self) -> dict:
+        path = BASE / "feeds" / "prices.json"
+
+        try:
+            if not path.exists():
+                return {}
+
+            data = json.loads(
+                path.read_text(encoding="utf-8")
+            )
+
+            return {
+                item["currency"]: item
+                for item in data
+                if isinstance(item, dict) and "currency" in item
+            }
+
+        except (OSError, json.JSONDecodeError, TypeError):
+            return {}
 
     def _process_source(self, kind: str, source: dict) -> dict | None:
 
@@ -94,65 +112,101 @@ class App:
     def run(self):
 
         prices = []
+        cached_prices = self._load_cached_prices()
         now = TimeUtils.to_string(TimeUtils.now())
 
         for currency in self.config.get("tgju", []):
 
+            title = currency["title"]
+
             try:
-            
+
                 data = self.tgju_parser.find(currency["slang"])
 
                 price_rial = data.price
-                readable_price_toman = f"{price_rial / 10:,.0f}" if price_rial % 10 == 0 else f"{price_rial / 10:,.2f}"
 
-                if data.time:
-                    formatted_time = TimeUtils.to_string(TimeUtils.parse_persian_time())
-                else:
-                    formatted_time = now
+                readable_price_toman = (
+                    f"{price_rial / 10:,.0f}"
+                    if price_rial % 10 == 0
+                    else f"{price_rial / 10:,.2f}"
+                )
+
+                formatted_time = (
+                    TimeUtils.to_string(TimeUtils.parse_persian_time())
+                    if data.time
+                    else now
+                )
 
                 prices.append({
-                    "currency": currency["title"],
+                    "currency": title,
                     "price": readable_price_toman,
-                    "time": formatted_time
+                    "time": formatted_time,
                 })
 
-                print(f"✓ TGJU -> {currency['title']}")
+                print(f"✓ TGJU -> {title}")
 
             except Exception as e:
-                print(f"⚠ TGJU failed -> {currency['title']}")
-                print(f"error: {e}")
+
+                cached = cached_prices.get(title)
+
+                if cached:
+                    prices.append(cached)
+                    print(f"↻ TGJU -> {title} (cached)")
+                else:
+                    print(f"⚠ TGJU failed -> {title}")
+                    print(f"error: {e}")
+
 
         for currency in self.config.get("live-rates", []):
 
+            title = currency["title"]
+
             try:
-            
-                data = self.live_rates_parser.get(currency['currency'])
+
+                data = self.live_rates_parser.get(
+                    currency["currency"]
+                )
+
+                if data is None:
+                    raise ValueError("rate not found")
 
                 prices.append({
-                    "currency": currency["title"],
+                    "currency": title,
                     "price": data.rate,
-                    "time": TimeUtils.from_timestamp(data.timestamp, fmt="%Y-%m-%d %H:%M:%S")
+                    "time": TimeUtils.from_timestamp(
+                        data.timestamp,
+                        fmt="%Y-%m-%d %H:%M:%S",
+                    ),
                 })
 
-                print(f"✓ Live Rates -> {currency['title']}")
+                print(f"✓ Live Rates -> {title}")
 
             except Exception as e:
-                print(f"⚠ Live Rates failed -> {currency['title']}")
-                print(f"error: {e}")
+
+                cached = cached_prices.get(title)
+
+                if cached:
+                    prices.append(cached)
+                    print(f"↻ Live Rates -> {title} (cached)")
+                else:
+                    print(f"⚠ Live Rates failed -> {title}")
+                    print(f"error: {e}")
+
 
         try:
 
             json_data = self.json_builder.build(prices)
-        
+
             self.storage.save_json(
                 "prices",
-                json_data
+                json_data,
             )
 
-            print(f"✓ feeds/prices.json generated")
+            print("✓ feeds/prices.json generated")
 
         except Exception as e:
-            print(f"⚠ feeds/prices.json was not generated")
+
+            print("⚠ feeds/prices.json was not generated")
             print(f"error: {e}")
 
         telegram_sources = self.config.get("telegram", [])
