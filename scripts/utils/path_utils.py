@@ -1,4 +1,3 @@
-import shutil
 from pathlib import Path
 
 
@@ -24,10 +23,3 @@ class PathUtils:
     def save_html(self, html: str):
         self.view.mkdir(parents=True, exist_ok=True)
         (self.view / "index.html").write_text(html, encoding="utf-8")
-
-    def clear_media(self):
-
-        if self.media.exists():
-            shutil.rmtree(self.media)
-
-        self.media.mkdir(parents=True, exist_ok=True)
