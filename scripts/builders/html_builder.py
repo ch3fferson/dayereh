@@ -287,7 +287,7 @@ class HTMLBuilder:
     data-anchor="{anchor}"
     aria-label="{safe_title}"
     onkeydown="if(event.key==='Enter'||event.key===' '){{event.preventDefault();this.click();}}"
-    onclick='this.classList.add("is-read");markRead(`{anchor}`);openNewsModal(`{safe_lang}`,`{safe_title}`,`{safe_content}`,`{safe_date}`,`{safe_link}`,`{source}`,JSON.parse(`{media_json}`),JSON.parse(`{related_json}`))'
+    onclick='this.classList.add("is-read");markRead(`{anchor}`);openNewsModal(`{safe_lang}`,`{safe_title}`,`{safe_content}`,`{safe_date}`,`{safe_link}`,`{source}`,JSON.parse(`{media_json}`),JSON.parse(`{related_json}`),this)'
 ><a id="{anchor}" class="anchor-marker"></a>
     {media_block}
     <div class="card-body">
@@ -506,7 +506,10 @@ _PAGE_TEMPLATE = """<!DOCTYPE html>
     color-scheme: dark;
 }}
 * {{ margin: 0; padding: 0; box-sizing: border-box; }}
-html {{ scroll-behavior: smooth; }}
+html {{
+    scroll-behavior: smooth;
+    transition: background-color 0.22s ease, color 0.22s ease;
+}}
 body {{
     background: var(--bg);
     color: var(--text);
@@ -514,6 +517,7 @@ body {{
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    transition: background-color 0.22s ease, color 0.22s ease;
 }}
 body.modal-open {{ overflow: hidden; }}
 a {{ color: inherit; text-decoration: none; }}
@@ -564,7 +568,7 @@ a {{ color: inherit; text-decoration: none; }}
 .search-input {{
     width: 100%;
     height: 38px;
-    padding: 0 2.6rem 0 1rem;
+    padding: 0 2.6rem 0 2.4rem;
     border-radius: 10px;
     border: 1px solid var(--border);
     background: var(--surface);
@@ -583,6 +587,23 @@ a {{ color: inherit; text-decoration: none; }}
     display: flex;
     pointer-events: none;
 }}
+.search-clear {{
+    position: absolute;
+    left: 0.45rem;
+    width: 28px;
+    height: 28px;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--text-tertiary);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: color 0.15s ease, background 0.15s ease;
+}}
+.search-clear:hover {{ color: var(--text); background: var(--divider); }}
+.search-wrap.has-value .search-clear {{ display: flex; }}
 .header-actions {{
     display: flex;
     align-items: center;
@@ -746,15 +767,35 @@ a {{ color: inherit; text-decoration: none; }}
     border: 1px solid var(--border);
     overflow: hidden;
     cursor: pointer;
-    transition: border-color 0.18s ease, transform 0.18s ease, opacity 0.4s ease;
+    transition: border-color 0.18s ease, transform 0.18s ease, opacity 0.4s ease, box-shadow 0.18s ease;
+    position: relative;
 }}
 .js .news-card {{ opacity: 0; }}
 .js .news-card.in-view {{ opacity: 1; }}
 .news-card:hover {{ border-color: var(--border-strong); transform: translateY(-2px); }}
+.news-card:active {{ transform: translateY(0) scale(0.985); }}
 .news-card:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px; }}
 .news-card.hidden-by-search {{ display: none; }}
-.news-card.is-read {{ opacity: 0.6; }}
+.news-card.is-read {{
+    opacity: 0.72;
+    border-color: transparent;
+    background: color-mix(in srgb, var(--surface) 92%, var(--bg));
+}}
 .news-card.is-read .card-source {{ color: var(--text-tertiary); }}
+.news-card.is-read .card-excerpt {{ color: var(--text-secondary); }}
+.news-card::before {{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--accent);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 2;
+}}
+.news-card:not(.is-read)::before {{ opacity: 1; }}
 .card-media {{
     width: 100%;
     aspect-ratio: 16/10;
@@ -830,6 +871,14 @@ a {{ color: inherit; text-decoration: none; }}
 .no-results-icon {{ display: flex; align-items: center; justify-content: center; color: var(--accent); opacity: 0.8; margin-bottom: 0.4rem; }}
 .no-results-title {{ color: var(--text); font-weight: 800; font-size: 1.05rem; }}
 .no-results-subtitle {{ font-size: 0.88rem; }}
+.search-meta {{
+    display: none;
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    padding: 0 0.15rem;
+    margin-top: -1.4rem;
+}}
+.search-meta.visible {{ display: block; }}
 .empty-state {{
     display: flex;
     flex-direction: column;
@@ -875,66 +924,180 @@ a {{ color: inherit; text-decoration: none; }}
 .modal-close:hover {{ border-color: var(--border-strong); color: var(--text); background: var(--surface); transform: scale(1.04); }}
 .modal-close:active {{ transform: scale(0.96); }}
 .news-modal {{ width: 100%; max-width: 720px; margin: 0 auto; min-height: 100vh; background: var(--bg); }}
-.modal-media {{ width: 100%; aspect-ratio: 16/9; background: #000; position: relative; }}
+.modal-media {{
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #000;
+    position: relative;
+    overflow: hidden;
+}}
 .modal-media.is-empty {{ display: none; }}
-.media-player {{ width: 100%; height: 100%; position: relative; background: #000; }}
-.media-player:fullscreen, .media-player:-webkit-full-screen {{ display: flex; align-items: center; justify-content: center; }}
-.media-player video {{ width: 100%; height: 100%; object-fit: contain; display: block; background: #000; }}
-.player-overlay {{
+.slider {{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    touch-action: pan-y;
+    user-select: none;
+    -webkit-user-select: none;
+    overflow: hidden;
+    direction: ltr;
+}}
+.slider-track {{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    transition: transform 0.32s cubic-bezier(0.25, 0.8, 0.25, 1);
+    will-change: transform;
+    direction: ltr;
+}}
+.slider-track.is-dragging {{
+    transition: none;
+}}
+.slider-slide {{
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    direction: ltr;
+}}
+.slider-slide img,
+.slider-slide video {{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    background: #000;
+    pointer-events: auto;
+}}
+.slider-slide video {{
+    max-height: 100%;
+    cursor: pointer;
+}}
+.slider-nav {{
     position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0,0,0,0.28);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.15s ease;
-    cursor: pointer;
-}}
-.media-player:hover .player-overlay, .media-player.is-paused .player-overlay {{ opacity: 1; pointer-events: auto; }}
-.player-play-btn {{
-    width: 62px;
-    height: 62px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.94);
-    color: #101012;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
     border: none;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    transition: transform 0.15s ease;
+    z-index: 8;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: background 0.15s ease, opacity 0.15s ease, transform 0.15s ease;
+    opacity: 0.85;
 }}
-.player-play-btn:hover {{ transform: scale(1.06); }}
-.player-play-btn svg {{ margin-right: -2px; }}
-.media-player.is-playing .player-play-btn {{ display: none; }}
-.player-controls {{
+.slider-nav:hover {{ background: rgba(0,0,0,0.75); transform: scale(1.06); opacity: 1; }}
+.slider-nav:disabled {{
+    opacity: 0 !important;
+    pointer-events: none;
+}}
+.slider-prev {{ left: 0.75rem; }}
+.slider-next {{ right: 0.75rem; }}
+.slider-ui {{
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 1.4rem 0.9rem 0.7rem;
-    background: linear-gradient(180deg, transparent, rgba(0,0,0,0.75));
+    z-index: 7;
+    padding: 1.6rem 0.9rem 0.75rem;
+    background: linear-gradient(180deg, transparent, rgba(0,0,0,0.72));
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    opacity: 0;
-    transition: opacity 0.15s ease;
+    gap: 0.55rem;
+    pointer-events: none;
+}}
+.slider-ui > * {{
+    pointer-events: auto;
+}}
+.slider-progress {{
+    display: flex;
+    gap: 3px;
+    height: 2.5px;
+}}
+.slider-progress-item {{
+    flex: 1;
+    min-width: 0;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.28);
+    overflow: hidden;
+    position: relative;
+}}
+.slider-progress-item.active {{
+    background: rgba(255,255,255,0.92);
+}}
+.slider-progress-item.passed {{
+    background: rgba(255,255,255,0.7);
+}}
+.slider-meta-row {{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
     direction: ltr;
 }}
-.media-player:hover .player-controls, .media-player.is-paused .player-controls {{ opacity: 1; }}
-.player-progress {{
+.slider-counter {{
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.92);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.02em;
+    background: rgba(0,0,0,0.35);
+    padding: 0.22rem 0.55rem;
+    border-radius: 999px;
+    backdrop-filter: blur(6px);
+}}
+.slider-actions {{
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}}
+.slider-btn {{
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}}
+.slider-btn:hover {{ background: rgba(0,0,0,0.65); }}
+.slider-video-controls {{
+    display: none;
+    align-items: center;
+    gap: 0.55rem;
+    direction: ltr;
+    width: 100%;
+}}
+.slider-video-controls.visible {{
+    display: flex;
+}}
+.slider-video-progress {{
     -webkit-appearance: none;
     appearance: none;
-    width: 100%;
+    flex: 1;
     height: 3px;
     border-radius: 2px;
-    background: rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.28);
     cursor: pointer;
     outline: none;
 }}
-.player-progress::-webkit-slider-thumb {{
+.slider-video-progress::-webkit-slider-thumb {{
     -webkit-appearance: none;
     width: 12px;
     height: 12px;
@@ -943,156 +1106,20 @@ a {{ color: inherit; text-decoration: none; }}
     cursor: pointer;
     margin-top: -4.5px;
 }}
-.player-progress::-moz-range-thumb {{ width: 12px; height: 12px; border-radius: 50%; background: #fff; border: none; cursor: pointer; }}
-.player-bottom-row {{ display: flex; align-items: center; gap: 0.7rem; }}
-.player-btn {{
-    width: 30px;
-    height: 30px;
-    border-radius: 6px;
-    border: none;
-    background: transparent;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    flex: 0 0 auto;
-}}
-.player-btn:hover {{ background: rgba(255,255,255,0.14); }}
-.player-time {{ font-size: 0.72rem; color: rgba(255,255,255,0.85); font-variant-numeric: tabular-nums; direction: ltr; white-space: nowrap; }}
-.player-spacer {{ flex: 1; }}
-.media-gallery {{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background: #000;
-    overflow: hidden;
-}}
-.media-gallery-stage {{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    touch-action: pan-y;
-    user-select: none;
-}}
-.media-gallery-media {{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-}}
-.media-gallery-media.is-image {{
-    object-fit: contain;
-}}
-.media-gallery-media.is-video {{
-    background: #000;
-}}
-.media-gallery-control {{
-    position: absolute;
-    top: 50%;
-    width: 42px;
-    height: 42px;
-    margin-top: -21px;
-    border: 1px solid rgba(255,255,255,0.16);
+.slider-video-progress::-moz-range-thumb {{
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-    background: rgba(0,0,0,0.52);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 4;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    transition: opacity 0.15s ease, transform 0.15s ease, background 0.15s ease;
-}}
-.media-gallery-control:hover {{
-    background: rgba(0,0,0,0.72);
-    transform: translateY(-1px) scale(1.04);
-}}
-.media-gallery-control:disabled {{
-    opacity: 0;
-    pointer-events: none;
-}}
-.media-gallery-prev {{
-    right: 0.9rem;
-}}
-.media-gallery-next {{
-    left: 0.9rem;
-}}
-.media-gallery-progress {{
-    position: absolute;
-    right: 0.9rem;
-    left: 0.9rem;
-    bottom: 0.85rem;
-    height: 2px;
-    display: flex;
-    gap: 2px;
-    z-index: 4;
-    pointer-events: none;
-}}
-.media-gallery-progress-item {{
-    flex: 1;
-    min-width: 0;
-    border-radius: 999px;
-    background: rgba(255,255,255,0.28);
-    transition: background 0.15s ease;
-}}
-.media-gallery-progress-item.active {{
-    background: rgba(255,255,255,0.92);
-}}
-.media-gallery-empty {{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}}
-.media-gallery-fullscreen {{
-    position: absolute;
-    bottom: 1.25rem;
-    left: 0.9rem;
-    width: 34px;
-    height: 34px;
-    border-radius: 8px;
+    background: #fff;
     border: none;
-    background: rgba(0,0,0,0.5);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
-    z-index: 5;
-    transition: background 0.15s ease, opacity 0.15s ease;
 }}
-.media-gallery-fullscreen:hover {{
-    background: rgba(0,0,0,0.72);
-}}
-@media (hover: hover) {{
-    .media-gallery-fullscreen {{
-        opacity: 0;
-    }}
-    .media-gallery:hover .media-gallery-fullscreen {{
-        opacity: 1;
-    }}
-}}
-@media (max-width: 640px) {{
-    .media-gallery-control {{
-        width: 36px;
-        height: 36px;
-        margin-top: -18px;
-    }}
-    .media-gallery-prev {{
-        right: 0.65rem;
-    }}
-    .media-gallery-next {{
-        left: 0.65rem;
-    }}
-    .media-gallery-progress {{
-        right: 0.65rem;
-        left: 0.65rem;
-        bottom: 0.65rem;
-    }}
+.slider-video-time {{
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.9);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    min-width: 4.6rem;
 }}
 .modal-inner {{ padding: 1.7rem 1.7rem 3rem; max-width: 720px; margin: 0 auto; }}
 .modal-source-row {{ display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.7rem; }}
@@ -1211,7 +1238,7 @@ a {{ color: inherit; text-decoration: none; }}
 @media (prefers-reduced-motion: reduce) {{
     html {{ scroll-behavior: auto; }}
     .js .news-card {{ opacity: 1; }}
-    .news-card, .pulse-ring::before, .price-card, .modal-close {{ transition: none; animation: none; }}
+    .news-card, .pulse-ring::before, .price-card, .modal-close, .slider-track {{ transition: none; animation: none; }}
 }}
 @media (max-width: 980px) {{
     .feed-grid {{ grid-template-columns: repeat(2, 1fr); }}
@@ -1228,6 +1255,17 @@ a {{ color: inherit; text-decoration: none; }}
     .header-top {{ flex-wrap: wrap; }}
     .header-actions {{ display: flex; align-items: center; flex: 1 1 100%; justify-content: space-between; }}
     .search-wrap {{ order: 3; max-width: none; flex: 1 1 100%; }}
+    .slider-nav {{
+        width: 34px;
+        height: 34px;
+        margin-top: -17px;
+        opacity: 1;
+    }}
+    .slider-prev {{ left: 0.55rem; }}
+    .slider-next {{ right: 0.55rem; }}
+    .slider-ui {{
+        padding: 1.3rem 0.7rem 0.65rem;
+    }}
 }}
 </style>
 </head>
@@ -1235,11 +1273,14 @@ a {{ color: inherit; text-decoration: none; }}
 <header class="app-header">
     <div class="header-inner">
         <div class="header-top">
-            <div class="search-wrap">
+            <div class="search-wrap" id="searchWrap">
                 <input type="text" class="search-input" id="searchInput" placeholder="جستجو در اخبار..." oninput="filterNews(this.value)" aria-label="جستجو در اخبار">
                 <span class="search-icon">
                     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>
                 </span>
+                <button class="search-clear" type="button" id="searchClear" onclick="clearSearch()" aria-label="پاک کردن جستجو">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"></path></svg>
+                </button>
             </div>
             <div class="header-actions">
                 <div class="header-actions-buttons">
@@ -1251,7 +1292,7 @@ a {{ color: inherit; text-decoration: none; }}
                 </div>
                 <div class="live-indicator">
                     <span class="pulse-ring"></span>
-                    <span id="latest-update" data-time="{latest_update}">در حال بروزرسانی...</span>
+                    <span id="latest-update" data-time="{latest_update}">{latest_update}</span>
                 </div>
             </div>
         </div>
@@ -1261,6 +1302,7 @@ a {{ color: inherit; text-decoration: none; }}
     </div>
 </header>
 <main class="main-layout">
+    <div class="search-meta" id="searchMeta"></div>
     <div class="no-results" id="noResults">
         <div class="no-results-icon">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>
@@ -1292,44 +1334,39 @@ a {{ color: inherit; text-decoration: none; }}
         </div>
     </div>
 </footer>
-<div class="modal-overlay" id="newsModal">
+<div class="modal-overlay" id="newsModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <button class="modal-close" type="button" onclick="closeNewsModal()" aria-label="بستن">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"></path></svg>
     </button>
     <div class="news-modal">
         <div class="modal-media is-empty" id="modalMedia">
-            <div class="media-player" id="mediaPlayer">
-                <video id="modalVideo" playsinline preload="metadata"></video>
-                <div class="player-overlay" onclick="togglePlay()">
-                    <button class="player-play-btn" aria-label="پخش" tabindex="-1">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
-                    </button>
-                </div>
-                <div class="player-controls" onclick="event.stopPropagation()">
-                    <input type="range" class="player-progress" id="playerProgress" value="0" min="0" max="100" step="0.1">
-                    <div class="player-bottom-row">
-                        <button class="player-btn" type="button" onclick="togglePlay()" aria-label="پخش/توقف" id="playPauseBtn">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
-                        </button>
-                        <span class="player-time" id="playerTime">0:00 / 0:00</span>
-                        <span class="player-spacer"></span>
-                        <button class="player-btn" type="button" onclick="toggleMute()" aria-label="بی‌صدا" id="muteBtn">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path></svg>
-                        </button>
-                        <button class="player-btn" type="button" onclick="toggleFullscreen('mediaPlayer')" aria-label="تمام‌صفحه">{fullscreen_icon_svg}</button>
-                    </div>
-                </div>
-            </div>
-            <div class="media-gallery" id="mediaGallery" style="display:none">
-                <div class="media-gallery-stage" id="mediaGalleryStage"></div>
-                <button class="media-gallery-control media-gallery-prev" id="mediaGalleryPrev" type="button" aria-label="رسانه قبلی">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
-                </button>
-                <button class="media-gallery-control media-gallery-next" id="mediaGalleryNext" type="button" aria-label="رسانه بعدی">
+            <div class="slider" id="mediaSlider">
+                <div class="slider-track" id="sliderTrack"></div>
+                <button class="slider-nav slider-prev" id="sliderPrev" type="button" aria-label="قبلی" disabled>
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
                 </button>
-                <div class="media-gallery-progress" id="mediaGalleryProgress"></div>
-                <button class="media-gallery-fullscreen" type="button" onclick="toggleFullscreen('mediaGallery')" aria-label="تمام‌صفحه">{fullscreen_icon_svg}</button>
+                <button class="slider-nav slider-next" id="sliderNext" type="button" aria-label="بعدی" disabled>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                </button>
+                <div class="slider-ui">
+                    <div class="slider-progress" id="sliderProgress"></div>
+                    <div class="slider-video-controls" id="sliderVideoControls">
+                        <button class="slider-btn" type="button" id="sliderPlayBtn" aria-label="پخش/توقف">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+                        </button>
+                        <input type="range" class="slider-video-progress" id="sliderVideoProgress" value="0" min="0" max="100" step="0.1">
+                        <span class="slider-video-time" id="sliderVideoTime">0:00 / 0:00</span>
+                        <button class="slider-btn" type="button" id="sliderMuteBtn" aria-label="بی‌صدا">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path></svg>
+                        </button>
+                    </div>
+                    <div class="slider-meta-row">
+                        <span class="slider-counter" id="sliderCounter">1 / 1</span>
+                        <div class="slider-actions">
+                            <button class="slider-btn" type="button" id="sliderFullscreenBtn" onclick="toggleSliderFullscreen()" aria-label="تمام‌صفحه">{fullscreen_icon_svg}</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="modal-inner">
@@ -1376,8 +1413,11 @@ a {{ color: inherit; text-decoration: none; }}
 }})();
 
 function timeAgo(dateString) {{
+    if (!dateString) return "";
     var parts = dateString.split(/[- :]/);
-    var date = new Date(parts[0], parts[1] - 1, parts[2], parts[3], parts[4], parts[5]);
+    if (parts.length < 3) return dateString;
+    var date = new Date(parts[0], parts[1] - 1, parts[2], parts[3] || 0, parts[4] || 0, parts[5] || 0);
+    if (isNaN(date.getTime())) return dateString;
     var seconds = Math.floor((Date.now() - date) / 1000);
 
     if (seconds < 60) return "چند لحظه پیش";
@@ -1436,53 +1476,383 @@ function markRead(anchor) {{
 
 var modal = document.getElementById("newsModal");
 var modalMedia = document.getElementById("modalMedia");
-var mediaPlayerBlock = document.getElementById("mediaPlayer");
-var mediaGallery = document.getElementById("mediaGallery");
-var mediaGalleryStage = document.getElementById("mediaGalleryStage");
-var mediaGalleryPrev = document.getElementById("mediaGalleryPrev");
-var mediaGalleryNext = document.getElementById("mediaGalleryNext");
-var mediaGalleryProgress = document.getElementById("mediaGalleryProgress");
-var video = document.getElementById("modalVideo");
-var playerEl = document.getElementById("mediaPlayer");
-var progressEl = document.getElementById("playerProgress");
-var timeEl = document.getElementById("playerTime");
-var playPauseBtn = document.getElementById("playPauseBtn");
-var muteBtn = document.getElementById("muteBtn");
+var slider = document.getElementById("mediaSlider");
+var sliderTrack = document.getElementById("sliderTrack");
+var sliderPrev = document.getElementById("sliderPrev");
+var sliderNext = document.getElementById("sliderNext");
+var sliderProgress = document.getElementById("sliderProgress");
+var sliderCounter = document.getElementById("sliderCounter");
+var sliderVideoControls = document.getElementById("sliderVideoControls");
+var sliderPlayBtn = document.getElementById("sliderPlayBtn");
+var sliderVideoProgress = document.getElementById("sliderVideoProgress");
+var sliderVideoTime = document.getElementById("sliderVideoTime");
+var sliderMuteBtn = document.getElementById("sliderMuteBtn");
+
+var ICON_PLAY = '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>';
+var ICON_PAUSE = '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7 5h4v14H7zM13 5h4v14h-4z"></path></svg>';
+var ICON_MUTE = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"></path><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>';
+var ICON_SOUND = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path></svg>';
 
 var mediaState = {{
     items: [],
     index: 0,
-    touchStartX: 0,
-    touchStartY: 0,
-    touchActive: false
+    startX: 0,
+    startY: 0,
+    currentX: 0,
+    dragging: false,
+    locked: null,
+    width: 0,
+    activeVideo: null,
+    lastFocused: null,
+    historyPushed: false,
+    suppressClick: false
 }};
 
-var ICON_PLAY = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>';
-var ICON_PAUSE = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 5h4v14H7zM13 5h4v14h-4z"></path></svg>';
-var ICON_MUTE = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"></path><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>';
-var ICON_SOUND = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path></svg>';
-
 function formatDuration(sec) {{
-    if (!isFinite(sec)) return "0:00";
+    if (!isFinite(sec) || sec < 0) return "0:00";
     var m = Math.floor(sec / 60);
     var s = Math.floor(sec % 60);
     return m + ":" + (s < 10 ? "0" : "") + s;
 }}
 
-function togglePlay() {{
-    if (!video.src) return;
+function getSlideWidth() {{
+    return modalMedia.clientWidth || slider.clientWidth || window.innerWidth;
+}}
+
+function pauseOtherVideos(keep) {{
+    sliderTrack.querySelectorAll("video").forEach(function(v) {{
+        if (v === keep) return;
+        try {{ v.pause(); }} catch (e) {{}}
+    }});
+}}
+
+function pauseAllVideos() {{
+    sliderTrack.querySelectorAll("video").forEach(function(v) {{
+        try {{ v.pause(); }} catch (e) {{}}
+    }});
+    mediaState.activeVideo = null;
+    sliderVideoControls.classList.remove("visible");
+}}
+
+function syncVideoControls(video) {{
+    if (!video) {{
+        sliderVideoControls.classList.remove("visible");
+        mediaState.activeVideo = null;
+        return;
+    }}
+    mediaState.activeVideo = video;
+    sliderVideoControls.classList.add("visible");
+    sliderPlayBtn.innerHTML = video.paused ? ICON_PLAY : ICON_PAUSE;
+    sliderMuteBtn.innerHTML = video.muted ? ICON_MUTE : ICON_SOUND;
+    if (video.duration) {{
+        sliderVideoProgress.value = (video.currentTime / video.duration) * 100;
+        sliderVideoTime.textContent = formatDuration(video.currentTime) + " / " + formatDuration(video.duration);
+    }} else {{
+        sliderVideoProgress.value = 0;
+        sliderVideoTime.textContent = "0:00 / 0:00";
+    }}
+}}
+
+function bindVideoEvents(video) {{
+    video.addEventListener("play", function() {{
+        if (mediaState.activeVideo === video) sliderPlayBtn.innerHTML = ICON_PAUSE;
+    }});
+    video.addEventListener("pause", function() {{
+        if (mediaState.activeVideo === video) sliderPlayBtn.innerHTML = ICON_PLAY;
+    }});
+    video.addEventListener("timeupdate", function() {{
+        if (mediaState.activeVideo !== video) return;
+        if (video.duration) sliderVideoProgress.value = (video.currentTime / video.duration) * 100;
+        sliderVideoTime.textContent = formatDuration(video.currentTime) + " / " + formatDuration(video.duration);
+    }});
+    video.addEventListener("loadedmetadata", function() {{
+        if (mediaState.activeVideo !== video) return;
+        sliderVideoTime.textContent = "0:00 / " + formatDuration(video.duration);
+    }});
+    video.addEventListener("ended", function() {{
+        if (mediaState.activeVideo === video) sliderPlayBtn.innerHTML = ICON_PLAY;
+    }});
+    video.addEventListener("click", function(e) {{
+        if (mediaState.suppressClick) {{
+            mediaState.suppressClick = false;
+            e.preventDefault();
+            e.stopPropagation();
+            return;
+        }}
+        e.stopPropagation();
+        if (video.paused) video.play(); else video.pause();
+    }});
+}}
+
+function activateCurrentMedia(changed) {{
+    var slides = sliderTrack.children;
+    if (!slides.length) return;
+
+    var slide = slides[mediaState.index];
+    if (!slide) return;
+
+    var video = slide.querySelector("video");
+    if (changed) pauseOtherVideos(video || null);
+    syncVideoControls(video || null);
+}}
+
+function updateSliderChrome() {{
+    var total = mediaState.items.length;
+    var idx = mediaState.index;
+
+    sliderCounter.textContent = (idx + 1) + " / " + total;
+    sliderPrev.disabled = idx <= 0 || total <= 1;
+    sliderNext.disabled = idx >= total - 1 || total <= 1;
+
+    var bars = sliderProgress.children;
+    for (var i = 0; i < bars.length; i++) {{
+        bars[i].classList.remove("active", "passed");
+        if (i < idx) bars[i].classList.add("passed");
+        if (i === idx) bars[i].classList.add("active");
+    }}
+}}
+
+function goToSlide(index, animate) {{
+    var total = mediaState.items.length;
+    if (!total) return;
+    index = Math.max(0, Math.min(total - 1, index));
+
+    var changed = index !== mediaState.index;
+    mediaState.index = index;
+    mediaState.width = getSlideWidth();
+
+    if (animate === false) sliderTrack.classList.add("is-dragging");
+    else sliderTrack.classList.remove("is-dragging");
+
+    sliderTrack.style.transform = "translate3d(" + (-index * mediaState.width) + "px,0,0)";
+    updateSliderChrome();
+    activateCurrentMedia(changed);
+
+    if (animate === false) {{
+        requestAnimationFrame(function() {{
+            sliderTrack.classList.remove("is-dragging");
+        }});
+    }}
+}}
+
+function nextSlide() {{
+    if (mediaState.index < mediaState.items.length - 1) goToSlide(mediaState.index + 1, true);
+}}
+
+function prevSlide() {{
+    if (mediaState.index > 0) goToSlide(mediaState.index - 1, true);
+}}
+
+function createSlide(item) {{
+    var slide = document.createElement("div");
+    slide.className = "slider-slide";
+
+    if (item.type === "video") {{
+        slide.classList.add("is-video");
+        var video = document.createElement("video");
+        video.src = item.url;
+        video.playsInline = true;
+        video.preload = "metadata";
+        video.setAttribute("playsinline", "");
+        if (item.poster) video.poster = item.poster;
+        bindVideoEvents(video);
+        slide.appendChild(video);
+    }} else {{
+        var img = document.createElement("img");
+        img.src = item.url;
+        img.alt = "";
+        img.draggable = false;
+        img.loading = "eager";
+        slide.appendChild(img);
+    }}
+
+    return slide;
+}}
+
+function buildSlider(mediaList) {{
+    mediaState.items = Array.isArray(mediaList) ? mediaList.filter(function(item) {{
+        return item && item.url;
+    }}) : [];
+    mediaState.index = 0;
+    mediaState.activeVideo = null;
+    mediaState.dragging = false;
+    mediaState.locked = null;
+
+    sliderTrack.innerHTML = "";
+    sliderProgress.innerHTML = "";
+    sliderTrack.style.transform = "translate3d(0,0,0)";
+    sliderTrack.classList.remove("is-dragging");
+
+    if (!mediaState.items.length) {{
+        modalMedia.classList.add("is-empty");
+        return;
+    }}
+
+    modalMedia.classList.remove("is-empty");
+
+    mediaState.items.forEach(function(item) {{
+        sliderTrack.appendChild(createSlide(item));
+        var bar = document.createElement("div");
+        bar.className = "slider-progress-item";
+        sliderProgress.appendChild(bar);
+    }});
+
+    var multi = mediaState.items.length > 1;
+    sliderPrev.style.display = multi ? "" : "none";
+    sliderNext.style.display = multi ? "" : "none";
+    sliderProgress.style.display = multi ? "" : "none";
+
+    requestAnimationFrame(function() {{
+        mediaState.width = getSlideWidth();
+        goToSlide(0, false);
+    }});
+}}
+
+function destroySlider() {{
+    pauseAllVideos();
+    sliderTrack.innerHTML = "";
+    sliderProgress.innerHTML = "";
+    mediaState.items = [];
+    mediaState.index = 0;
+    mediaState.activeVideo = null;
+    mediaState.dragging = false;
+    mediaState.locked = null;
+    sliderVideoControls.classList.remove("visible");
+    modalMedia.classList.add("is-empty");
+}}
+
+sliderPrev.addEventListener("click", function(e) {{
+    e.preventDefault();
+    e.stopPropagation();
+    prevSlide();
+}});
+sliderNext.addEventListener("click", function(e) {{
+    e.preventDefault();
+    e.stopPropagation();
+    nextSlide();
+}});
+
+sliderPlayBtn.addEventListener("click", function(e) {{
+    e.stopPropagation();
+    var video = mediaState.activeVideo;
+    if (!video) return;
     if (video.paused) video.play(); else video.pause();
-}}
+}});
 
-function toggleMute() {{
+sliderMuteBtn.addEventListener("click", function(e) {{
+    e.stopPropagation();
+    var video = mediaState.activeVideo;
+    if (!video) return;
     video.muted = !video.muted;
-    muteBtn.innerHTML = video.muted ? ICON_MUTE : ICON_SOUND;
+    sliderMuteBtn.innerHTML = video.muted ? ICON_MUTE : ICON_SOUND;
+}});
+
+sliderVideoProgress.addEventListener("input", function() {{
+    var video = mediaState.activeVideo;
+    if (!video || !video.duration) return;
+    video.currentTime = (sliderVideoProgress.value / 100) * video.duration;
+}});
+
+function pointerDown(clientX, clientY) {{
+    if (mediaState.items.length <= 1) return;
+    mediaState.dragging = true;
+    mediaState.locked = null;
+    mediaState.startX = clientX;
+    mediaState.startY = clientY;
+    mediaState.currentX = clientX;
+    mediaState.width = getSlideWidth();
 }}
 
-function toggleFullscreen(elementId) {{
-    var el = document.getElementById(elementId);
-    var isFullscreen = document.fullscreenElement || document.webkitFullscreenElement;
+function pointerMove(clientX, clientY) {{
+    if (!mediaState.dragging) return;
 
+    var dx = clientX - mediaState.startX;
+    var dy = clientY - mediaState.startY;
+
+    if (mediaState.locked === null && (Math.abs(dx) > 6 || Math.abs(dy) > 6)) {{
+        mediaState.locked = Math.abs(dx) > Math.abs(dy) ? "h" : "v";
+        if (mediaState.locked === "h") sliderTrack.classList.add("is-dragging");
+    }}
+
+    if (mediaState.locked !== "h") return;
+
+    mediaState.currentX = clientX;
+    var base = -mediaState.index * mediaState.width;
+    sliderTrack.style.transform = "translate3d(" + (base + dx) + "px,0,0)";
+}}
+
+function pointerUp() {{
+    if (!mediaState.dragging) return;
+
+    var wasHorizontal = mediaState.locked === "h";
+    var dx = mediaState.currentX - mediaState.startX;
+
+    mediaState.dragging = false;
+    mediaState.locked = null;
+    sliderTrack.classList.remove("is-dragging");
+
+    if (!wasHorizontal) {{
+        goToSlide(mediaState.index, false);
+        return;
+    }}
+
+    if (Math.abs(dx) > 10) mediaState.suppressClick = true;
+
+    var threshold = Math.max(40, mediaState.width * 0.15);
+    if (dx > threshold) prevSlide();
+    else if (dx < -threshold) nextSlide();
+    else goToSlide(mediaState.index, true);
+}}
+
+slider.addEventListener("touchstart", function(e) {{
+    if (e.touches.length !== 1) return;
+    if (e.target.closest(".slider-nav, .slider-ui, .slider-btn, input")) return;
+    pointerDown(e.touches[0].clientX, e.touches[0].clientY);
+}}, {{ passive: true }});
+
+slider.addEventListener("touchmove", function(e) {{
+    if (!mediaState.dragging || e.touches.length !== 1) return;
+    pointerMove(e.touches[0].clientX, e.touches[0].clientY);
+    if (mediaState.locked === "h" && e.cancelable) e.preventDefault();
+}}, {{ passive: false }});
+
+slider.addEventListener("touchend", function() {{
+    pointerUp();
+}}, {{ passive: true }});
+
+slider.addEventListener("touchcancel", function() {{
+    pointerUp();
+}}, {{ passive: true }});
+
+slider.addEventListener("mousedown", function(e) {{
+    if (e.button !== 0) return;
+    if (e.target.closest(".slider-nav, .slider-ui, .slider-btn, input, video")) return;
+    pointerDown(e.clientX, e.clientY);
+}});
+
+window.addEventListener("mousemove", function(e) {{
+    if (!mediaState.dragging) return;
+    pointerMove(e.clientX, e.clientY);
+}});
+
+window.addEventListener("mouseup", function() {{
+    if (!mediaState.dragging) return;
+    pointerUp();
+}});
+
+window.addEventListener("resize", function() {{
+    if (!mediaState.items.length) return;
+    mediaState.width = getSlideWidth();
+    sliderTrack.classList.add("is-dragging");
+    sliderTrack.style.transform = "translate3d(" + (-mediaState.index * mediaState.width) + "px,0,0)";
+    requestAnimationFrame(function() {{
+        sliderTrack.classList.remove("is-dragging");
+    }});
+}});
+
+function toggleSliderFullscreen() {{
+    var el = modalMedia;
+    var isFullscreen = document.fullscreenElement || document.webkitFullscreenElement;
     if (!isFullscreen) {{
         if (el.requestFullscreen) el.requestFullscreen();
         else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
@@ -1492,208 +1862,57 @@ function toggleFullscreen(elementId) {{
     }}
 }}
 
-video.addEventListener("play", function() {{
-    playerEl.classList.add("is-playing");
-    playerEl.classList.remove("is-paused");
-    playPauseBtn.innerHTML = ICON_PAUSE;
-}});
-video.addEventListener("pause", function() {{
-    playerEl.classList.remove("is-playing");
-    playerEl.classList.add("is-paused");
-    playPauseBtn.innerHTML = ICON_PLAY;
-}});
-video.addEventListener("timeupdate", function() {{
-    if (video.duration) progressEl.value = (video.currentTime / video.duration) * 100;
-    timeEl.textContent = formatDuration(video.currentTime) + " / " + formatDuration(video.duration);
-}});
-video.addEventListener("loadedmetadata", function() {{
-    timeEl.textContent = "0:00 / " + formatDuration(video.duration);
-}});
-progressEl.addEventListener("input", function() {{
-    if (video.duration) video.currentTime = (progressEl.value / 100) * video.duration;
-}});
-
-function resetVideo() {{
-    video.pause();
-    video.removeAttribute("src");
-    video.removeAttribute("poster");
-    video.load();
-}}
-
-function createGalleryMedia(item) {{
-    if (item.type === "video") {{
-        var media = document.createElement("video");
-        media.className = "media-gallery-media is-video";
-        media.src = item.url;
-        media.playsInline = true;
-        media.controls = true;
-        media.preload = "metadata";
-        if (item.poster) media.poster = item.poster;
-        return media;
-    }}
-
-    var image = document.createElement("img");
-    image.className = "media-gallery-media is-image";
-    image.src = item.url;
-    image.alt = "";
-    image.draggable = false;
-    image.loading = "eager";
-    return image;
-}}
-
-function preloadGalleryMedia(index) {{
-    var item = mediaState.items[index];
-    if (!item || item.type === "video") return;
-
-    var image = new Image();
-    image.src = item.url;
-}}
-
-function updateGalleryControls() {{
-    var total = mediaState.items.length;
-    var isSingle = !(total > 1);
-
-    mediaGalleryPrev.disabled = isSingle;
-    mediaGalleryNext.disabled = isSingle;
-    mediaGalleryProgress.hidden = isSingle;
-
-    if (isSingle) return;
-
-    mediaGalleryPrev.disabled = mediaState.index === 0;
-    mediaGalleryNext.disabled = mediaState.index === total - 1;
-
-    mediaGalleryProgress.querySelectorAll(".media-gallery-progress-item").forEach(function(item, index) {{
-        item.classList.toggle("active", index === mediaState.index);
+function getFocusable(container) {{
+    return Array.prototype.slice.call(container.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    )).filter(function(el) {{
+        return !el.disabled && el.offsetParent !== null;
     }});
 }}
 
-function renderGallery() {{
-    var item = mediaState.items[mediaState.index];
-    if (!item) return;
-
-    var media = createGalleryMedia(item);
-    mediaGalleryStage.replaceChildren(media);
-    updateGalleryControls();
-
-    preloadGalleryMedia(mediaState.index - 1);
-    preloadGalleryMedia(mediaState.index + 1);
-}}
-
-function showGalleryItem(index) {{
-    var total = mediaState.items.length;
-    if (!total || index < 0 || index >= total || index === mediaState.index) return;
-
-    var currentMedia = mediaGalleryStage.querySelector("video");
-    if (currentMedia) currentMedia.pause();
-
-    mediaState.index = index;
-    renderGallery();
-}}
-
-function nextGalleryItem() {{
-    showGalleryItem(mediaState.index + 1);
-}}
-
-function previousGalleryItem() {{
-    showGalleryItem(mediaState.index - 1);
-}}
-
-function handleGalleryTouchStart(event) {{
-    if (event.touches.length !== 1) return;
-    mediaState.touchStartX = event.touches[0].clientX;
-    mediaState.touchStartY = event.touches[0].clientY;
-    mediaState.touchActive = true;
-}}
-
-function handleGalleryTouchEnd(event) {{
-    if (!mediaState.touchActive || !event.changedTouches.length) return;
-
-    var touch = event.changedTouches[0];
-    var deltaX = touch.clientX - mediaState.touchStartX;
-    var deltaY = touch.clientY - mediaState.touchStartY;
-    mediaState.touchActive = false;
-
-    if (Math.abs(deltaX) < 45 || Math.abs(deltaX) < Math.abs(deltaY)) return;
-
-    if (deltaX < 0) nextGalleryItem();
-    else previousGalleryItem();
-}}
-
-function renderGalleryProgress() {{
-    mediaGalleryProgress.replaceChildren();
-
-    mediaState.items.forEach(function(_, index) {{
-        var item = document.createElement("span");
-        item.className = "media-gallery-progress-item";
-        item.classList.toggle("active", index === mediaState.index);
-        mediaGalleryProgress.appendChild(item);
-    }});
-}}
-
-function renderModalMedia(mediaList) {{
-    mediaState.items = Array.isArray(mediaList) ? mediaList.filter(function(item) {{
-        return item && item.url;
-    }}) : [];
-    mediaState.index = 0;
-
-    if (!mediaState.items.length) {{
-        modalMedia.classList.add("is-empty");
-        mediaPlayerBlock.style.display = "none";
-        mediaGallery.style.display = "none";
-        resetVideo();
-        return;
+function trapFocus(e, container) {{
+    if (e.key !== "Tab") return;
+    var focusable = getFocusable(container);
+    if (!focusable.length) return;
+    var first = focusable[0];
+    var last = focusable[focusable.length - 1];
+    if (e.shiftKey) {{
+        if (document.activeElement === first) {{
+            e.preventDefault();
+            last.focus();
+        }}
+    }} else {{
+        if (document.activeElement === last) {{
+            e.preventDefault();
+            first.focus();
+        }}
     }}
-
-    modalMedia.classList.remove("is-empty");
-
-    var first = mediaState.items[0];
-    var isSingleVideo = mediaState.items.length === 1 && first.type === "video";
-
-    if (isSingleVideo) {{
-        mediaGallery.style.display = "none";
-        mediaPlayerBlock.style.display = "";
-        video.src = first.url;
-        if (first.poster) video.poster = first.poster;
-        video.load();
-        return;
-    }}
-
-    mediaPlayerBlock.style.display = "none";
-    resetVideo();
-    mediaGallery.style.display = "";
-    renderGalleryProgress();
-    renderGallery();
 }}
 
-mediaGalleryPrev.addEventListener("click", previousGalleryItem);
-mediaGalleryNext.addEventListener("click", nextGalleryItem);
-mediaGalleryStage.addEventListener("touchstart", handleGalleryTouchStart, {{ passive: true }});
-mediaGalleryStage.addEventListener("touchend", handleGalleryTouchEnd, {{ passive: true }});
+function pushModalHistory() {{
+    if (mediaState.historyPushed) return;
+    try {{
+        history.pushState({{ dayerehModal: true }}, "");
+        mediaState.historyPushed = true;
+    }} catch (e) {{}}
+}}
 
-mediaGalleryStage.addEventListener("keydown", function(event) {{
-    if (event.key === "ArrowLeft") {{
-        event.preventDefault();
-        nextGalleryItem();
+function clearModalHistory() {{
+    if (!mediaState.historyPushed) return;
+    mediaState.historyPushed = false;
+}}
+
+window.addEventListener("popstate", function() {{
+    if (modal.classList.contains("active")) {{
+        mediaState.historyPushed = false;
+        closeNewsModal(true);
     }}
-    if (event.key === "ArrowRight") {{
-        event.preventDefault();
-        previousGalleryItem();
+    var summaryModal = document.getElementById("aiSummaryModal");
+    if (summaryModal && summaryModal.classList.contains("active")) {{
+        closeSummaryModal(true);
     }}
 }});
 
-document.addEventListener("keydown", function(event) {{
-    if (!modal.classList.contains("active") || mediaState.items.length < 2) return;
-
-    if (event.key === "ArrowLeft") {{
-        event.preventDefault();
-        nextGalleryItem();
-    }}
-
-    if (event.key === "ArrowRight") {{
-        event.preventDefault();
-        previousGalleryItem();
-    }}
-}});
 function openRelated(anchor) {{
     var target = document.querySelector('[data-anchor="' + anchor + '"]');
     if (target) {{
@@ -1769,10 +1988,12 @@ function renderRelated(related) {{
     }});
 }}
 
-function openNewsModal(lang, title, content, date, link, source, media, related) {{
+function openNewsModal(lang, title, content, date, link, source, media, related, triggerEl) {{
+    mediaState.lastFocused = triggerEl || document.activeElement;
     document.body.classList.add("modal-open");
     modal.classList.add("active");
     modal.scrollTop = 0;
+    pushModalHistory();
 
     var titleEl = document.getElementById("modalTitle");
     var contentEl = document.getElementById("modalContent");
@@ -1791,52 +2012,102 @@ function openNewsModal(lang, title, content, date, link, source, media, related)
     dateEl.textContent = date ? timeAgo(date) : "";
     titleEl.textContent = title;
 
-    renderModalMedia(media);
+    buildSlider(media);
     renderRelated(related);
 
-    document.querySelector(".modal-close").focus();
+    var closeBtn = modal.querySelector(".modal-close");
+    if (closeBtn) closeBtn.focus();
 }}
 
-function closeNewsModal() {{
-    resetVideo();
-
-    var galleryVideo = mediaGalleryStage.querySelector("video");
-    if (galleryVideo) galleryVideo.pause();
+function closeNewsModal(fromPopstate) {{
+    destroySlider();
 
     if (document.fullscreenElement || document.webkitFullscreenElement) {{
         if (document.exitFullscreen) document.exitFullscreen();
         else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
     }}
 
-    mediaState.items = [];
-    mediaState.index = 0;
-    mediaGalleryStage.replaceChildren();
-
     document.body.classList.remove("modal-open");
     modal.classList.remove("active");
+
+    if (!fromPopstate && mediaState.historyPushed) {{
+        clearModalHistory();
+        try {{ history.back(); }} catch (e) {{}}
+    }} else {{
+        clearModalHistory();
+    }}
+
+    if (mediaState.lastFocused && typeof mediaState.lastFocused.focus === "function") {{
+        try {{ mediaState.lastFocused.focus(); }} catch (e) {{}}
+    }}
+    mediaState.lastFocused = null;
 }}
 
 var summaryModal = document.getElementById("aiSummaryModal");
 
 function openSummaryModal() {{
     if (!summaryModal) return;
+    mediaState.lastFocused = document.activeElement;
     document.body.classList.add("modal-open");
     summaryModal.classList.add("active");
     summaryModal.scrollTop = 0;
+    pushModalHistory();
     var closeBtn = summaryModal.querySelector(".modal-close");
     if (closeBtn) closeBtn.focus();
 }}
 
-function closeSummaryModal() {{
+function closeSummaryModal(fromPopstate) {{
     if (!summaryModal) return;
     document.body.classList.remove("modal-open");
     summaryModal.classList.remove("active");
+
+    if (!fromPopstate && mediaState.historyPushed) {{
+        clearModalHistory();
+        try {{ history.back(); }} catch (e) {{}}
+    }} else {{
+        clearModalHistory();
+    }}
+
+    if (mediaState.lastFocused && typeof mediaState.lastFocused.focus === "function") {{
+        try {{ mediaState.lastFocused.focus(); }} catch (e) {{}}
+    }}
+    mediaState.lastFocused = null;
 }}
 
 document.addEventListener("keydown", function(event) {{
     if (event.key === "Escape") {{
-        closeNewsModal();
-        closeSummaryModal();
+        if (modal.classList.contains("active")) {{
+            closeNewsModal();
+            return;
+        }}
+        if (summaryModal && summaryModal.classList.contains("active")) {{
+            closeSummaryModal();
+        }}
+        return;
+    }}
+
+    if (modal.classList.contains("active")) {{
+        trapFocus(event, modal);
+        if (mediaState.items.length > 1) {{
+            if (event.key === "ArrowLeft") {{
+                event.preventDefault();
+                prevSlide();
+            }}
+            if (event.key === "ArrowRight") {{
+                event.preventDefault();
+                nextSlide();
+            }}
+        }}
+        if (event.key === " " && mediaState.activeVideo) {{
+            var tag = (event.target && event.target.tagName) || "";
+            if (tag !== "INPUT" && tag !== "TEXTAREA" && tag !== "BUTTON") {{
+                event.preventDefault();
+                if (mediaState.activeVideo.paused) mediaState.activeVideo.play();
+                else mediaState.activeVideo.pause();
+            }}
+        }}
+    }} else if (summaryModal && summaryModal.classList.contains("active")) {{
+        trapFocus(event, summaryModal);
     }}
 }});
 
@@ -1900,10 +2171,22 @@ document.querySelectorAll(".chip:not(.chip-price)").forEach(function(chip) {{
 
 function normalize(text) {{ return (text || "").toLowerCase().trim(); }}
 
+function clearSearch() {{
+    var input = document.getElementById("searchInput");
+    input.value = "";
+    filterNews("");
+    input.focus();
+}}
+
 function filterNews(query) {{
     var q = normalize(query);
     var sections = document.querySelectorAll("[data-source-section]");
     var anyVisible = false;
+    var matchCount = 0;
+    var searchWrap = document.getElementById("searchWrap");
+    var searchMeta = document.getElementById("searchMeta");
+
+    if (searchWrap) searchWrap.classList.toggle("has-value", q.length > 0);
 
     sections.forEach(function(section) {{
         var cards = section.querySelectorAll(".news-card, .price-card");
@@ -1912,14 +2195,27 @@ function filterNews(query) {{
         cards.forEach(function(card) {{
             var matches = q === "" || normalize(card.dataset.search).indexOf(q) !== -1;
             card.classList.toggle("hidden-by-search", !matches);
-            if (matches) sectionHasMatch = true;
+            if (matches) {{
+                sectionHasMatch = true;
+                if (card.classList.contains("news-card") || card.classList.contains("price-card")) matchCount++;
+            }}
         }});
 
         section.style.display = sectionHasMatch ? "" : "none";
         if (sectionHasMatch) anyVisible = true;
     }});
 
-    document.getElementById("noResults").classList.toggle("visible", sections.length > 0 && !anyVisible);
+    document.getElementById("noResults").classList.toggle("visible", sections.length > 0 && !anyVisible && q.length > 0);
+
+    if (searchMeta) {{
+        if (q.length > 0 && anyVisible) {{
+            searchMeta.textContent = matchCount + " نتیجه";
+            searchMeta.classList.add("visible");
+        }} else {{
+            searchMeta.textContent = "";
+            searchMeta.classList.remove("visible");
+        }}
+    }}
 }}
 
 if ("IntersectionObserver" in window) {{
