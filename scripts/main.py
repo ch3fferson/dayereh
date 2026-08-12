@@ -503,6 +503,7 @@ Context Memory:
             )
 
             self.storage.save_html(html)
+            self.media_downloader.cleanup()
 
             print("✓ SITE LAUNCHED -> feeds/view/index.html")
 
