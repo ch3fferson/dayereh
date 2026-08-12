@@ -674,8 +674,13 @@ a {{ color: inherit; text-decoration: none; }}
     display: flex;
     gap: 0.5rem;
     overflow-x: auto;
+    overflow-y: hidden;
+    touch-action: pan-x;
+    overscroll-behavior-x: contain;
+    overscroll-behavior-y: none;
     padding-bottom: 0.15rem;
     scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
 }}
 .chips-row::-webkit-scrollbar {{ display: none; }}
 .chip {{
@@ -919,6 +924,16 @@ a {{ color: inherit; text-decoration: none; }}
     overflow: hidden;
 }}
 .modal-media.is-empty {{ display: none; }}
+.modal-media.is-pseudo-fs {{
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: none !important;
+    aspect-ratio: auto !important;
+    z-index: 10000;
+    background: #000;
+}}
 .slider {{
     width: 100%;
     height: 100%;
@@ -1850,22 +1865,68 @@ function syncSliderPosition(animate) {{
     }}
 }}
 
+function isNativeFullscreen() {{
+    return !!(document.fullscreenElement || document.webkitFullscreenElement);
+}}
+
+function isAnyFullscreen() {{
+    return isNativeFullscreen() || modalMedia.classList.contains("is-pseudo-fs");
+}}
+
+function enterPseudoFullscreen() {{
+    modalMedia.classList.add("is-pseudo-fs");
+    document.body.classList.add("modal-open");
+    syncSliderPosition(false);
+}}
+
+function exitPseudoFullscreen() {{
+    modalMedia.classList.remove("is-pseudo-fs");
+    syncSliderPosition(false);
+}}
+
 function toggleSliderFullscreen() {{
     var el = modalMedia;
-    var isFullscreen = document.fullscreenElement || document.webkitFullscreenElement;
-    if (!isFullscreen) {{
-        if (el.requestFullscreen) el.requestFullscreen();
-        else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
-    }} else {{
-        if (document.exitFullscreen) document.exitFullscreen();
-        else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+    if (isAnyFullscreen()) {{
+        if (isNativeFullscreen()) {{
+            if (document.exitFullscreen) document.exitFullscreen();
+            else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+        }}
+        exitPseudoFullscreen();
+        return;
     }}
+
+    var req = el.requestFullscreen || el.webkitRequestFullscreen || el.webkitRequestFullScreen;
+    if (req) {{
+        try {{
+            var result = req.call(el);
+            if (result && typeof result.then === "function") {{
+                result.then(function() {{
+                    syncSliderPosition(false);
+                }}).catch(function() {{
+                    enterPseudoFullscreen();
+                }});
+                return;
+            }}
+            setTimeout(function() {{
+                if (!isNativeFullscreen()) enterPseudoFullscreen();
+                else syncSliderPosition(false);
+            }}, 120);
+            return;
+        }} catch (e) {{
+            enterPseudoFullscreen();
+            return;
+        }}
+    }}
+
+    enterPseudoFullscreen();
 }}
 
 document.addEventListener("fullscreenchange", function() {{
+    if (!isNativeFullscreen()) exitPseudoFullscreen();
     syncSliderPosition(false);
 }});
 document.addEventListener("webkitfullscreenchange", function() {{
+    if (!isNativeFullscreen()) exitPseudoFullscreen();
     syncSliderPosition(false);
 }});
 
@@ -2033,6 +2094,7 @@ function closeNewsModal(fromPopstate) {{
         if (document.exitFullscreen) document.exitFullscreen();
         else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
     }}
+    exitPseudoFullscreen();
 
     document.body.classList.remove("modal-open");
     modal.classList.remove("active");
@@ -2083,6 +2145,14 @@ function closeSummaryModal(fromPopstate) {{
 
 document.addEventListener("keydown", function(event) {{
     if (event.key === "Escape") {{
+        if (isAnyFullscreen()) {{
+            if (isNativeFullscreen()) {{
+                if (document.exitFullscreen) document.exitFullscreen();
+                else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+            }}
+            exitPseudoFullscreen();
+            return;
+        }}
         if (modal.classList.contains("active")) {{
             closeNewsModal();
             return;

@@ -66,6 +66,7 @@ class MediaDownloader:
 
         if destination.is_file():
             self.valid_files.add(filename)
+            self.valid_files.add(f"{Path(filename).stem}_thumb.jpg")
             return filename
 
         last_error = None
@@ -90,6 +91,7 @@ class MediaDownloader:
                 )
 
                 self.valid_files.add(filename)
+                self.valid_files.add(f"{Path(filename).stem}_thumb.jpg")
 
                 return filename
 
@@ -114,13 +116,18 @@ class MediaDownloader:
         if not media_directory.exists():
             return
 
-        for file in media_directory.iterdir():
+        protected = set(self.valid_files)
+        for name in list(self.valid_files):
+            protected.add(f"{Path(name).stem}_thumb.jpg")
 
+        for file in media_directory.iterdir():
             if not file.is_file():
                 continue
 
-            if file.name not in self.valid_files:
-                try:
-                    file.unlink()
-                except OSError as e:
-                    print(f"error removing {file.name}: {e}")
+            if file.name in protected:
+                continue
+
+            try:
+                file.unlink()
+            except OSError as e:
+                print(f"error removing {file.name}: {e}")
