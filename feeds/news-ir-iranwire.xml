@@ -3,6 +3,13 @@
     <channel>
         <title>ایران وایر</title>
         <item>
+            <pubDate>2026-08-12 11:08:10</pubDate>
+            <title>یک شهروند خبرنگار با ارسال این ویدیو برای ایران‌وایر صف بسیار طولانی بنزین را در سه‌شنبه ۲۰ مرداد در...</title>
+            <description>یک شهروند خبرنگار با ارسال این ویدیو برای ایران‌وایر صف بسیار طولانی بنزین را در سه‌شنبه ۲۰ مرداد در بندرعباس به تصویر کشیده است. او می‌گوید برای چند لیتر بنزین باید ساعت‌ها در صف بمانند. شهروندخبرنگاران دیگر از بوشهر و آبادان هم از صف‌های طویل بنزین خبر داده‌اند. سوال اینجاست که چرا در جغرافیایی که مهمترین مراکز تولید و انتقال فرآورده‌های نفتی ایران است چنین شرایطی ایجاد شده است؟ @Farsi_Iranwire</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#87e1082bc938</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/Farsi_Iranwire_92601.mp4" medium="video" type="video/mp4" />
+        </item>
+        <item>
             <pubDate>2026-08-11 23:56:34</pubDate>
             <title>قاسم رضایی، جانشین فرمانده انتظامی کشور، کشته‌شدن حمیدرضا رجب‌زاده، مداح حکومتی، را یک «اتفاق فردی»...</title>
             <description>قاسم رضایی، جانشین فرمانده انتظامی کشور، کشته‌شدن حمیدرضا رجب‌زاده، مداح حکومتی، را یک «اتفاق فردی» دانست و گفت این پرونده «سیاسی و امنیتی نیست». بیشتر بخوانید: https://iranwire.com/fa/news-1/156168 @Farsi_Iranwire</description>
@@ -151,14 +158,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#49148a143ff3</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/Farsi_Iranwire_92582.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/Farsi_Iranwire_92582.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-08-11 13:30:00</pubDate>
-            <title>جمعی از انجمن‌ها و نهادهای فعال در حوزه حقوق کودک با انتشار بیانیه‌ای، نسبت به پیامدهای جنگ، تعطیلی...</title>
-            <description>جمعی از انجمن‌ها و نهادهای فعال در حوزه حقوق کودک با انتشار بیانیه‌ای، نسبت به پیامدهای جنگ، تعطیلی مدارس و نبود برنامه منسجم برای ادامه آموزش کودکان در شرایط بحرانی هشدار داده‌اند. بیشتر: https://iranwire.com/fa/news-1/156140 @Farsi_Iranwire</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#88944f9c0645</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/Farsi_Iranwire_92581.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/Farsi_Iranwire_92581.jpg" />
         </item>
     </channel>
 </rss>
