@@ -11,6 +11,14 @@
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-1e410e998889.jpg" />
         </item>
         <item>
+            <pubDate>2026-08-13 15:39:23</pubDate>
+            <title>ممنوعیت تلفن هوشمند در دانشگاه‌های افغانستان؛ دانشجویان: تحصیل و کارمان مختل شده است</title>
+            <description>ممنوعیت همراه داشتن تلفن‌های هوشمند در دانشگاه‌های افغانستان که از سوی طالبان به اجرا گذاشته شده دسترسی دانشجویان به منابع آموزشی و ابزارهای فناوری را محدود کرده و در مواردی کار آن‌ها را نیز مختل کرده است. شماری از دانشجویان می‌گویند این تصمیم روند تحصیل و تأمین هزینه‌های زندگی و تحصیلشان را دشوارتر کرده، هرچند برخی دیگر از افزایش تمرکز خود بر درس‌ها خبر می‌دهند.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#e7a92fc934c1</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-e7a92fc934c1.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-e7a92fc934c1.jpg" />
+        </item>
+        <item>
             <pubDate>2026-08-13 14:15:48</pubDate>
             <title>تلاش یک زنبوردار در غزه برای احیای زنبورداری پس از جنگ در این منطقه</title>
             <description>یک زنبوردار در شمال غزه، پس از نزدیک به دو سال آوارگی هنگام بازگشت به خانه‌اش در جبالیا، تنها یک کندو از ۳۰۰ کندوی خود را پیدا کرد که از جنگ جان سالم به در برده بود. این زن ۴۳ ساله اکنون با تکیه بر همان کندو تلاش می‌کند کسب‌وکار زنبورداری را دوباره راه‌اندازی کند و هزینه‌های زندگی خانواده‌اش را تأمین کند.</description>
@@ -129,14 +137,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#ed32b98df4b6</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-ed32b98df4b6.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-ed32b98df4b6.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-08-10 19:14:28</pubDate>
-            <title>جمهوری‌خواهان آمریکا سه ماه مانده به انتخابات میان‌دوره‌ای با چالش‌های جدی روبه‌رو هستند</title>
-            <description>سه ماه مانده به انتخابات میان‌دوره‌ای آمریکا، تداوم تورم و آمار ناامیدکننده بازار کار به افت محبوبیت حزب جمهوری‌خواه دامن زده است. شکاف‌ها در خود جنبش «ماگا» (MAGA) -که دموکرات‌ها را به تشکیل «ائتلافی از کمونیست‌ها و اسلام‌گرایان» متهم می‌کند- نیز افزایش یافته و اختلاف نظر درباره جنگ ایران و اوکراین، نگرانی درباره وضعیت اقتصادی و اختلاف بر سر اولویت‌های دولت، شکاف‌هایی را در این اردوگاه آشکار کرده است.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#2bdd7766f252</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-2bdd7766f252.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-2bdd7766f252.jpg" />
         </item>
     </channel>
 </rss>
