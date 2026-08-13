@@ -11,6 +11,14 @@
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-1e410e998889.jpg" />
         </item>
         <item>
+            <pubDate>2026-08-13 14:15:48</pubDate>
+            <title>تلاش یک زنبوردار در غزه برای احیای زنبورداری پس از جنگ در این منطقه</title>
+            <description>یک زنبوردار در شمال غزه، پس از نزدیک به دو سال آوارگی هنگام بازگشت به خانه‌اش در جبالیا، تنها یک کندو از ۳۰۰ کندوی خود را پیدا کرد که از جنگ جان سالم به در برده بود. این زن ۴۳ ساله اکنون با تکیه بر همان کندو تلاش می‌کند کسب‌وکار زنبورداری را دوباره راه‌اندازی کند و هزینه‌های زندگی خانواده‌اش را تأمین کند.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#20b9f1ff8dd5</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-20b9f1ff8dd5.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-20b9f1ff8dd5.jpg" />
+        </item>
+        <item>
             <pubDate>2026-08-13 12:57:48</pubDate>
             <title>سفیر آمریکا در اسرائیل محاصره خانۀ فلسطینیان در کرانه باختری را «اقدام تروریستی» خواند</title>
             <description>سفیر آمریکا در اسرائیل، در موضعی کم‌سابقه محاصره خانه‌های یک خانواده فلسطینی توسط شهرک‌نشینان اسرائیلی در روستای قُصره در نزدیکی نابلس را «اقدام تروریستی» توصیف کرد. این خانواده از سه روز پیش در محاصره بوده و دسترسی آنها به برخی خدمات و نیازهای اساسی مختل شده است.</description>
@@ -129,14 +137,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#2bdd7766f252</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-2bdd7766f252.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-2bdd7766f252.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-08-10 11:19:43</pubDate>
-            <title>ایران: بازگشایی تنگه هرمز به برآورده شدن تمامی شروط تهران وابسته است</title>
-            <description>در پی تداوم حملات موشکی و پهپادی حوثی‌ها به مواضع عربستان سعودی، گزارش‌ها از تصمیم دونالد ترامپ برای افزایش بی‌سروصدای فشار اقتصادی بر ایران حکایت دارد؛ در مقابل تهران تأکید کرده است که بازگشایی تنگه هرمز به تحقق تمامی شروط ایران بستگی دارد. هم‌زمان با این تحولات منطقه‌ای، ساختار سیاسی ایران نیز دستخوش تغییرات کلیدی شد؛ مسعود پزشکیان محسن رضایی را به دبیری شورای عالی امنیت ملی منصوب کرد و محمدباقر ذوالقدر نیز با حکم مجتبی خامنه‌ای مشاور سیاسی رهبری شد.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#4a2a91698ab0</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-4a2a91698ab0.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-4a2a91698ab0.jpg" />
         </item>
     </channel>
 </rss>
