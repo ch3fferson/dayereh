@@ -222,7 +222,7 @@ class HTMLBuilder:
             kind_badge = '<span class="card-media-kind">ویدیو</span>'
 
         overflow_badge = (
-            f'<span class="card-media-badge">+{len(media_list) - 1}</span>'
+            f'<span class="card-media-badge">+{min(len(media_list) - 1, 3)}</span>'
             if len(media_list) > 1 else ""
         )
 
