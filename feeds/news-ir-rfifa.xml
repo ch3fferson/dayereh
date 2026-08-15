@@ -3,6 +3,14 @@
     <channel>
         <title>رادیو بین‌المللی فرانسه فارسی</title>
         <item>
+            <pubDate>2026-08-15 11:11:16</pubDate>
+            <title>ترامپ: تنگه هرمز را «قلمرو آمریکا» اعلام می‌کنم؛ تهران: هرمز ایرانی است و ایرانی می‌ماند</title>
+            <description>دونالد ترامپ، رئیس‌جمهوری آمریکا با لحنی که به گفته یک مقام کاخ سفید طنزآمیز بود، اعلام کرد پس از «شکست ایران» تنگه هرمز را «قلمرو ایالات متحده» اعلام خواهد کرد. در واکنش، کاظم غریب‌آبادی، معاون وزیر خارجه ایران تأکید کرد که تنگه هرمز «ایرانی بوده، هست و خواهد ماند». ترامپ همچنین بار دیگر گفت ایران «هرگز به سلاح هسته‌ای دست نخواهد یافت» و با وجود افزایش بیش از ۳۵ درصدی قیمت بنزین در آمریکا، از تصمیم خود برای ورود به جنگ دفاع کرد.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#6a95a2c6891d</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-6a95a2c6891d.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-6a95a2c6891d.jpg" />
+        </item>
+        <item>
             <pubDate>2026-08-15 08:30:07</pubDate>
             <title>پنجمین سال سقوط؛ پنج بحران، پنج دیدگاه</title>
             <description>پنج سال پس از سقوط کابل و بازگشت طالبان به قدرت، افغانستان با بحران‌هایی عمیق و بهم‌پیوسته روبه‌روست؛ از گسست تاریخی در زندگی زنان، بحران مشروعیت سیاسی و گسترش سانسور گرفته تا پیامدهای فرامرزی و تهدید فرهنگ، هنر و میراث تاریخی این کشور. این ویدئو مکثی است کوتاه، از نگاه صاحب‌نظران به پیامدهای پنج سال حاکمیت طالبان.</description>
@@ -129,14 +137,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#44d2f0aebefa</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-44d2f0aebefa.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-44d2f0aebefa.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-08-12 17:17:24</pubDate>
-            <title>نگرانی سازمان جهانی بهداشت از سیاست‌های ضد واکسن دولت ترامپ</title>
-            <description>دونالد ترامپ در فرمان جدیدش کاهش واکسیناسیون را برای کودکان توصیه می‌کند. او این فرمان را تحت تأثیر عقاید بی‌پایۀ وزیر بهداشت خود امضا کرده است. رابرت اف. کندی جونیور عمیقاً باور دارد که گسترش واکسیناسیون در آمریکا باعث افزایش بیماری اوتیسم شده است.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#e7b95cd13642</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-e7b95cd13642.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-e7b95cd13642.jpg" />
         </item>
     </channel>
 </rss>
