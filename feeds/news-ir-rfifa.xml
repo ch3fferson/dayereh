@@ -11,6 +11,14 @@
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-6a95a2c6891d.jpg" />
         </item>
         <item>
+            <pubDate>2026-08-15 13:49:48</pubDate>
+            <title>پنهانکاری، اهداف متغیر و کتمان واقعیت: سیاست‌های دولت ترامپ در جنگ با ایران</title>
+            <description>در حالی که رسانه‌های آمریکایی از شرایط نامناسب زندگی ملوانان ناو هواپیمابر «آبراهام لینکلن» خبر می‌دهند، کاخ سفید تمایل چندانی به پاسخ‌گویی در این مورد و اصولاً در مورد جنگ با ایران نشان نمی‌دهد. به نوشتۀ روزنامۀ فرانسوی لوموند «اگر جنگ علیه ایران را یک شکست راهبردی برای آمریکا بدانیم، افکار عمومی و حتی نمایندگان کنگره آمریکا تنها از خلال شکاف‌های محدود اطلاعاتی می‌توانند ابعاد واقعی آن را ببینند.»</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#6738c4c795b1</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-6738c4c795b1.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-6738c4c795b1.jpg" />
+        </item>
+        <item>
             <pubDate>2026-08-15 08:30:07</pubDate>
             <title>پنجمین سال سقوط؛ پنج بحران، پنج دیدگاه</title>
             <description>پنج سال پس از سقوط کابل و بازگشت طالبان به قدرت، افغانستان با بحران‌هایی عمیق و بهم‌پیوسته روبه‌روست؛ از گسست تاریخی در زندگی زنان، بحران مشروعیت سیاسی و گسترش سانسور گرفته تا پیامدهای فرامرزی و تهدید فرهنگ، هنر و میراث تاریخی این کشور. این ویدئو مکثی است کوتاه، از نگاه صاحب‌نظران به پیامدهای پنج سال حاکمیت طالبان.</description>
@@ -129,14 +137,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#26c1eb99e7bc</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-26c1eb99e7bc.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-26c1eb99e7bc.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-08-12 11:19:57</pubDate>
-            <title>۲۷ کشور روند رو‌به‌افزایش اعدام معترضان در ایران را محکوم کردند</title>
-            <description>نیروهای آمریکایی سیستم هدایت یک کشتی باری با پرچم پاناما را در مسیر بنادر ایران هدف گرفتند. دونالد ترامپ اوضاع را «مساعد» خواند و مدعی شد که تنگه هرمز در «کنترل کامل» ایالات متحده قرار دارد. این در حالی است که بر پایه آمارها، تنها ١۴‬ شناور از این تنگه عبور کرده‌اند. در سوی دیگر، وزیر کشور پاکستان در راستای تلاش‌های میانجی‌گرانه برای پایان دادن به درگیری‌ها عازم تهران شد.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#44d2f0aebefa</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-44d2f0aebefa.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-44d2f0aebefa.jpg" />
         </item>
     </channel>
 </rss>
