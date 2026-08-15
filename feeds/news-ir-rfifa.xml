@@ -11,6 +11,14 @@
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-6a95a2c6891d.jpg" />
         </item>
         <item>
+            <pubDate>2026-08-15 17:31:41</pubDate>
+            <title>لوموند: پنج سال پس از بازگشت به قدرت، طالبان از انزوای بین‌المللی خارج می‌شوند</title>
+            <description>با اینکه رژیم طالبان طی پنج سال گذشته سیاست‌های تعصب‌آمیز و خشن خود را بدون ملاحظه اعمال کرده، اما کشورهای همسایه به خاطر منافع تجاری مشغول گفتگو با کابل‌اند. کشورهای غربی نیز برای پیش‌گیری از امواج مهاجرت و به نام «مبارزه با تروریسم» با حکومت طالبان مذاکره می‌کنند.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#68f09b7a0d7a</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-68f09b7a0d7a.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-68f09b7a0d7a.jpg" />
+        </item>
+        <item>
             <pubDate>2026-08-15 15:01:25</pubDate>
             <title>وزارت اطلاعات: دیپلمات‌های فرانسوی به دنبال «پروژه‌های موذیانه» بودند</title>
             <description>نزدیک به یک ماه بعد از بازداشت کوتاه‌مدت دو دیپلمات فرانسوی در تهران، اینک وزارت اطلاعات این حادثه را با طرح اتهاماتی بسیار سنگین علیه فرانسه دوباره پیش کشیده است. وزارت اطلاعات ادعا می‌کند که «پروژۀ موذیانه‌ای» با «اهدافی همچون نفوذ، مداخلۀ خارجی و بسترسازی برای اقدام فرانسه علیه استقلال کشور» در جریان بوده است.</description>
@@ -129,14 +137,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#69d39ca556bf</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-69d39ca556bf.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-69d39ca556bf.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-08-13 12:38:09</pubDate>
-            <title>نگرانی نمایندگان کنگرۀ آمریکا از کمبود امکانات و تهدید به خودکشی در ناو هواپیمابر لینکلن</title>
-            <description>خبرگزاری فرانسه روز پنجشنبه ۲۲ مرداد گزارش داد که نمایندگان دموکرات کنگره آمریکا روز چهارشنبه خواستار توضیح دربارۀ شرایط زندگی در ناو هواپیمابر آبراهام لینکلن شدند؛ ناوی که بیش از ۲۰۰ روز است در دریا به سر می‌برد و رکوردی بی‌سابقه را ثبت کرده است. این درخواست در پی گزارش‌های نگران‌کننده دربارۀ وضعیت تغذیه و سلامت روان خدمه مطرح شده است.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#ebdc4460d477</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-ebdc4460d477.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-ebdc4460d477.jpg" />
         </item>
     </channel>
 </rss>
