@@ -11,6 +11,14 @@
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-7dfb3caa14d5.jpg" />
         </item>
         <item>
+            <pubDate>2026-08-16 14:31:18</pubDate>
+            <title>رسانه‌های اسرائیلی: ترامپ یک کانال محرمانه برای تماس با احمد وحیدی ایجاد کرد</title>
+            <description>به نوشتۀ رسانه‌های اسرائیلی، بزرگ‌ترین مشکل آمریکا در مذاکره با ایران، شناسایی تصمیم‌گیرندگان اصلی بوده است. به همین دلیل کاخ سفید مستقلاً تلاش کرده تا بفهمد آیا فرماندهی سپاه پاسداران با مذاکره‌کنندگان رسمی (قالیباف و ...) تفاهم دارد یا خیر. وساطت برای تماس با سپاه را نچیروان بارزانی، رئیس اقلیم کردستان عراق به عهده گرفته است.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#3c50d55e1c3e</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-3c50d55e1c3e.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-3c50d55e1c3e.jpg" />
+        </item>
+        <item>
             <pubDate>2026-08-15 11:11:16</pubDate>
             <title>ترامپ: تنگه هرمز را «قلمرو آمریکا» اعلام می‌کنم؛ تهران: هرمز ایرانی است و ایرانی می‌ماند</title>
             <description>دونالد ترامپ، رئیس‌جمهوری آمریکا با لحنی که به گفته یک مقام کاخ سفید طنزآمیز بود، اعلام کرد پس از «شکست ایران» تنگه هرمز را «قلمرو ایالات متحده» اعلام خواهد کرد. در واکنش، کاظم غریب‌آبادی، معاون وزیر خارجه ایران تأکید کرد که تنگه هرمز «ایرانی بوده، هست و خواهد ماند». ترامپ همچنین بار دیگر گفت ایران «هرگز به سلاح هسته‌ای دست نخواهد یافت» و با وجود افزایش بیش از ۳۵ درصدی قیمت بنزین در آمریکا، از تصمیم خود برای ورود به جنگ دفاع کرد.</description>
@@ -129,14 +137,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#8979da90303e</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-8979da90303e.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-8979da90303e.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-08-13 14:15:48</pubDate>
-            <title>تلاش یک زنبوردار در غزه برای احیای زنبورداری پس از جنگ در این منطقه</title>
-            <description>یک زنبوردار در شمال غزه، پس از نزدیک به دو سال آوارگی هنگام بازگشت به خانه‌اش در جبالیا، تنها یک کندو از ۳۰۰ کندوی خود را پیدا کرد که از جنگ جان سالم به در برده بود. این زن ۴۳ ساله اکنون با تکیه بر همان کندو تلاش می‌کند کسب‌وکار زنبورداری را دوباره راه‌اندازی کند و هزینه‌های زندگی خانواده‌اش را تأمین کند.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#20b9f1ff8dd5</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-20b9f1ff8dd5.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-20b9f1ff8dd5.jpg" />
         </item>
     </channel>
 </rss>
