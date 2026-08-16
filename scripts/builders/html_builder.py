@@ -453,6 +453,24 @@ _PAGE_TEMPLATE = """<!DOCTYPE html>
 <meta name="description" content="دایره؛ دسترسی سریع و زیبا به تازه‌ترین اخبار از منابع مختلف">
 <title>دایره</title>
 <link rel="icon" type="image/webp" href="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/assets/favicon.webp">
+
+
+<!-- Standard browser favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/assets/favicon.webp">
+<link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/assets/favicon.webp">
+
+<!-- iOS / Safari Home Screen -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/assets/favicon.webp">
+
+<!-- Web App Manifest -->
+<link rel="manifest" href="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/assets/manifest.json">
+
+<!-- iOS Web App -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Dayereh">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+
 <script>document.documentElement.classList.add("js");</script>
 <style>
 @font-face {{
