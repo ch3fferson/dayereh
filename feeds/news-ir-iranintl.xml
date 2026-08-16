@@ -3,6 +3,12 @@
     <channel>
         <title>ایران اینترنشنال</title>
         <item>
+            <pubDate>2026-08-16 10:58:02</pubDate>
+            <title>🎧 نسخه صوتی اخبار بامدادی | یکشنبه ۲۵ مرداد @iranintlTV</title>
+            <description>🎧 نسخه صوتی اخبار بامدادی | یکشنبه ۲۵ مرداد @iranintlTV</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#6e90631219bf</link>
+        </item>
+        <item>
             <pubDate>2026-08-16 10:33:34</pubDate>
             <title>محمد باقرزاده، فرمانده کمیته جستجوی مفقودین ستاد کل نیروهای مسلح، یک‌شنبه ۲۵ مرداد گفت تیمی از کارشن...</title>
             <description>محمد باقرزاده، فرمانده کمیته جستجوی مفقودین ستاد کل نیروهای مسلح، یک‌شنبه ۲۵ مرداد گفت تیمی از کارشناسان نیروی هوایی کشور چند ماه است که در انتظار ورود به قطر و بررسی میدانی درباره سه خلبان ایرانی هستند اما با کارشکنی‌ مسئولان قطری، تاکنون زمینه بازگشت این خلبانان فراهم نشده است. محمد باقرزاده افزود: دولت قطر به جای تکذیب مسئله اجازه دهد تا تیم حقیقت یاب نیروی هوایی ارتش جمهوری اسلامی به قطر عزیمت کند. پیش‌تر فرمانده کمیته جست‌وجوی مفقودین ستاد کل نیروهای مسلح جمهوری اسلامی، اعلام کرده بود سه خلبان ارتش که جنگنده‌های سوخو-۲۴ آن‌ها در جریان حملات اسفندماه سقوط کرده بود، به اسارت نیروهای قطری درآمده‌اند. وزارت خارجه قطر شنبه ۲۴ مرداد گزارش‌ها درباره بازداشت خلبانان ایرانی در این کشور را رد کرد. https://iranintl.com/202608168066</description>
@@ -116,11 +122,11 @@
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/IranintlTV_352758.jpg" />
         </item>
         <item>
-            <pubDate>2026-08-16 08:31:33</pubDate>
+            <pubDate>2026-08-16 08:30:43</pubDate>
             <title>سرخط خبرهای یکشنبه ۲۵ مرداد @iranintltv</title>
             <description>سرخط خبرهای یکشنبه ۲۵ مرداد @iranintltv</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#92d549170eee</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/IranintlTV_352757.mp4" medium="video" type="video/mp4" />
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#83e83a5b8a76</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/IranintlTV_352756.mp4" medium="video" type="video/mp4" />
         </item>
         <item>
             <pubDate>2026-08-16 08:27:00</pubDate>
@@ -137,14 +143,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#cea348f3b36f</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/IranintlTV_352754.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/IranintlTV_352754.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-08-16 07:42:18</pubDate>
-            <title>خبرگزاری قوه قضاییه از اعدام شهرام صادقی، از معترضان دی‌ماه در کرج، به اتهام «اقدام عملیاتی» به نفع...</title>
-            <description>خبرگزاری قوه قضاییه از اعدام شهرام صادقی، از معترضان دی‌ماه در کرج، به اتهام «اقدام عملیاتی» به نفع اسرائیل و آمریکا و گروه‌های متخاصم و اقدام «علیه امنیت و منافع ملی» خبر داد. خبرگزاری قوه قضاییه گفت شهرام صادقی به دلیل زیرگرفتن ماموران با خودرو در ۱۸ دی‌ماه، بازداشت شده بود. https://iranintl.com/202608168805</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#649a290a56dd</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/IranintlTV_352753.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/IranintlTV_352753.jpg" />
         </item>
     </channel>
 </rss>
