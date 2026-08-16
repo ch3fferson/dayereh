@@ -7,7 +7,7 @@
     "theme_color": "#0A0A0B",
     "icons": [
         {
-            "src": "/apple-touch-icon.png",
+            "src": "https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/assets/favicon.webp",
             "sizes": "180x180",
             "type": "image/webp",
             "purpose": "any"
