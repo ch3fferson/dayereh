@@ -3,6 +3,14 @@
     <channel>
         <title>رادیو بین‌المللی فرانسه فارسی</title>
         <item>
+            <pubDate>2026-08-18 11:37:25</pubDate>
+            <title>تنگۀ هرمز؛ از اصابت پرتابه به یک کشتی تا تهدید ترامپ به بمباران عمان</title>
+            <description>آژانس دریانوردی بریتانیا روز سه‌شنبه ۲۷ مرداد گزارش داد یک کشتیِ در حال عبور از تنگۀ هرمز، بر اثر برخورد یک پرتابۀ ناشناس آسیب دیده است. بر اساس این گزارش یکی از خدمۀ کشتی نیز زخمی شده و سایر خدمه فعلا تحت پوشش گارد ساحلی عمان هستند. این در حالی است که با وصف تلاش‌های چندجانبه تاکنون راه حلی برای گشایش این تنگه پیدا نشده است. دونالد ترامپ رئیس جمهوری آمریکا نیز روز گذشته در گفتگویی با شبکۀ فاکس نیوز، عمان را در صورت مانع تراشی در گشایش تنگۀ هرمز به بمباران تهدید کرد.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#312d15ac26d0</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-312d15ac26d0.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-312d15ac26d0.jpg" />
+        </item>
+        <item>
             <pubDate>2026-08-17 11:11:24</pubDate>
             <title>مهلت ۶۰ روزه تفاهم‌نامه ایران و آمریکا پایان یافت؛ نه حمله، نه توافق</title>
             <description>با پایان بی‌نتیجه مهلت ۶۰ روزه برای دستیابی به تفاهم میان ایران و آمریکا، خاورمیانه وارد مرحله تازه‌ای از بلاتکلیفی و بن‌بست سیاسی شده است. در حالی که واشنگتن، تهران را به افزایش فشارهای اقتصادی تهدید کرده و ایران نیز در پاسخ، نسبت به تلافی هشدار داده است، تهران کنترل‌های امنیتی را تشدید و فعالیت‌های خارج از کشور را جرم‌انگاری کرده است. از سوی دیگر، گزارش‌ها از کاهش بیش از پیش رفت‌وآمد در تنگه هرمز و گسترش دامنه درگیری‌ها در یمن خبر می‌دهند. با این حال، توقف حملات مستقیم میان ایران و آمریکا، منطقه را در وضعیت تعلیق قرار داده است.</description>
@@ -129,14 +137,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#90df520f14fc</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-90df520f14fc.png" medium="image" type="image/png" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-90df520f14fc.png" />
-        </item>
-        <item>
-            <pubDate>2026-08-15 07:30:04</pubDate>
-            <title>پنج سال پس از بازگشت طالبان؛ افغانستان کماکان میان انزوا، فقر و سرکوب</title>
-            <description>پنج سال پس از سقوط کابل و بازگشت طالبان به قدرت، افغانستان همچنان با پیامدهای سیاسی، اقتصادی و انسانی آن روز سرنوشت‌ساز دست‌وپنجه نرم می‌کند. این ویدیو از خروج آشفته آمریکا و قطعی بخش بزرگی از حمایت‌های بین‌المللی تا گسترش فقر، محدودیت‌های شدید علیه زنان و انزوای سیاسی افغانستان را مرور می‌کند؛ بحران‌هایی که در نهایت بیشترین هزینۀ آن را مردم این کشور پرداخته‌اند.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#3470fa58588d</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-3470fa58588d.png" medium="image" type="image/png" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-3470fa58588d.png" />
         </item>
     </channel>
 </rss>
