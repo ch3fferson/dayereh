@@ -3,6 +3,14 @@
     <channel>
         <title>صدای آمریکا</title>
         <item>
+            <pubDate>2026-08-18 08:15:13</pubDate>
+            <title>سازمان عملیات تجارت دریایی بریتانیا بامداد سه‌شنبه از دریافت گزارشی مبنی بر حمله با پرتابه‌ای ناشناس...</title>
+            <description>سازمان عملیات تجارت دریایی بریتانیا بامداد سه‌شنبه از دریافت گزارشی مبنی بر حمله با پرتابه‌ای ناشناس به یک کشتی در تنگه هرمز خبر داد. بر اساس این گزارش، این کشتی هنگام عبور در مسیر خروجی از تنگه هرمز، مورد اصابت این پرتابه قرار گرفته است. سازمان عملیات تجارت دریایی بریتانیا افزود که این حادثه موجب آسیب به موتورخانه و زخمی شدن یکی از خدمه شده است و سایر خدمه نیز توسط گارد ساحلی عمان در حال دریافت کمک هستند. @FarsiVOA</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#a6f7bea2771d</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/farsivoa_227552.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/farsivoa_227552.jpg" />
+        </item>
+        <item>
             <pubDate>2026-08-18 06:15:48</pubDate>
             <title>هشت کشور عربی و مسلمان نسبت به مخالفت اسرائیل با نقشه راه آمریکا برای غزه هشدار دادند @FarsiVOA</title>
             <description>هشت کشور عربی و مسلمان نسبت به مخالفت اسرائیل با نقشه راه آمریکا برای غزه هشدار دادند @FarsiVOA</description>
@@ -129,13 +137,6 @@
             <description>دونالد ترامپ: جمهوری اسلامی نه الان و نه در آینده نباید سلاح هسته‌ای داشته باشد @FarsiVOA</description>
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#9c5e449a5a9a</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/farsivoa_227533.mp4" medium="video" type="video/mp4" />
-        </item>
-        <item>
-            <pubDate>2026-08-18 02:30:15</pubDate>
-            <title>لادن بازرگان در برنامه تفسیر خبر: عروس ابتکار تقاص منافعی را پس می‌دهد که از کنار بالا رفتن مادر شوه...</title>
-            <description>لادن بازرگان در برنامه تفسیر خبر: عروس ابتکار تقاص منافعی را پس می‌دهد که از کنار بالا رفتن مادر شوهرش از دیوار سفارت به دست آورد @FarsiVOA</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#2602ecd8ea73</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/farsivoa_227532.mp4" medium="video" type="video/mp4" />
         </item>
     </channel>
 </rss>
