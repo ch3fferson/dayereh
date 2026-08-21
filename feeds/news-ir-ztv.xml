@@ -1,7 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss xmlns:media="http://search.yahoo.com/mrss/" version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
     <channel>
         <title>ضد تی وی</title>
+        <item>
+            <pubDate>2026-08-21 07:22:00</pubDate>
+            <title>صادرات نفت و پتروشیمی به صفر رسید؛ بحران کمبود ۲۰ میلیون لیتر بنزین در روز. ذخایر مواد غذایی و نهاده...</title>
+            <description>صادرات نفت و پتروشیمی به صفر رسید؛ بحران کمبود ۲۰ میلیون لیتر بنزین در روز. ذخایر مواد غذایی و نهاده‌های دامی تنها برای سه ماه؛ بن‌بست کامل در واردات دارو. بی‌اثری تهدیدهای رژیم؛ کشورهای منطقه مسیرهای جایگزین تجاری را فعال کردند.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#25ebf88cebcc</link>
+        </item>
         <item>
             <pubDate>2026-08-21 01:06:59</pubDate>
             <title>واشینگتن‌پست: رژیم ایران در آستانه ورشکستگی کامل؛ فشارهای ترامپ تشدید می‌شود. ناو هواپیمابر جورج واش...</title>
@@ -115,14 +121,6 @@
             <title>تعطیلی فولاد امیرکبیر خزر رشت؛ ۵۰۰ کارگر در پی بحران انرژی و نبود مواد اولیه بیکار شدند. بحران معیشت...</title>
             <description>تعطیلی فولاد امیرکبیر خزر رشت؛ ۵۰۰ کارگر در پی بحران انرژی و نبود مواد اولیه بیکار شدند. بحران معیشت در خانواده‌های کارگری؛ فرزندان برای تامین مخارج به کار در اسنپ روی آورده‌اند. تداوم نابودی صنایع زیربنایی؛ ناکارآمدی رژیم معیشت و آینده کارگران را هدف قرار داده است.</description>
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#d8060fc4d182</link>
-        </item>
-        <item>
-            <pubDate>2026-08-20 16:39:27</pubDate>
-            <title>فساد در وزارت کشاورزی: تلاش برای توزیع ۲۰ هزار تن مرغ تاریخ‌مصرف‌گذشته در بازار. اخراج مسئول سازمان...</title>
-            <description>فساد در وزارت کشاورزی: تلاش برای توزیع ۲۰ هزار تن مرغ تاریخ‌مصرف‌گذشته در بازار. اخراج مسئول سازمان دامپزشکی در پی مخالفت با جعل تاریخ انقضای محموله‌های فاسد. افشای رانت‌خواری و فساد سیستمی در واردات نهاده‌های دامی توسط مقامات حکومتی.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#d933c5b9a8ca</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/ZTVofficial_11943.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/ZTVofficial_11943.jpg" />
         </item>
     </channel>
 </rss>
