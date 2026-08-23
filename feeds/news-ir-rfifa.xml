@@ -11,6 +11,14 @@
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-a2ff13a6a93b.jpg" />
         </item>
         <item>
+            <pubDate>2026-08-23 17:05:49</pubDate>
+            <title>سی سال از اخراج خشونت‌آمیز مهاجران بدون مدرک از کلیسای سن برنارد فرانسه گذشت</title>
+            <description>سی سال پیش در چنین روزی، در ۲۳ اوت ۱۹۹۶، بیش از ۳۰۰ خانواده، از جمله بسیاری از کودکان که به کلیسای سن برنارد در منطقه ۱۸ پاریس پناه برده بودند، توسط پلیس با خشونت اخراج شدند. به ساختمان حمله شد و درهای کلیسا با تبر شکسته شد. ساکنان بدون مدرک قبل از اینکه به خیابان پرتاب شوند یا به بازداشتگاه منتقل شوند، با گاز اشک‌آور مورد حمله قرار گرفتند.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#73ec722dcbeb</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-73ec722dcbeb.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-73ec722dcbeb.jpg" />
+        </item>
+        <item>
             <pubDate>2026-08-23 16:06:22</pubDate>
             <title>مصوبه جدید درباره مهریه بالای ۱۴ سکه؛ حبس به پابند الکترونیکی تبدیل می‌شود</title>
             <description>تصویب طرح جدید مجلس برای اصلاح قانون مهریه و مطرح‌شدن عدد «۱۴ سکه»، ابهامات و نگرانی‌هایی ایجاد کرده است. نمایندگان مجلس می‌گویند که هدفشان از این طرح، کم‌کردن تعداد زندانی‌های بدهکار مالی است. این در حالی است که بر اساس آمار ستاد دیه، در حال حاضر بیش از ۲۰ هزار نفر به دلیل جرائم غیرعمد در زندان هستند که از این میان، تنها حدود سه هزار نفر به دلیل نداشتن توان مالی در پرداخت مهریه در زندان به سر می‌برند.</description>
@@ -129,14 +137,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#238690ff8e9f</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-238690ff8e9f.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-238690ff8e9f.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-08-21 17:27:20</pubDate>
-            <title>بحران معیشت در سایه جنگ اقتصادی؛ روایت ایرانیان از فشار تحریم‌ها و گرانی</title>
-            <description>در حالی که ایالات متحده از گسترش جنگ اقتصادی سخن می‌گوید، خانواده‌های ایرانی برای تأمین ابتدایی‌ترین نیازهای روزمره خود با چالش‌های بی‌سابقه‌ای روبه‌رو شده‌اند. با وجود اینکه خواربارفرشی‌های تهران خالی از کالا نیستند، اما تورم کمرشکن، سقوط ارزش پول ملی و نرخ رو به رشد بیکاری، سبد غذایی مردم را کوچک‌تر کرده و بسیاری را مجبور به انجام کارهای چندشیفته برای بقا کرده است.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#04eb83ff731a</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-04eb83ff731a.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-04eb83ff731a.jpg" />
         </item>
     </channel>
 </rss>
