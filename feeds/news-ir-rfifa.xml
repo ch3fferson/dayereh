@@ -3,6 +3,14 @@
     <channel>
         <title>رادیو بین‌المللی فرانسه فارسی</title>
         <item>
+            <pubDate>2026-08-24 11:15:38</pubDate>
+            <title>وزیر خارجه عمان برای توافق درباره تنگه هرمز به تهران سفر می‌کند</title>
+            <description>تلاش‌های دیپلماتیک برای پیداکردن راه‌حلی درباره تنگه هرمز ادامه دارد. از یک‌سو بدر البوسعیدی، وزیر خارجه عمان، برای نهایی‌کردن توافقی با ایران درباره مسیر جدید کشتیرانی عازم تهران می‌شود؛ دیداری که قطر نیز آن را گامی مهم برای احیای گفت‌وگوهای ایران و آمریکا دانسته است. از سوی دیگر، امانوئل ماکرون در پاریس میزبان محمد بن سلمان است تا درباره بحران خاورمیانه گفت‌وگو کند؛ سفری دو روزه که با اعتراض شدید اتحادیه‌های روزنامه‌نگاران فرانسوی به دلیل پرونده قتل جمال خاشقچی روبرو شده است.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#44192cefbb2b</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-44192cefbb2b.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-44192cefbb2b.jpg" />
+        </item>
+        <item>
             <pubDate>2026-08-23 11:27:59</pubDate>
             <title>رئیس ستاد ارتش پاکستان، به تهران می‌رود</title>
             <description>رسانه‌های داخلی ایران خبر داده اند که عاصم منیر، فرمانده ارتش پاکستان، روز دوشنبه برای دیدار با مقام‌های ایرانی به تهران سفر می‌کند؛ سفری که هم‌زمان با نقش میانجی‌گرانۀ اسلام‌آباد در مذاکرات میان ایران و آمریکا برای پایان‌دادن به جنگ انجام می‌شود. این سفر در شرایطی صورت می‌گیرد که دونالد ترامپ گفته ایران هنوز برای «توافق درست» آماده نیست و محسن رضایی نیز هشدار داده است هر گونه حرکت ایالات متحده در تنگۀ هرمز هدف قرار خواهد گرفت.</description>
@@ -129,14 +137,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#cbd398f5907b</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-cbd398f5907b.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-cbd398f5907b.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-08-21 18:23:28</pubDate>
-            <title>مختومه‌شدن پرونده امدادگران غزه؛ سه کشور غربی تصمیم اسرائیل را «شرم‌آور» خواندند</title>
-            <description>بریتانیا، کانادا و استرالیا تصمیم اسرائیل برای بستن پرونده تحقیقات درباره کشته‌شدن هفت امدادگر «آشپزخانه مرکزی جهانی» در غزه را «شرم‌آور» خواندند. در پرونده‌ای دیگر، خانواده هند رجب، کودک پنج‌ساله فلسطینی، تحقیقات جنایی ارتش اسرائیل درباره مرگ او را تلاشی برای توجیه جنایت توصیف کردند.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#238690ff8e9f</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-238690ff8e9f.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-238690ff8e9f.jpg" />
         </item>
     </channel>
 </rss>
