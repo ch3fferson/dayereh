@@ -5,6 +5,10 @@
       "slang": "price_dollar_rl"
     },
     {
+      "title": "درهم",
+      "slang": "price_aed"
+    },
+    {
       "title": "سکه امامی",
       "slang": "sekee"
     },
@@ -45,6 +49,11 @@
       "url": "https://t.me/s/caronline_original"
     },
     {
+      "title": "فکت‌نامه",
+      "app_name": "news-ir-factnameh",
+      "url": "https://t.me/s/factnameh"
+    },
+    {
       "title": "ایران اینترنشنال",
       "app_name": "news-ir-iranintl",
       "url": "https://t.me/s/iranintltv"
@@ -68,11 +77,6 @@
       "title": "رادیو فردا",
       "app_name": "news-ir-radiofarda",
       "url": "https://t.me/s/radiofarda"
-    },
-    {
-      "title": "فکت‌نامه",
-      "app_name": "news-ir-factnameh",
-      "url": "https://t.me/s/factnameh"
     },
     {
       "title": "کانال شاهزاده",
