@@ -11,6 +11,14 @@
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-0e6a63639ece.jpg" />
         </item>
         <item>
+            <pubDate>2026-08-25 14:14:19</pubDate>
+            <title>جنگ با ایران؛ آیا اسرائیل به اهداف استراتژیک خود رسیده است؟</title>
+            <description>در حالی که از نخستین روزهای حملۀ آمریکا و اسرائیل به ایران این زمزمه‌ها وجود داشت که دونالد ترامپ، رئیس‌جمهوری ایالات متحدۀ آمریکا، به تحریک بنیامین نتانیاهو، نخست‌وزیر اسرائیل، وارد این جنگ شده است، امروز پس از حدود شش ماه از شروع درگیری‌ها و پس از آن تلاش‌های دیپلماتیک برای حل آن، سؤالی که کارشناسان و تحلیلگران اطلاعاتی و نظامی در پی پاسخ دادن به آن هستند این است که آیا اسرائیل در این جنگ به اهداف اصلی مورد نظر خود رسیده است یا نه؟ و با توجه به این که بسیاری از کشورهای جهان امروز در پی این هستند که برای این جنگ راه‌حلی دیپلماتیک پیدا کنند، اساساً پیروز این جنگ کدام طرف بوده است؟</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#1c77ce491487</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-1c77ce491487.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-1c77ce491487.jpg" />
+        </item>
+        <item>
             <pubDate>2026-08-24 11:15:38</pubDate>
             <title>ترامپ ادعا کرد: ایران کاملاً در حال فروپاشی است؛ دلار از ٢٠٠ هزار تومان گذشت</title>
             <description>هم‌زمان با رکوردشکنی تاریخی نرخ ارز در تهران و گذر دلار از مرز ۲۰۰ هزار تومان، دونالد ترامپ از «فروپاشی کامل ایران» سخن گفت؛ ادعایی که با واکنش رئیس کل بانک مرکزی مواجه شد و او این افت ارزش را «مقطعی» و ناشی از جنگ روانی واشنگتن در آستانه اعلام بسته جدید تحریم‌های اقتصادی آمریکا دانست.</description>
@@ -129,14 +137,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#76550a10a75d</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-76550a10a75d.png" medium="image" type="image/png" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-76550a10a75d.png" />
-        </item>
-        <item>
-            <pubDate>2026-08-22 18:45:55</pubDate>
-            <title>سود شرکت‌های نفتی درپی جنگ خاورمیانه؛ شش کشور اروپایی خواستار وضع مالیات شدند</title>
-            <description>خبرگزاری فرانسه در گزارشی نوشته که شش کشور عضو اتحادیه اروپا خواستار تشدید تلاش‌ها برای وضع مالیات بر سودهای بادآورده شرکت‌های نفتی در سراسر این اتحادیه شده‌اند. گفته شده که سود این شرکت‌ها به دلیل جنگ خاورمیانه افزایش چشمگیری پیدا کرده است. وزیران دارایی این شش کشور پیشنهاد داده‌اند که این موضوع در نشست وزیران دارایی کشورهای عضو اتحادیه در ماه آینده در دوبلین، در دستور کار قرار گیرد.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#17e86b395ebb</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-17e86b395ebb.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-17e86b395ebb.jpg" />
         </item>
     </channel>
 </rss>
