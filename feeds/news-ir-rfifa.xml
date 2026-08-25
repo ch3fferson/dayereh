@@ -27,6 +27,14 @@
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-b1a5ae0083ba.jpg" />
         </item>
         <item>
+            <pubDate>2026-08-25 17:39:19</pubDate>
+            <title>حذف نام سوریه از فهرست کشورهای حامی تروریسم</title>
+            <description>سوریه از حذف نامش از فهرست کشورهای حامی تروریسم آمریکا استقبال می‌کند.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#e4521874ab66</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-e4521874ab66.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-e4521874ab66.jpg" />
+        </item>
+        <item>
             <pubDate>2026-08-24 11:15:38</pubDate>
             <title>ترامپ ادعا کرد: ایران کاملاً در حال فروپاشی است؛ دلار از ٢٠٠ هزار تومان گذشت</title>
             <description>هم‌زمان با رکوردشکنی تاریخی نرخ ارز در تهران و گذر دلار از مرز ۲۰۰ هزار تومان، دونالد ترامپ از «فروپاشی کامل ایران» سخن گفت؛ ادعایی که با واکنش رئیس کل بانک مرکزی مواجه شد و او این افت ارزش را «مقطعی» و ناشی از جنگ روانی واشنگتن در آستانه اعلام بسته جدید تحریم‌های اقتصادی آمریکا دانست.</description>
@@ -129,14 +137,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#39f36a091d6c</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-39f36a091d6c.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-39f36a091d6c.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-08-22 18:18:21</pubDate>
-            <title>طالبان هرگونه تظاهرات در سراسر افغانستان را به‌گونه رسمی ممنوع کردند</title>
-            <description>طالبان با نشر «قانون شرطه» هرگونه تظاهرات در افغانستان را ممنوع اعلام کرده و هم‌زمان نام پلیس را به به شرطه تغییر داده‌اند. این قانون که به دستور ملا هبت‌الله آخندزاده، رهبر طالبان تدوین شده، درحالی منتشر می‌شود که در پنج سال پسین، هرگونه تظاهرات و اعتراض از سوی رژیم طالبان سرکوب شده و معترضان نیز با شکنجه و بازداشت روبه‌رو بوده‌اند.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#6bf270679031</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-6bf270679031.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-6bf270679031.jpg" />
         </item>
     </channel>
 </rss>
