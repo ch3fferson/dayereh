@@ -19,6 +19,14 @@
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-abfe3f26c8d1.jpg" />
         </item>
         <item>
+            <pubDate>2026-08-25 20:06:02</pubDate>
+            <title>سوریه و لنبان، دو عرصۀ رویارویی ترکیه و اسرائیل</title>
+            <description>سحرگاه روز سه‌شنبه ۲۷ مرداد ۱۴۰۵ / ۱۸ اوت ۲۰۲۶، اسرائیل پایگاه هوایی ابوظهور را در سوریه بمباران کرد. این فرودگاه نظامیِ متروکه در شمال غربی سوریه در حدود ۷۰ کیلومتری مرز ترکیه قرار دارد. به گفتۀ کارشناسان، این حمله هشداری به ترکیه بود.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#7b50ae98b701</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-7b50ae98b701.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-7b50ae98b701.jpg" />
+        </item>
+        <item>
             <pubDate>2026-08-25 14:14:19</pubDate>
             <title>جنگ با ایران؛ آیا اسرائیل به اهداف استراتژیک خود رسیده است؟</title>
             <description>در حالی که از نخستین روزهای حملۀ آمریکا و اسرائیل به ایران این زمزمه‌ها وجود داشت که دونالد ترامپ، رئیس‌جمهوری ایالات متحدۀ آمریکا، به تحریک بنیامین نتانیاهو، نخست‌وزیر اسرائیل، وارد این جنگ شده است، امروز پس از حدود شش ماه از شروع درگیری‌ها و پس از آن تلاش‌های دیپلماتیک برای حل بحران، سؤالی که کارشناسان و تحلیلگران اطلاعاتی و نظامی در پی پاسخ دادن به آن هستند این است که آیا اسرائیل در این جنگ به اهداف اصلی مورد نظر خود رسیده است یا نه؟ و با توجه به این که بسیاری از کشورهای جهان امروز در پی این هستند که برای این جنگ راه‌حلی دیپلماتیک پیدا کنند، اساساً پیروز این جنگ کدام طرف بوده است؟</description>
@@ -129,14 +137,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#0fc59ba867de</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-0fc59ba867de.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-0fc59ba867de.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-08-22 11:27:31</pubDate>
-            <title>سنتکام: ۶۸ کشتی تجاری در چارچوب محاصرۀ دریایی ایران تغییر مسیر داده‌اند</title>
-            <description>فرماندهی مرکزی ارتش آمریکا، سنتکام، اعلام کرده است که تا ۲۱ اوت در چارچوب محاصرۀ دریایی ایران، ۶۸ کشتی تجاری را تغییر مسیر داده، سه کشتی را از کار انداخته و وارد دو کشتی شده است؛ هم‌زمان محمدباقر قالیباف، رئیس مجلس ایران، گفته تهران پیام‌هایی از کشورهای همسایه درباره شکل‌گیری ترتیبات تازۀ امنیتی و همکاری اقتصادی دریافت کرده و «نظم بومی و مستقل» را راه تأمین صلح و امنیت منطقه دانسته است.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#39f36a091d6c</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-39f36a091d6c.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-39f36a091d6c.jpg" />
         </item>
     </channel>
 </rss>
