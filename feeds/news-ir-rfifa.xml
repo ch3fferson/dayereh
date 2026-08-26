@@ -3,6 +3,14 @@
     <channel>
         <title>رادیو بین‌المللی فرانسه فارسی</title>
         <item>
+            <pubDate>2026-08-26 11:46:27</pubDate>
+            <title>تهران: تا زمانی که آمریکا به جنگ پایان ندهد تنگۀ هرمز بازگشایی نخواهد شد</title>
+            <description>در حالی که عمان و ایران در حال مذاکره درباره ایجاد یک کریدور موقت برای کشتیرانی در تنگۀ هرمز و همچنین پاکسازی مین‌های دریایی هستند تهران روز چهارشنبه ۴ شهریور، هشدار داد که این گذرگاه راهبردی برای نفت جهان تا زمانی که ایالات متحده به جنگ پایان ندهد، بازگشایی نخواهد شد.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#03ad440accba</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-03ad440accba.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-03ad440accba.jpg" />
+        </item>
+        <item>
             <pubDate>2026-08-25 11:10:39</pubDate>
             <title>تهران با ابراز امیدواری از مقاومت شرکا در برابر تحریم‌های «خردکننده» واشنگتن، وعده تلافی داد</title>
             <description>تهران قول داده که تحریم‌های گسترده واشنگتن را که به گفته آمریکایی‌ها، شریان اقتصادی ایران را قطع می‌کند، تلافی کند. ایران همچنان ابراز امیدواری کرده که شرکای تجاری اصلی در برابر این فشار سنگین مقاومت خواهند کرد. وزیر خزانه‌داری آمریکا، روز گذشته، از این اقدامات رونمایی کرد، اما از اعمال شدیدترین تحریم‌ها خودداری نمود. او همچنان هشدار داد کشورهایی که به تجارت با ایران ادامه می‌دهند، در معرض خطر خروج از سیستم مالی مبتنی بر دلار قرار خواهند گرفت. همزمان با این، وزیر کشور پاکستان که به تهران سفر کرده، در مورد نتایج مذاکرات ابراز امیدواری کرده است.</description>
@@ -129,14 +137,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#fccc1703fdd4</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-fccc1703fdd4.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-fccc1703fdd4.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-08-23 13:19:04</pubDate>
-            <title>مکرون میزبان محمد بن سلمان در پاریس؛ محور گفتگوها درباره روابط دوجانبه و تحولات خاورمیانه</title>
-            <description>برای تعمیق روابط بین پاریس و ریاض، امانوئل مکرون، رئیس‌جمهور فرانسه، روز یک‌شنبه، میزبان محمد بن سلمان، ولیعهد عربستان سعودی خواهد بود. این سفر دو روزه ولیعهد عربستان درحالی انجام می‌شود که رهبران کشورهای غربی و خاورمیانه تلاش می‌کنند تا به جنگ آمریکا و اسرائیل با ایران پایان دهند.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#0fc59ba867de</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-0fc59ba867de.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-0fc59ba867de.jpg" />
         </item>
     </channel>
 </rss>
