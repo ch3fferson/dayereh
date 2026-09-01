@@ -11,25 +11,29 @@ on:
 jobs:
   update-schedule:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
       - name: Checkout repo content
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           persist-credentials: true
 
       - name: Install FFmpeg
-        run: sudo apt-get install -y --no-install-recommends ffmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          ffmpeg -version | head -n 1
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.13"
           cache: pip
           cache-dependency-path: config/requirements.txt
 
       - name: Install Python packages
-        run: pip install -r config/requirements.txt
+        run: python -m pip install -r config/requirements.txt
 
       - name: Execute script
         run: python scripts/main.py "${{ secrets.GEMINI_TOKEN }}"
