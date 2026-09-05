@@ -3,6 +3,22 @@
     <channel>
         <title>رادیو بین‌المللی فرانسه فارسی</title>
         <item>
+            <pubDate>2026-09-05 12:03:55</pubDate>
+            <title>نفت‌کش ایرانی در نزدیکی جزیرۀ خارگ هدف حملۀ موشکی آمریکا قرار گرفت</title>
+            <description>یک نفت‌کش ایرانی در محدودۀ لنگرگاه جزیرۀ خارگ هدف چهار موشک نیروهای آمریکایی قرار گرفته است. بر اساس گزارش‌های اولیه، این حمله تلفات جانی نداشته و عملیات تخلیۀ خدمه نفتکش آغاز شده است.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#79def50f133c</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-79def50f133c.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-79def50f133c.jpg" />
+        </item>
+        <item>
+            <pubDate>2026-09-05 13:12:04</pubDate>
+            <title>جهان روی نقشه عوض می‌شود؛ سازمان ملل به نمایش واقعی‌تر اندازه قاره‌ها و کشورها رأی داد</title>
+            <description>مجمع عمومی سازمان ملل متحد روز جمعه با تصویب قطعنامه‌ای خواستار استفاده از نقشه‌هایی شد که اندازۀ واقعی قاره‌ها و کشورها را دقیق‌تر نشان می‌دهند. با اجرای این تغییر، آفریقا، آمریکای لاتین و جنوب آسیا بزرگ‌تر از آنچه در نقشه‌های رایج دیده‌ایم ظاهر می‌شوند و در مقابل، آمریکا، اروپا، روسیه و چین کوچک‌تر به نظر خواهند رسید.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#0bbd2fda141b</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-0bbd2fda141b.png" medium="image" type="image/png" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-0bbd2fda141b.png" />
+        </item>
+        <item>
             <pubDate>2026-09-04 10:53:43</pubDate>
             <title>ارتش جمهوری اسلامی: دکترین نظامی ما به سمت جنگ «پیش‌دستانه» حرکت می‌کند</title>
             <description>سخنگوی ارتش جمهوری اسلامی تأیید کرد که حملات اخیر ایران به اردن، بحرین و امارات، ضربات «پیش‌دستانه» بوده است. تاکنون جمهوری اسلامی ادعا می‌کرد که صرفاً در واکنش به حملات دشمن دست به اقدام نظامی دست می‌زند. این در حالی است که آمریکا تلاش می‌کند فشار اصلی خود علیه ایران را به عرصۀ اقتصادی انتقال دهد. وزیر دارایی آمریکا اعلام کرد که اتحادیۀ اروپا رسما به «عملیات انزوای اقتصادی ایران» پیوسته است.</description>
@@ -121,14 +137,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#6e3b8758781f</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-6e3b8758781f.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-6e3b8758781f.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-09-02 18:27:05</pubDate>
-            <title>مجاهد در دفاع از قانون منع تظاهرات در افغانستان: تظاهرات در «قوانین اسلامی» وجود ندارد</title>
-            <description>ذبیح‌الله مجاهد، سخنگوی طالبان در دفاع از ممنوعیت تظاهرات، می‌گوید که تظاهرات در «قوانین اسلامی وجود ندارد». مجاهد درحالی از این قانون جنجالی، دفاع کرده که سازمان‌های بین‌المللی، این قانون طالبان را «بی‌رحمانه» خوانده و آن را اقدامی برای سرکوب هرگونه مخالفت در کشور دانسته‌اند.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#1879e5b40c50</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-1879e5b40c50.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-1879e5b40c50.jpg" />
         </item>
     </channel>
 </rss>
