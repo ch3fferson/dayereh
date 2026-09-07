@@ -3,6 +3,14 @@
     <channel>
         <title>رادیو بین‌المللی فرانسه فارسی</title>
         <item>
+            <pubDate>2026-09-07 11:28:10</pubDate>
+            <title>محسن رضایی: هر کشتی که به قصد عبور از تنگۀ هرمز وارد «منطقۀ ممنوعه» شود، از سوی ایران تحریم می‌شود</title>
+            <description>محسن رضایی، دبیر شورای عالی امنیت ملی ایران، شامگاه یکشنبه اعلام کرد تهران در روزها و هفته‌های آینده «منطقۀ ممنوعه‌ای» در خارج از تنگۀ هرمز اعلام خواهد کرد و گفت هر کشتی که با هدف عبور از این تنگه وارد این محدوده شود و مورد شناسایی قرار گیرد، در «لیست تحریمی» ایران قرار خواهد گرفت. این اظهارات در پی تشدید حملات متقابل ایران و آمریکا در آب‌های خلیج فارس و کاهش شدید تردد دریایی در تنگه هرمز مطرح شده است.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#f5636d543aa0</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-f5636d543aa0.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-f5636d543aa0.jpg" />
+        </item>
+        <item>
             <pubDate>2026-09-06 11:38:50</pubDate>
             <title>سنتکام محاصرۀ دریایی را ادامه می‌دهد؛ قالیباف از پاسخ «دردناک‌تر» می‌گوید</title>
             <description>فرماندهی مرکزی ارتش ایالات متحده، سنتکام، اعلام کرده است که محاصرۀ دریایی ایران ادامه دارد و نیروهای آمریکایی تاکنون مسیر ده‌ها کشتی تجاری را تغییر داده‌اند. هم‌زمان، محمدباقر قالیباف، رئیس مجلس ایران، به واشنگتن هشدار داده است که هرگونه اقدام علیه منافع و امنیت ایران با پاسخی «سریع‌تر، سنگین‌تر و دردناک‌تر» روبه‌رو خواهد شد. این تحولات در حالی رخ می‌دهد که ایران از هدف قرار دادن چند نفتکش و شناور آمریکایی و مرتبط با آمریکا خبر داده و سنتکام نیز روز گذشته اعلام کرده بود که به سه نفتکش مرتبط با سپاه پاسداران حمله کرده است.</description>
@@ -129,14 +137,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#4828b6c8d169</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-4828b6c8d169.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-4828b6c8d169.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-09-03 19:12:48</pubDate>
-            <title>«پایانی در کار نیست»؛ چرنوبیل پس از ۴۰ سال در قاب دوربین گِرد لودویگ</title>
-            <description>نمایشگاه «پایانی در کار نیست: چرنوبیل، ۴۰ سال بعد»، مخاطب را با مجموعه‌ای مواجه می‌کند که در آن، زمان، حافظه و فاجعه در کنار یکدیگر قرار گرفته‌اند. عکس‌های لودویگ از چرنوبیل نه فقط به گذشته، بلکه به حال و آینده منطقه نیز نگاه می‌کنند. از رآکتور و شهرهای متروکه گرفته تا زندگی انسان‌هایی که در سایه تشعشعات و خاطره یک فاجعه هسته‌ای ادامه دارد، تصاویر این مجموعه‌ یادآور این واقعیت هستند که برخی فجایع با پایان یافتن لحظه وقوعشان تمام نمی‌شوند. چرنوبیل، چهار دهه بعد، همچنان موضوعی زنده برای عکاسی، محیط زیست و تاریخ معاصر است؛ روایتی که به تعبیر عنوان نمایشگاه، هنوز پایانی در کار ندارد.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#838b5eea09a8</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-838b5eea09a8.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-838b5eea09a8.jpg" />
         </item>
     </channel>
 </rss>
