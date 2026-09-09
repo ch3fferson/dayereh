@@ -3,6 +3,13 @@
     <channel>
         <title>ایران وایر</title>
         <item>
+            <pubDate>2026-09-09 01:23:02</pubDate>
+            <title>ویدیوها و گزارش‌های منتشر شده در رسانه‌های سپاه پاسداران از آغاز موجی از حملات موشکی جمهوری اسلامی ب...</title>
+            <description>ویدیوها و گزارش‌های منتشر شده در رسانه‌های سپاه پاسداران از آغاز موجی از حملات موشکی جمهوری اسلامی به اردن در شامگاه ۱۷ شهریور ۱۴۰۵،حکایت دارند. شبکه الحدث گزارش کرده پدافند هوایی اردن با موجی از موشک‌های پرتاب شده از سوی ایران مقابله کرده است. خبرگزاری فارس مدعی شده پایگاه‌های هوایی «موفق السلطی» در منطقه الازرق و «شاهزاده حسن» اهداف حملات موشکی سپاه هستند. @Farsi_Iranwire</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#26ab23ea03d7</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/Farsi_Iranwire_93500.mp4" medium="video" type="video/mp4" />
+        </item>
+        <item>
             <pubDate>2026-09-09 00:04:18</pubDate>
             <title>نیروی دریایی سپاه پاسداران، شامگاه ۱۷ شهریور ۱۴۰۵، به خدمه نفتکش‌های مستقر در محدوده اسکله‌های کویت...</title>
             <description>نیروی دریایی سپاه پاسداران، شامگاه ۱۷ شهریور ۱۴۰۵، به خدمه نفتکش‌های مستقر در محدوده اسکله‌های کویت و بحرین هشدار داد که شناورهای خود را فورا ترک کنند. در اطلاعیه نیروی دریایی سپاه آمده است که این هشدار متوجه تمامی نفتکش‌های مستقر در محدوده اسکله‌ها و لنگرگاه‌های کویت و بحرین است؛ کشورهایی که به گفته سپاه «میزبان» نیروهای آمریکایی و «شریک در شرارت آنان» هستند. سپاه اعلام کرده است این شناورها در صورت باقی ماندن در محل «هدف قرار خواهند گرفت». بیشتر بخوانید: https://iranwire.com/fa/news-1/157349 @Farsi_Iranwire</description>
@@ -141,13 +148,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#56f48f27a09e</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/Farsi_Iranwire_93481.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/Farsi_Iranwire_93481.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-09-08 14:43:07</pubDate>
-            <title>ویدیوی رسیده به ایران‌وایر صف خودروها مقابل یکی از جایگاه‌های سوخت را پس از اجرای نرخ جدید نشان می‌د...</title>
-            <description>ویدیوی رسیده به ایران‌وایر صف خودروها مقابل یکی از جایگاه‌های سوخت را پس از اجرای نرخ جدید نشان می‌دهد. جمهوری اسلامی از بامداد سه‌شنبه ۱۷ شهریور قیمت بنزین مصرفی مازاد بر سهمیه ماهانه را به لیتری ۱۰ هزار تومان افزایش داده است. @Farsi_Iranwire</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#3d6d9c56cdd6</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/Farsi_Iranwire_93480.mp4" medium="video" type="video/mp4" />
         </item>
     </channel>
 </rss>
