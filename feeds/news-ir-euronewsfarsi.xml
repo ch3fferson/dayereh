@@ -3,6 +3,14 @@
     <channel>
         <title>یورونیوز</title>
         <item>
+            <pubDate>2026-09-13 02:38:05</pubDate>
+            <title>۱۲ سپتامبر ۲۰۲۶ - آرشیو یورونیوز - تمام مقالات و ویدیوها را به صورت آنلاین مرور کنید https://l.euron...</title>
+            <description>۱۲ سپتامبر ۲۰۲۶ - آرشیو یورونیوز - تمام مقالات و ویدیوها را به صورت آنلاین مرور کنید https://l.euronews.com/0F8M</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#03016a38735e</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/euronewspe_89308.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/euronewspe_89308.jpg" />
+        </item>
+        <item>
             <pubDate>2026-09-12 23:42:46</pubDate>
             <title>ریچل زورک و یووال آبراهام برای فیلم «Naza» جایزه ویژه هیات داوران را دریافت کردند. لی چانگ‌دونگ برای...</title>
             <description>ریچل زورک و یووال آبراهام برای فیلم «Naza» جایزه ویژه هیات داوران را دریافت کردند. لی چانگ‌دونگ برای «Possible Love» شیر نقره‌ای هیات داوران را گرفت. https://l.euronews.com/uHr3</description>
@@ -153,14 +161,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#1e117c396158</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/euronewspe_89289.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/euronewspe_89289.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-09-12 12:30:46</pubDate>
-            <title>پیشروی سریع نیروهای حوثی، مسیر کلیدی کشتیرانی در دریای سرخ را با تهدیدی جدی مواجه کرده است. هم‌زمان،...</title>
-            <description>پیشروی سریع نیروهای حوثی، مسیر کلیدی کشتیرانی در دریای سرخ را با تهدیدی جدی مواجه کرده است. هم‌زمان، حملات پهپادی منتسب به گروه‌های شبه‌نظامی عراق موجب تعطیلی یک خط لوله نفتی حیاتی در عربستان شده و تداوم اختلال عبور و مرور در تنگه هرمز، سناریویی کابوس‌وار برای ریاض و بازارهای جهانی رقم زده است. https://l.euronews.com/IW7j</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#3b35eda1788b</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/euronewspe_89288.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/euronewspe_89288.jpg" />
         </item>
     </channel>
 </rss>
