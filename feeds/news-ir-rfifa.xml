@@ -3,6 +3,14 @@
     <channel>
         <title>رادیو بین‌المللی فرانسه فارسی</title>
         <item>
+            <pubDate>2026-09-23 11:18:55</pubDate>
+            <title>مهاجر ایرانی اخراج شده از آمریکا: در هواپیما فهمیدیم ما را به آفریقای مرکزی می‌برند</title>
+            <description>از زمان بازگشت دونالد ترامپ به کاخ سفید، هزاران مهاجر از آمریکا اخراج شده‌اند. برخی نه به کشور خود، بلکه به کشورهایی که هیچ آشنایی با آن‌ها ندارند. یک زن ایرانی که از سرکوب در ایران گریخته بود، در جریان پرواز متوجه شد که او را به جمهوری آفریقای مرکزی می‌برند. روایت او و دیگر اخراج‌شدگان، بخشی از تحقیق بین‌المللی «پروژۀ اخراج» است؛ تحقیقی با همکاری ۲۴ رسانه از سراسر جهان، از جمله رادیو فرانسه بین‌المللی، با ابتکار مجموعه «فوربیدن استوریز» که ابعاد سیاست اخراج مهاجران در دولت ترامپ و منافع اقتصادی پشت آن را بررسی کرده است.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#cad0c392019c</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-cad0c392019c.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-cad0c392019c.jpg" />
+        </item>
+        <item>
             <pubDate>2026-09-22 11:07:09</pubDate>
             <title>دیدار احتمالی ایران و آمریکا در سازمان ملل؛ آمادگی واشنگتن و چراغ سبز تهران برای بازگشایی تنگه هرمز</title>
             <description>در آستانه برگزاری مجمع عمومی سازمان ملل، یک مقام ارشد ایرانی گفته که درصورت کاهش فشار نظامی و لغو محاصره بنادر ایران، تهران آماده بازگشایی تنگه هرمز است. وزیر خارجه آمریکا هم گفته که آماده گفتگو با هیئت ایرانی در حاشیه نشست سازمان ملل است، اما تاکید کرده که تاکنون هیچ دیداری برنامه‌ریزی نشده است. در سوی دیگر، پوتین و بن سلمان نیز در گفتگوی تلفنی خواستار عبور ایمن کشتی‌ها از تنگه‌های هرمز و باب‌المندب شده‌اند. پادشاه عربستان نیز در اعلامیه‌ای بی‌پیشینه، حوثی‌های مورد حمایت ایران را «شبه‌نظامیان تروریست» گفته است.</description>
@@ -129,14 +137,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#5062ecfbe727</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-5062ecfbe727.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-5062ecfbe727.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-09-21 13:23:19</pubDate>
-            <title>از سرگیری حملات پاکستان به افغانستان: اسلام‌آباد می‌گوید مخفیگاه‌های شبه‌نظامیان را هدف قرار داده است</title>
-            <description>به دنبال دو حمله پسین در پاکستان، ارتش این کشور، روز دوشنبه، حملات هوایی را در شرق افغانستان و علیه آنچه «مخفیگاه‌های احتمالی شبه‌نظامیان» توصیف کرده، انجام داد. اسلام‌آباد می‌گوید در این حملات ۲۸ نفر کشته شده‌اند، اما مقام‌های طالبان شمار تلفات را ۳ نفر گفته‌اند. این حملات در نزدیکی مرز دو کشور، نشانه تشدید دوباره تنش‌ها میان این دو همسایه است.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#c197e3d3d08a</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-c197e3d3d08a.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-c197e3d3d08a.jpg" />
         </item>
     </channel>
 </rss>
