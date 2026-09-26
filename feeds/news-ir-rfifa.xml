@@ -11,6 +11,14 @@
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-a0a096d1398b.jpg" />
         </item>
         <item>
+            <pubDate>2026-09-26 23:12:05</pubDate>
+            <title>نخستین باری که طالبان وارد کابل شدند</title>
+            <description>کابل، ۶ مهر ۱٣۷۵ / ٢۷ سپتامبر ۱۹۹۶: طالبان برای نخستین بار در مقام نیروی غالب وارد پایتخت افغانستان می‌شوند... طالبان بعد از چهار سال جنگ داخلی و با حمایت پاکستان به قدرت رسیدند و برای بار اول پنج سال در افغانستان حکومت کردند.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#bacb02463e78</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-bacb02463e78.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-bacb02463e78.jpg" />
+        </item>
+        <item>
             <pubDate>2026-09-26 14:30:27</pubDate>
             <title>عکسی از روزی که مطالبۀ دموکراسی در گینه به خاک و خون کشیده شد</title>
             <description>کوناکری، گینه ۲۸ سپتامبر ۲۰۰۹. هزاران نفر از مخالفان حکومت نظامی دست به یک تجمع اعتراضی گسترده زدند و خواستار برگزاری انتخابات شدند. نیروهای نظامی به سوی جمعیت تیراندازی کردند و موجب کشته و زخمی شدن شمار زیادی از معترضان شدند. عکس سیلو دیالو، عکاس خبرگزاری فرانسه از «کشتار ۲۸ سپتامبر ۲۰۰۹»، روایتگر یکی از تاریک‌ترین صفحه‌های تاریخ معاصر گینه است.</description>
@@ -129,12 +137,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#2d2591a34108</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-2d2591a34108.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-2d2591a34108.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-09-24 15:42:18</pubDate>
-            <title>وزیر خزانه‌داری آمریکا: ۸۰ تا ۹۰ درصد پروازهای ایرانی متوقف شده‌اند</title>
-            <description>رسانه‌های ایرانی روز پنج‌شنبه گزارش دادند که امارات متحدۀ عربی و ترکمنستان پروازهای شرکت‌های هواپیمایی ایرانی را متوقف کرده‌‌اند. همزمان، وزارت خزانه داری آمریکا ادعا کرده که ۸۰ تا ۹۰ درصد پروازهای ایرانی متوقف شده‌اند. آمریکا روز دوشنبۀ این هفته اعلام کرد که از روز چهارشنبه (دیروز) تمامی پروازهای ایرانی تحت تحریم قرار خواهند گرفت.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#8c33bcc3c743</link>
         </item>
     </channel>
 </rss>
