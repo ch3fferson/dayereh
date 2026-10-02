@@ -142,13 +142,5 @@
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/Farsi_Iranwire_94249.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/Farsi_Iranwire_94249.jpg" />
         </item>
-        <item>
-            <pubDate>2026-10-01 16:10:54</pubDate>
-            <title>رییس سازمان مدیریت و برنامه‌ریزی گیلان گفته است تنها ۲۵ درصد فاضلاب تولید شده در این استان تصفیه می‌...</title>
-            <description>رییس سازمان مدیریت و برنامه‌ریزی گیلان گفته است تنها ۲۵ درصد فاضلاب تولید شده در این استان تصفیه می‌شود و سه‌چهارم باقی‌مانده بدون تصفیه وارد رودخانه‌ها و دیگر بخش‌های محیط‌زیست می‌شود. بیشتر: https://iranwire.com/fa/news-1/158348 @Farsi_Iranwire</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#116700698c86</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/Farsi_Iranwire_94248.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/Farsi_Iranwire_94248.jpg" />
-        </item>
     </channel>
 </rss>
