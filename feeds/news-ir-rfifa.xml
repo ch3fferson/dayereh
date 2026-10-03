@@ -4,11 +4,19 @@
         <title>رادیو بین‌المللی فرانسه فارسی</title>
         <item>
             <pubDate>2026-10-03 11:23:55</pubDate>
-            <title>آکسیوس: نشست محرمانه مقام‌های ارشد آمریکا درباره ایران و یمن</title>
-            <description>به گزارش پایگاه خبری آکسیوس، شماری از مقام‌های ارشد دولت دونالد ترامپ، رئیس‌جمهور آمریکا، روز جمعه در نشستی محرمانه درباره گام‌های بعدی آمریکا در قبال جنگ با ایران و تحولات مربوط به درگیری میان عربستان سعودی و حوثی‌های‌ یمن، گفت‌وگو کردند.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#7c06fdfeb50f</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-7c06fdfeb50f.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-7c06fdfeb50f.jpg" />
+            <title>انفجارهای شدید در صنعا؛ رسانه حوثی‌ها از حملات عربستان خبر داد</title>
+            <description>خبرگزاری فرانسه امروز از شنیده شدن صدای انفجارهای شدیدی در صنعا، پایتخت یمن -که تحت کنترل حوثی‌های‌ تحت حمایت ایران قرار دارد- خبر داد. هم‌زمان، شبکه المسیره، رسانه وابسته به حوثی‌ها، از حملات عربستان سعودی به پایتخت یمن خبر داده است. به گفته حوثی‌ها، ریاض روز شنبه ۲۶ حمله به صنعا انجام داده است.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#38833b3eab80</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-38833b3eab80.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-38833b3eab80.jpg" />
+        </item>
+        <item>
+            <pubDate>2026-10-03 15:26:58</pubDate>
+            <title>سازمان ملل: ۱۵۰ هزار نفر در یمن آواره شده‌اند و قحطی در کمین است</title>
+            <description>با تشدید درگیری‌ها میان نیروهای دولت یمن و شبه‌نظامیان حوثی، بحران انسانی این کشور وارد مرحله‌ای بحرانی شده است؛ سازمان ملل از آوارگی دست‌کم ۱۵۰ هزار نفر و شتاب بی‌سابقۀ گرسنگی خبر می‌دهد. حمله به اردوگاه‌های آوارگان و مراکز درمانی، تلفات غیرنظامیان و به‌ویژه کودکان را افزایش داده است.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#7b411c3fbf7c</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-7b411c3fbf7c.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-7b411c3fbf7c.jpg" />
         </item>
         <item>
             <pubDate>2026-10-03 14:13:10</pubDate>
@@ -129,14 +137,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#acec066baa76</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-acec066baa76.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-acec066baa76.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-10-01 12:43:06</pubDate>
-            <title>حملات پاکستان به افغانستان؛ طالبان از کشته شدن ۹ غیرنظامی خبر دادند</title>
-            <description>حکومت طالبان روز پنجشنبه اعلام کرد در حملات هوایی پاکستان به دو ولایت هلمند و کنر در افغانستان، ۹ غیرنظامی از جمله زنان و کودکان کشته و ۱۱ نفر دیگر زخمی شده‌اند. اسلام‌آباد انجام این حملات را تأیید کرده و گفته است که اهداف مورد حمله «اردوگاه‌های تروریستی و مخفیگاه‌ها» بوده‌اند.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#6da7287bb505</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-6da7287bb505.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-6da7287bb505.jpg" />
         </item>
     </channel>
 </rss>
