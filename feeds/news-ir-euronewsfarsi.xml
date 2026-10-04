@@ -3,6 +3,14 @@
     <channel>
         <title>یورونیوز</title>
         <item>
+            <pubDate>2026-10-05 00:42:56</pubDate>
+            <title>خبرگزاری‌های ایران شامگاه یکشنبه از شنیده‌شدن صدای چند انفجار در نزدیکی جزیره قشم و سیریک در جنوب ای...</title>
+            <description>خبرگزاری‌های ایران شامگاه یکشنبه از شنیده‌شدن صدای چند انفجار در نزدیکی جزیره قشم و سیریک در جنوب ایران خبر دادند. همزمان تصاویری از سقوط قطعه‌ای شبیه به بخشی از یک پرتابه نظامی در محدوده شهر قشم منتشر شده است. https://l.euronews.com/gtBf</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#886e09554f5f</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/euronewspe_90214.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/euronewspe_90214.jpg" />
+        </item>
+        <item>
             <pubDate>2026-10-04 22:52:41</pubDate>
             <title>کشف فسیلی با حفظ‌شدگی کم‌نظیر از یک دایناسور پردار در شمال شرق چین، شواهد تازه‌ای در حمایت از این فر...</title>
             <description>کشف فسیلی با حفظ‌شدگی کم‌نظیر از یک دایناسور پردار در شمال شرق چین، شواهد تازه‌ای در حمایت از این فرضیه فراهم کرده است که توانایی پرواز در دایناسورها بیش از یک بار و در مسیرهای تکاملی جداگانه پدید آمده است. https://l.euronews.com/frOi</description>
@@ -153,14 +161,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#3cd73fe4eab3</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/euronewspe_90195.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/euronewspe_90195.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-10-04 07:55:54</pubDate>
-            <title>مسعود پزشکیان، رئیس‌جمهوری ایران، روز شنبه مدعی شد که دولت او «با همراهی مردم» جلوی تحقق اهداف کارزا...</title>
-            <description>مسعود پزشکیان، رئیس‌جمهوری ایران، روز شنبه مدعی شد که دولت او «با همراهی مردم» جلوی تحقق اهداف کارزار فشار اقتصادی آمریکا را گرفته است. این در حالی است که با وجود آغاز برنامه بانک مرکزی برای عرضه تا سقف دو میلیارد دلار اسکناس به بازار، قیمت دلار آمریکا روز شنبه از مرز ۲۷۰ هزار تومان گذشت. https://l.euronews.com/rkzi</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#05b2bd3cd417</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/euronewspe_90194.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/euronewspe_90194.jpg" />
         </item>
     </channel>
 </rss>
