@@ -9,7 +9,7 @@ class GeminiClient:
     def __init__(
         self,
         api_key: str,
-        model: str = "gemini-3.5-flash",
+        model: str = "gemini-3.8-flash",
         system_instruction: str | None = None,
         temperature: float | None = None,
         top_p: float | None = None,
