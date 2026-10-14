@@ -3,6 +3,14 @@
     <channel>
         <title>رادیو بین‌المللی فرانسه فارسی</title>
         <item>
+            <pubDate>2026-10-14 11:05:21</pubDate>
+            <title>جمهوری اسلامی در انتظار گشایش سیاسی اعدام‌ها را ادامه می‌دهد</title>
+            <description>بامداد روز چهارشنبه ٢٢ مهر، قوۀ قضاییۀ جمهوری اسلامی اعلام کرد که علی‌سینا مصطفوی، زندانی سیاسی، در کرمان اعدام شده است. این در حالی است که درگیری و اختلافات ایران و آمریکا در وضعیتی معلق و ناروشن باقی مانده است. در حال حاضر، کانون درگیری‌های مسلحانه بر فعالیت حوثی‌های یمن متمرکز شده و عربستان بهای سنگینی برای آن پرداخته است.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#87e486f0487e</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-87e486f0487e.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-87e486f0487e.jpg" />
+        </item>
+        <item>
             <pubDate>2026-10-13 11:03:59</pubDate>
             <title>حوثی‌ها به غیرنظامیان در اطراف شرکت نفتی «آرامکو» هشدار تخلیه صادر کردند</title>
             <description>همزمان با تشدید حملات حوثی‌ها به عربستان سعودی، این گروه شبه‌نظامی، امروز سه‌شنبه، به غیرنظامیان و کارکنان مناطق نزدیک به شرکت نفتی «آرامکو» در عربستان هشدار داده تا محل را تخلیه کنند. سخنگوی حوثی‌ها گفته که این شرکت نفتی هدف مشروع نیروهای این گروه است. این هشدار درحالی صادر شده که ائتلاف به رهبری عربستان سعودی اعلام کرده که قصد دارد یک شرکت نفتی در صنعا را هدف قرار دهد.</description>
@@ -129,14 +137,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#3a1e8721e7b7</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-3a1e8721e7b7.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-3a1e8721e7b7.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-10-09 18:04:16</pubDate>
-            <title>فرانسه: صد سال اعتراضات خیابانی</title>
-            <description>پاریس، ۱۱ ژوئیۀ ۱۹٢۶ / ۱۹ تیر ۱٣۰۵: تظاهرات کهنه سربازان فرانسوی در میدان ایِنا... اگرچه سابقۀ اعتراض و تظاهرات در فرانسه بسیار قدیمی‌تر است، اما دست کم از صد سال اخیر عکس‌هایی موجود است که به روشنی تکرار این تکانه‌های اجتماعی را به عنوان یک پدیدۀ تکرارشونده در جامعۀ فرانسوی نشان می‌دهند.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#f2191a7241a6</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-f2191a7241a6.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-f2191a7241a6.jpg" />
         </item>
     </channel>
 </rss>
