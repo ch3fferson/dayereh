@@ -1,7 +1,19 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss xmlns:media="http://search.yahoo.com/mrss/" version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
     <channel>
         <title>ضد تی وی</title>
+        <item>
+            <pubDate>2026-10-18 20:13:35</pubDate>
+            <title>نتانیاهو: آمادگی برای حمله پیش‌دستانه علیه جمهوری اسلامی. تأکید بر اقدام مستقل اسرائیل حتی بدون حمای...</title>
+            <description>نتانیاهو: آمادگی برای حمله پیش‌دستانه علیه جمهوری اسلامی. تأکید بر اقدام مستقل اسرائیل حتی بدون حمایت آمریکا. هدف: جلوگیری از وقوع هرگونه حمله اولیه توسط رژیم.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#9f8600e856c8</link>
+        </item>
+        <item>
+            <pubDate>2026-10-18 20:13:29</pubDate>
+            <title>انتشار تصاویر منتسب به پیکر علی خامنه‌ای؛ بحران عمیق در ساختار قدرت و تزلزل در ارکان نظام.</title>
+            <description>انتشار تصاویر منتسب به پیکر علی خامنه‌ای؛ بحران عمیق در ساختار قدرت و تزلزل در ارکان نظام.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#db3240edc5c5</link>
+        </item>
         <item>
             <pubDate>2026-10-18 19:10:43</pubDate>
             <title>نتانیاهو: هدف اصلی موشک‌های قاره‌پیمای رژیم ایران شهرهای آمریکا است. تلاش جمهوری اسلامی برای تهدید ا...</title>
@@ -109,20 +121,6 @@
             <title>روزنامه کیهان خواستار هدف قرار دادن تاسیسات هسته‌ای اسرائیل شد. واکنش ارگان مطبوعاتی سپاه به احتمال...</title>
             <description>روزنامه کیهان خواستار هدف قرار دادن تاسیسات هسته‌ای اسرائیل شد. واکنش ارگان مطبوعاتی سپاه به احتمال حمله آمریکا به کوه کلنگ. تشدید لفاظی‌های جنگ‌طلبانه رسانه‌های حکومتی در پی افزایش تنش‌ها.</description>
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#710e2ee70d14</link>
-        </item>
-        <item>
-            <pubDate>2026-10-18 14:11:16</pubDate>
-            <title>تعطیلی اجباری شهر برای نمایش‌های حکومتی؛ انسولین در داروخانه‌ها و بازار سیاه نایاب شد. بذل و بخشش دا...</title>
-            <description>تعطیلی اجباری شهر برای نمایش‌های حکومتی؛ انسولین در داروخانه‌ها و بازار سیاه نایاب شد. بذل و بخشش دارایی ایرانیان به خارج از مرزها همزمان با بحران در پرداخت حقوق بازنشستگان. سقوط معیشت: جهش نجومی قیمت مواد غذایی و اخاذی از شهروندان برای صدور کارت اقامت.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#89d6fa8eee13</link>
-        </item>
-        <item>
-            <pubDate>2026-10-18 13:41:47</pubDate>
-            <title>تأکید مقامات ارشد آمریکا بر تداوم نبرد با جمهوری اسلامی؛ ترامپ: به زودی به نتیجه نهایی می‌رسیم. وزیر...</title>
-            <description>تأکید مقامات ارشد آمریکا بر تداوم نبرد با جمهوری اسلامی؛ ترامپ: به زودی به نتیجه نهایی می‌رسیم. وزیر دفاع آمریکا: رژیم ایران باید بین توقف برنامه هسته‌ای یا نابودی کامل یکی را انتخاب کند. واشینگتن: پیروزی‌های قاطع به دست آمده و به دنبال تعهد قطعی برای پایان همیشگی برنامه هسته‌ای هستیم.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#36e653e2ee12</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/ZTVofficial_14980.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/ZTVofficial_14980.jpg" />
         </item>
     </channel>
 </rss>
