@@ -19,6 +19,14 @@
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-8f1c5a9d2d49.jpg" />
         </item>
         <item>
+            <pubDate>2026-10-18 18:04:33</pubDate>
+            <title>ترامپ دربارۀ ناآرامی‌های فرانسه: پیش از آن‌که دیر شود، مرزهای‌تان را ببندید</title>
+            <description>دونالد ترامپ، رئیس‌جمهوری ایالات متحده، امروز یکشنبه ۲۶ مهر/۱۸ اکتبر، مهاجرت را عامل ناآرامی‌های پیش‌آمده در جریان اعتراضات فرانسه دانست و از این کشور خواست قوانین مهاجرتی خود را سخت‌گیرانه‌تر کند.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#ee81ce0db17c</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-ee81ce0db17c.jpeg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-ee81ce0db17c.jpeg" />
+        </item>
+        <item>
             <pubDate>2026-10-18 11:47:57</pubDate>
             <title>روابط ترامپ با پوتین و نگرانی جمهوری‌خواهان در آستانۀ انتخابات میان‌دوره‌ای</title>
             <description>در حالی که کمتر از سه هفته تا انتخابات میان‌دوره‌ای آمریکا باقی مانده، اقدامات تازۀ دونالد ترامپ برای همسویی با ولادیمیر پوتین، بار دیگر روابط جنجالی او با رئیس‌جمهور روسیه را به مرکز توجه بازگردانده است. این موضوع نگرانی‌هایی را در میان بخشی از جمهوری‌خواهان برانگیخته و باعث فاصله‌گرفتن آن‌ها از ترامپ شده است.</description>
@@ -129,14 +137,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#ba6868b210aa</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-ba6868b210aa.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-ba6868b210aa.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-10-15 11:57:07</pubDate>
-            <title>عربستان می‌گوید ایران حوثی‌ها را به تشدید حملات تشویق می‌کند</title>
-            <description>هم‌زمان با تداوم حملات حوثی‌های یمن به عربستان، یک مقام سعودی تهران را به «تسلیح، آموزش و حمایت» از این گروه متهم کرده است. معاون وزیر امور خارجۀ عربستان همچنین اعلام کرد که حوثی‌ها پیشنهاد ریاض برای دیدار در مسقط، پایتخت عمان را رد کرده‌اند. این تحولات از افزایش تنش‌ها و بن‌بست در تلاش‌های دیپلماتیک میان دو طرف حکایت دارد.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#64ab58526a6a</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-64ab58526a6a.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-64ab58526a6a.jpg" />
         </item>
     </channel>
 </rss>
