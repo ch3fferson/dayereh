@@ -11,6 +11,14 @@
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-5658d8f2d37c.jpg" />
         </item>
         <item>
+            <pubDate>2026-10-25 14:41:36</pubDate>
+            <title>اعتراضات فرانسه؛ بازداشت هزار نفر در یک روز</title>
+            <description>شنبه ۲ آبان ماه در جریان موج تازه اعتراضات در پاریس و دیگر شهرهای فرانسه درگیری‌هایی میان معترضان و نیروهای امنیتی رخ داد.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#e610cf8c0e77</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-e610cf8c0e77.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-e610cf8c0e77.jpg" />
+        </item>
+        <item>
             <pubDate>2026-10-25 13:41:49</pubDate>
             <title>نامزدهای اصلی انتخابات پارلمانی اسرائیل چه کسانی هستند؟</title>
             <description>در انتخابات پارلمانی اسرائیل که روز سه‌شنبه ٢۷ اکتبر / ۵ آبان برگزار خواهد شد، چند نامزد شناخته‌شده و همچنین چهره‌های تازه‌وارد برای کنار زدن بنیامین نتانیاهو، نخست‌وزیر کنونی و متحدان راست افراطی‌اش رقابت می‌کنند. خبرگزاری فرانسه شش چهره اصلی این رقابت را (صرف نظر از نتانیاهو) معرفی کرده است.</description>
@@ -129,14 +137,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#6ef7a8c0354d</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-6ef7a8c0354d.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-6ef7a8c0354d.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-10-21 20:09:37</pubDate>
-            <title>کشتار الجزایری‌ها در پاریس؛ ۶۵ سال بعد</title>
-            <description>پاریس، ۱۷ اکتبر ۱۹۶۱ / ٢۵ مهر ۱٣۴۰: در حالی که جنگ استقلال الجزایر ماه‌های آخر را می‌گذراند، پلیس پاریس تظاهرات هزاران الجزایری را با خشونت سرکوب می‌کند. این کشتار یکی از تلخ‌ترین رویدادهای تاریخ معاصر فرانسه محسوب می‌شود.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#7b841ada5711</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-7b841ada5711.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-7b841ada5711.jpg" />
         </item>
     </channel>
 </rss>
