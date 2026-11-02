@@ -3,6 +3,14 @@
     <channel>
         <title>یورونیوز</title>
         <item>
+            <pubDate>2026-11-02 03:49:21</pubDate>
+            <title>دونالد ترامپ روز یکشنبه تایید کرد که روز شنبه با بنیامین نتانیاهو درباره جنگ با ایران گفتگو کرده است...</title>
+            <description>دونالد ترامپ روز یکشنبه تایید کرد که روز شنبه با بنیامین نتانیاهو درباره جنگ با ایران گفتگو کرده است. این در حالی است که دو روز تا انتخابات میان‌دوره‌ای کنگره آمریکا باقی مانده و گزارش‌های متعددی از احتمال ازسرگیری جنگ آمریکا و اسرائیل با ایران پس از این انتخابات منتشر شده است. https://l.euronews.com/RzIL</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#8bf7079d70a4</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/euronewspe_91369.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/euronewspe_91369.jpg" />
+        </item>
+        <item>
             <pubDate>2026-11-01 23:53:38</pubDate>
             <title>مارتا شهبازی در مسیر سفر برای دریافت جایزه «خوزه لوئیس گومز-اسکارمتا» (ویژه سال ۲۰۲۶) جان باخت. قرار...</title>
             <description>مارتا شهبازی در مسیر سفر برای دریافت جایزه «خوزه لوئیس گومز-اسکارمتا» (ویژه سال ۲۰۲۶) جان باخت. قرار بود این جایزه‌ به پاس «خدمات برجسته او در مطالعه مراحل اولیه رشد انسان» به وی اهدا شود. #EuropeNews https://l.euronews.com/rkGJ</description>
@@ -153,14 +161,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#e1afdef05d39</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/euronewspe_91350.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/euronewspe_91350.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-11-01 03:23:27</pubDate>
-            <title>محسن رضایی روز شنبه تاکید کرد که تحقق هفت شرط ایران از سوی آمریکا لازمه آغاز مذاکرات پایان جنگ است....</title>
-            <description>محسن رضایی روز شنبه تاکید کرد که تحقق هفت شرط ایران از سوی آمریکا لازمه آغاز مذاکرات پایان جنگ است. او همچنین تایید کرد که نامه ونس را دریافت کرده است، اما هنوز به آن پاسخی نداده است. این در حالی است که با نزدیک شدن به انتخابات میان‌دوره‌ای کنگره آمریکا، نگرانی‌ها از ازسرگیری جنگ افزایش یافته است. https://l.euronews.com/dPwP</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#1e8be3e5d45b</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/euronewspe_91349.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/euronewspe_91349.jpg" />
         </item>
     </channel>
 </rss>
