@@ -19,6 +19,14 @@
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-c2e4c023d517.jpg" />
         </item>
         <item>
+            <pubDate>2026-11-05 20:14:36</pubDate>
+            <title>تمدید زندان برای جاشوا وانگ، فعال هنگ کنگی</title>
+            <description>جاشوا وانگ، فعال هنگ کنگی، در دومین پرونده جرایم امنیت ملی به ۱۰ سال زندان محکوم شد.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#064709104cb3</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-064709104cb3.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-064709104cb3.jpg" />
+        </item>
+        <item>
             <pubDate>2026-11-05 18:46:30</pubDate>
             <title>نخستین اعتصاب تاریخ کجا رخ داد؟</title>
             <description>در سال بیست‌ونهم سلطنت رامسس سوم، یعنی حدود سال ۱۱۶۶ پیش از میلاد نخستین اعتصاب تاریخ برخلاف آنچه ممکن است تصور کنید نه در فرانسه، بلکه در مصر اتفاق افتاد.</description>
@@ -129,14 +137,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#2f1bc346cab0</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-2f1bc346cab0.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-2f1bc346cab0.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-11-04 20:05:21</pubDate>
-            <title>پیروزی دموکرات ها در انتخابات میان دوره ای ایالات متحده</title>
-            <description>بازارهای سهام جهانی پس از انتخابات میان‌دوره‌ای ایالات متحده، عمدتاً بالاتر بودند.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#d4ea3e589a48</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-d4ea3e589a48.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-d4ea3e589a48.jpg" />
         </item>
     </channel>
 </rss>
