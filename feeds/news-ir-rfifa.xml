@@ -19,6 +19,14 @@
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-0e0458c0456c.jpg" />
         </item>
         <item>
+            <pubDate>2026-11-07 20:54:36</pubDate>
+            <title>سباستین للیو کارگردان اهل شیلی و برندۀ جایزۀ اسکار درگذشت</title>
+            <description>سباستین للیو، فیلمساز اهل شیلی و برندۀ اسکار، در سن ۵۲ سالگی در سانتیاگوی شیلی درگذشت. او با فیلم تحسین‌شدۀ «یک زن شگفت‌انگیز» با روایت پیشگامانه‌اش از زندگی یک زن تراجنسیتی شهرت جهانی یافت.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#73585eed3972</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-73585eed3972.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-73585eed3972.jpg" />
+        </item>
+        <item>
             <pubDate>2026-11-07 13:44:15</pubDate>
             <title>چرا زمین به تاریکی نیاز دارد؟</title>
             <description>در جهانی که روشنایی شب نشانۀ پیشرفت و رفاه است، تاریکی به‌تدریج به پدیده‌ای کمیاب تبدیل می‌شود. با این حال، پژوهش‌های علمی نشان می‌دهند که نور مصنوعی نه‌تنها امکان مشاهدۀ ستارگان در آسمان شهرها را از بین می‌برد، بلکه زندگی جانوران و چرخۀ طبیعی خواب انسان را نیز تحت تأثیر قرار می‌دهد. اکنون در برخی کشورهای اروپایی، خاموش کردن چراغ‌های غیرضروری به راهی برای حفاظت از محیط زیست تبدیل شده که البته مخالفان خود را هم دارد. در پرتو این تحول دیدگاه، موضوعی تحت عنوان «حق برخورداری از تاریکی» مطرح شده‌است.</description>
@@ -129,14 +137,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#829c7835ec7f</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-829c7835ec7f.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-829c7835ec7f.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-11-06 14:31:23</pubDate>
-            <title>دامنه رسوایی صندوق‌های سرمایه‌گذاری در ترکیه به عالی‌ترین سطوح قدرت رسیده است</title>
-            <description>پرونده موسوم به «رسوایی صندوق‌های سرمایه‌گذاری» در ترکیه ابعاد گسترده‌تری پیدا کرده است. این بحران که نزدیک به نیم میلیون سرمایه‌گذار را تحت تأثیر قرار داده، به حذف و بازداشت شماری از چهره‌های ارشد نظام مالی ترکیه منجر شده و اکنون دامنه آن به محافل قدرت سیاسی نیز رسیده است. در تازه‌ترین تحول، روز جمعه ۶ نوامبر/۱۵ آبان، فاطمه بتول سایان کایا، وزیر پیشین و از مدیران ارشد حزب حاکم، با حکم قضایی بازداشت موقت شد. کایا و همسرش متهم هستند که از طریق دستکاری بازار سرمایه، حدود ۴۴ میلیون دلار سود به دست آورده‌اند.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#5d310ee5bb5a</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-5d310ee5bb5a.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-5d310ee5bb5a.jpg" />
         </item>
     </channel>
 </rss>
