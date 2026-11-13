@@ -3,6 +3,14 @@
     <channel>
         <title>رادیو بین‌المللی فرانسه فارسی</title>
         <item>
+            <pubDate>2026-11-13 12:27:30</pubDate>
+            <title>آژانس بین‌المللی انرژی اتمی خواستار دسترسی دوبارۀ بازرسان به تأسیسات هسته‌ای ایران شد</title>
+            <description>آژانس بین‌المللی انرژی اتمی در گزارش فصلی محرمانۀ خود ضمن ابراز نگرانی فزاینده دربارۀ یک تأسیسات زیرزمینی غنی‌سازی اورانیوم در اصفهان، از ایران خواست با اتخاذ «اقداماتی تدریجی»، زمینۀ بازگشت بازرسان این نهاد به تأسیسات هسته‌ای کلیدی کشور را فراهم کند. در موازات با انتشار گزارش آژانس، تنش میان ایران و آمریکا پس از حملۀ هوایی به سیریک، در استان هرمزگان و پاسخ سپاه پاسداران با هدف قرار دادن یک رادار هشدار زودهنگام آمریکا در بحرین، بار دیگر افزایش یافته است.</description>
+            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#1c66259eafad</link>
+            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-1c66259eafad.jpg" medium="image" type="image/jpeg" />
+            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-1c66259eafad.jpg" />
+        </item>
+        <item>
             <pubDate>2026-11-12 12:27:18</pubDate>
             <title>درخواست بازنگری دکترین دفاعی ایران در مجلس خبرگان؛ ونس مذاکرات مستقیم با رضایی را بررسی می‌کند</title>
             <description>مجلس خبرگان رهبری ایران با صدور بیانیه‌ای، خواهان بازنگری دکترین دفاعی ایران و بررسی امکان خروج این کشور از پیمان منع گسترش سلا‌ح‌های هسته‌ای، ا‌ن‌پی‌تی، شد و گفت ایران به اقدامات نظامی مجدد علیه این کشور، پاسخ فوری و بدون محدودیت جغرافیایی خواهد داد. در آمریکا، دونالد ترامپ خواستار پیروزی کامل آمریکا در جنگ با ایران شد. همزمان وال استریت ژورنال گزارش داد که ونس، انجام مذاکرات مستقیم با محسن رضایی را بررسی می‌کند. اردوغان نیز در دیدار با پزشکیان، خواهان از سرگیری مذاکرات بدون تأخیر میان تهران و واشنگتن شد.</description>
@@ -129,14 +137,6 @@
             <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#2c6401688fc2</link>
             <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-2c6401688fc2.jpg" medium="image" type="image/jpeg" />
             <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-2c6401688fc2.jpg" />
-        </item>
-        <item>
-            <pubDate>2026-11-11 14:18:56</pubDate>
-            <title>پایان مذاکرات روسیه و اوکراین در ابوظبی پس از کمتر از دو ساعت؛ حملات نظامی ادامه دارد</title>
-            <description>دور تازۀ مذاکرات صلح میان اوکراین و روسیه با میانجی‌گری آمریکا روز چهارشنبه ۱۱ نوامبر/۲۰ آبان در ابوظبی پس از کمتر از دو ساعت گفت‌وگو به پایان رسید. این مذاکرات در حالی خاتمه یافت که ولودیمیر زلنسکی، رئیس‌جمهوری اوکراین از تغییر رویکرد واشنگتن در گفت‌وگوها با مسکو و همچنین ورود اروپا به این موضوع ابراز رضایت کرده بود. هم‌زمان با تلاش‌های دیپلماتیک برای پایان دادن به جنگ، حملات نظامی دو طرف ادامه دارد و حمله پهپادی اوکراین به یکی از بنادر مهم نفتی روسیه موجب آتش‌سوزی شده است.</description>
-            <link>https://htmlpreview.github.io/?https://raw.githubusercontent.com/ch3fferson/dayereh/refs/heads/main/feeds/view/index.html#af5e2f746b7d</link>
-            <media:content url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-af5e2f746b7d.jpg" medium="image" type="image/jpeg" />
-            <media:thumbnail url="https://raw.githubusercontent.com/ch3fferson/dayereh/main/feeds/view/media/rfi.fr-af5e2f746b7d.jpg" />
         </item>
     </channel>
 </rss>
